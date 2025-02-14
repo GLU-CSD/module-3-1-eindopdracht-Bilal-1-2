@@ -9,7 +9,7 @@ body {
 
 header {
   background-color: #ffffff;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 footer {
@@ -19,7 +19,7 @@ footer {
 .boven {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .boven .menuLeft {
@@ -157,7 +157,66 @@ footer {
   background-color: aqua;
   display: flex;
 }
-.menu{
+.menu1{
   width: 25%;
+  background-color: #ffffff;
+  float: left;
+ 
+}
+.menu1Left{
+ 
   background-color: #0056b3;
+  border:1px solid #000000;
+margin: 10px;
+padding: 10px;
+margin: auto;
+margin-top: 20px;
+}
+.nutri-score {
+  display: flex;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nutri-score div {
+  
+  width: 45px;
+  height: 35px;
+  line-height: 30px;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-right: 5px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.A { background-color: #008000; } 
+.B { background-color: #86C440; } 
+.C { background-color: #F5A623; } 
+.D { background-color: #DC582A; } 
+.E { background-color: #D61D1D; } 
+
+
+.selected {
+  transform: scale(1.1);
+  border: 3px solid white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.productenvergelijken{
+  margin-left: 20px;
+  justify-content: center;
+}
+
+.productenvergelijken#button1{
+  background-color: #2cffb5d5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  justify-content: center;
 }
