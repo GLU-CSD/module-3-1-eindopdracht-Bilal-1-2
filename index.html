@@ -1,32 +1,90 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilco</title>
+    <meta name="description" content="Dit is een webshop" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery.min.js"></script>
+    <script src="script.js" defer></script>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="description" content="">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="boven">
+          <div class="menuLeft">
+            <div>Taal</div>
+            <div>
+              <select name="Taal">
+                <option value="English">English</option>
+                <option value="Nederlands">Nederlands</option>
+              </select>
+            </div>
+          </div>
+          <div class="menuRight">
+            <div><a href=""> Mijn Account</a></div>
+            <div>|</div>
+            <div><a href=""> Afrekenen</a></div>
+            <div>|</div>
+            <div><a href="">Inloggen</a></div>
+          </div>
+        </div>
+        <div class="onder">
+          <div id="logo">
+            <img src="logo.png" />
+          </div>
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+          <div>
+            <div class="productDropdown">
+              <button class="productDropbtn">product </button>
+              <div class="productDropdown-content">
+                <a href="#">Groente,fruit</a>
+                <a href="#">Bakkerij</a>
+                <a href="#">Thee,koffie</a>
+              </div>
+          </div> 
+        </div>
+         <input type="text" value="" placeholder="Search" id="zoek" autofocus >
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+          <div><a href=""> online bestellen</a></div>
+          <div class="dropdown">
+            <button class="dropbtn">Mijn profiel </button>
+            <div class="dropdown-content">
+              <a href="#">favoriet lijst</a>
+              <a href="#"> Eerder gekocht</a>
+              <a href="#">Mijn bestellingen</a>
+            </div>
+          </div>
+          <div>❤️</div>
+          <button id="winkelmand"><img src="bag.png" alt="" /> 0,00</button>
+        </div>
+      </header>
+      <div id="container">
+       
+        <div class="menu">
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>7</div>
 
-  <meta name="theme-color" content="#fafafa">
-</head>
+        </div>
+         <div class="product">
 
-<body>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="assets/js/app.js"></script>
+         </div>
+        <!-- <div class="markt">4</div>
 
-</body>
-
+        <div class="cleint">5</div>
+        -->
+      </div>
+      <footer>
+         <div >6</div>
+        <div>7</div>
+      </footer>
+  </body>
 </html>
