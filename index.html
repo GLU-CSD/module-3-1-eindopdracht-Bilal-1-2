@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html class="no-js" lang="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +9,19 @@
     <link rel="stylesheet" href="style.css" />
     <script src="jquery.min.js"></script>
     <script src="script.js" defer></script>
+    <meta name="description" content="" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <meta name="theme-color" content="#fafafa" />
 
   </head>
   <body>
@@ -63,8 +77,8 @@
       </header>
       <div id="container">
        
-        <div class="menu1">
-<div class="menu1Left">
+        <div class="sidebar">
+<div class="sidebar1">
   <div>Nutri-score</div>
   <div class="nutri-score">
     <div class="A" onclick="selectScore(this)">A</div>
@@ -74,37 +88,261 @@
     <div class="E" onclick="selectScore(this)">E</div>
 </div>
 </div>
-<div class="menu1Left">Uw selectie verfijnen <br>
+<div class="sidebar1">Uw selectie verfijnen <br>
 <div> Bakkerij</div>
 <div>Groente</div>
 <div> Fruit</div>
 <div> Thee</div>
 <a href=""> more</a>
 </div>
-<div class="menu1Left">recent bekeken</div>
-<div class="menu1Left" >producten 
-  <br>vergelijken
+<div class="sidebar1">recent bekeken</div>
+<div class="sidebar1" >producten 
+  vergelijken
+  <div>______________________________</div>
+  <br>
+  <div class="productenvergelijken"><a href="">set van de products</a></div>
   <div class="productenvergelijken">  <a href=""> set van de products</a></div>
-  <div>  <a href=""> set van de products</a></div>
+ <div>______________________________</div> <br>
   <button id="button1">vergelijken</button> 
   <br>
-  <a href=""> Alles wissen</a>
+  <br>
+  <div style ="margin-left:25%;"><a href=""> Alles wissen </a></div ></div>
 </div>
 
-<div class="menu1Left">5</div>
-<div class="menu1Left">6</div>
 
-
+<div>
+  <div id="products">
+    <div class="product">
+      <img src="assets/img/groente/carrot.png" alt="product" />
+      <div class="onder">
+        <div class="onderlinks">
+          <div>
+            <h3 style="margin-top:10px;">wortel</h3>
+          </div>
+          <div>
+            <p>Price: $25</p>
+           
+          </div>
         </div>
-         <div class="product">
-
-
+        <div class="onderrechts">
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="assets/img/groente/lettuce.jpg" alt="product" />
+      <div class="onder">
+        <div class="onderlinks">
+          <div>
+            <h3 style="margin-top:10px;">sla</h3>
+          </div>
+          <div>
+            <p>Price: $25</p>
+           
+          </div>
+        </div>
+        <div class="onderrechts">
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="assets/img/groente/onion.jpg" alt="product" />
+      <div class="onder">
+        <div class="onderlinks">
+          <div>
+            <h3 style="margin-top:10px;">uien</h3>
+          </div>
+          <div>
+            <p>Price: $25</p>
+           
+          </div>
+        </div>
+        <div class="onderrechts">
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div>
+ <div id="products">
+    <div class="product">
+      <img src="assets/img/groente/patato.jpg" alt="product" />
+      <div class="onder">
+        <div class="onderlinks">
+          <div>
+            <h3 style="margin-top:10px;">aardappel</h3>
+          </div>
+          <div>
+            <p>Price: $25</p>
+           
+          </div>
+        </div>
+        <div class="onderrechts">
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="assets/img/groente/redonion.jpg" alt="product" />
+      <div class="onder">
+        <div class="onderlinks">
+          <div>
+            <h3 style="margin-top:10px;">rode uien</h3>
+          </div>
+          <div>
+            <p>Price: $25</p>
+           
+          </div>
+        </div>
+        <div class="onderrechts">
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="product">
+      <img src="assets/img/groente/bosui.jpeg" alt="product" />
+      <div class="onder">
+        <div class="onderlinks">
+          <div>
+            <h3 style="margin-top:10px;"> bosui</h3>
+          </div>
+          <div>
+            <p>Price: $25</p>
+           
+          </div>
+        </div>
+        <div class="onderrechts">
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <div id="products">
+      <div class="product">
+        <img src="assets/img/bakkerij/borek.jpg" alt="product" />
+        <div class="onder">
+          <div class="onderlinks">
+            <div>
+              <h3 style="margin-top:10px;">borek</h3>
+            </div>
+            <div>
+              <p>Price: $25</p>
+             
+            </div>
+          </div>
+          <div class="onderrechts">
+            <button>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <img src="assets/img/bakkerij/Firefly a chocolate donut with white background realistic 14284.jpg" alt="product" />
+        <div class="onder">
+          <div class="onderlinks">
+            <div>
+              <h3 style="margin-top:10px;">donut</h3>
+            </div>
+            <div>
+              <p>Price: $25</p>
+             
+            </div>
+          </div>
+          <div class="onderrechts">
+            <button>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <img src="assets/img/bakkerij/bread.webp" alt="product" />
+        <div class="onder">
+          <div class="onderlinks">
+            <div>
+              <h3 style="margin-top:10px;">ongesneden bruin brood</h3>
+            </div>
+            <div>
+              <p>Price: $25</p>
+             
+            </div>
+          </div>
+          <div class="onderrechts">
+            <button>Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div id="products">
+        <div class="product">
+          <img src="assets/img/bakkerij/d64e9555-0218-440f-b139-3698274eddfc.png" alt="product" />
+          <div class="onder">
+            <div class="onderlinks">
+              <div>
+                <h3 style="margin-top:10px;">gesneden witte brood</h3>
+              </div>
+              <div>
+                <p>Price: $25</p>
+               
+              </div>
+            </div>
+            <div class="onderrechts">
+              <button>Add to cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <img src="assets/img/bakkerij/images (1).jpeg" alt="product" />
+          <div class="onder">
+            <div class="onderlinks">
+              <div>
+                <h3 style="margin-top:10px;">Simit</h3>
+              </div>
+              <div>
+                <p>Price: $25</p>
+               
+              </div>
+            </div>
+            <div class="onderrechts">
+              <button>Add to cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <img  src="assets/img/bakkerij/images.jpeg" alt="product" />
+          <div class="onder">
+            <div class="onderlinks">
+              <div>
+                <h3 style="margin-top:10px;"> gesneden bruin brood</h3>
+              </div>
+              <div>
+                <p>Price: $25</p>
+               
+              </div>
+            </div>
+            <div class="onderrechts">
+              <button>Add to cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <img  src="assets/img/bakkerij/e3b4f6af-7fa2-44b5-8aef-5089a483fde3.png" alt="product" />
+          <div class="onder">
+            <div class="onderlinks">
+              <div>
+                <h3 style="margin-top:10px;"> Roomboter croissant</h3>
+              </div>
+              <div>
+                <p>Price: $25</p>
+               
+              </div>
+            </div>
+            <div class="onderrechts">
+              <button>Add to cart</button>
+            </div>
+          </div>
+        </div>
+</div>
          </div>
         <!-- <div class="markt">4</div>
 
         <div class="cleint">5</div>
         -->
-      </div>
+      
       <footer>
          <div >6</div>
         <div>7</div>
