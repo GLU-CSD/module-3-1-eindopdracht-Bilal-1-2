@@ -192,7 +192,7 @@ width: 100%;
 }
 
 .sidebar1 {
-  background-color: #0056b3;
+  background-color: #3fbcff;
   border: 1px solid #000000;
   margin: 10px auto;
   padding: 10px;
@@ -329,7 +329,7 @@ width: 100%;
 }
 #products {
   width: 100%;
-  background: blue;
+  background: rgb(255, 255, 255);
 }
 
 footer {
