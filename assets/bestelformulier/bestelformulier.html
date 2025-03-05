@@ -11,36 +11,56 @@
         <form method="post" action="/submit">
             <fieldset>
                 <legend>Bestelformulier</legend>
+
+                <label for="aanhef">Aanhef:</label>
+                <select name="aanhef" id="aanhef" required>
+                    <option value="Dhr">Dhr.</option>
+                    <option value="Mevr">Mevr.</option>
+                </select>
+                 
                 <label for="voornaam">Voornaam:</label>
                 <input type="text" name="voornaam" id="voornaam" required>
+                
+                <label for="tussenvoegsel">Tussenvoegsel:</label>
+                <input type="text" name="tussenvoegsel" id="tussenvoegsel">
                 
                 <label for="achternaam">Achternaam:</label>
                 <input type="text" name="achternaam" id="achternaam" required>
                 
+                <div style="display: flex; justify-content: space-between;">
+                    <div>
+                        <label for="adres">Straatnaam:</label>
+                        <input type="text" name="adres" id="adres" required>
+                    </div>
+                    <div>
+                        <label for="huisnummer">Huisnummer:</label>
+                        <input type="text" name="huisnummer" id="huisnummer" required>
+                    </div>
+                    <div>
+                        <label for="postcode">Postcode:</label>
+                        <input type="text" name="postcode" id="postcode" required pattern="[0-9]{4}[A-Za-z]{2}" title="Vul een geldige postcode in (bijv. 1234AB)">
+                    </div>
+                </div>
+
                 <label for="email">E-mail:</label>
                 <input type="email" name="email" id="email" required>
-                
-                <label for="adres">Adres:</label>
-                <input type="text" name="adres" id="adres" required>
-            </fieldset>
-            
-            <fieldset>
-                <legend>Producten</legend>
-                <label for="product">Kies een product:</label>
-                <select name="product" id="product" required>
-                    <option value="">-- Maak een keuze --</option>
-                    <option value="Laptop">Laptop</option>
-                    <option value="Smartphone">Smartphone</option>
-                    <option value="Tablet">Tablet</option>
-                </select>  
-                
-                <label for="aantal">Aantal:</label>
-                <input type="number" name="aantal" id="aantal" min="1" required>
+
+                <label for="land">Land:</label>
+                <select name="land" id="land" required>
+                    <option value="Nederland">Nederland</option>
+                    <option value="Belgie">Belgie</option>
+                </select>
+
+                <label for="telefoonnummer">Telefoonnummer:</label>
+                <input type="tel" name="telefoonnummer" id="telefoonnummer" required pattern="\d{10}" title="Vul een geldig telefoonnummer in (minimaal 10 cijfers)">
+
+                <label for="gebortedatum">Geboortedatum:</label>
+                <input type="date" name="gebortedatum" id="gebortedatum" required>
             </fieldset>
 
             <fieldset>
                 <legend>Jouw bestelling</legend>
-                <ul id="order-list"></ul> <!-- Hier worden de producten ingeladen -->
+                <ul id="order-list"></ul>
             </fieldset>
             
             <fieldset>
@@ -71,9 +91,43 @@
             }
         });
 
-        // Leeg de winkelwagen na het verzenden van het formulier
-        document.querySelector("form").addEventListener("submit", function() {
-            localStorage.removeItem("cart");
+        // Store form data in local storage
+        document.querySelector("form").addEventListener("input", function() {
+            const formData = {
+                voornaam: document.getElementById("voornaam").value,
+                tussenvoegsel: document.getElementById("tussenvoegsel").value,
+                achternaam: document.getElementById("achternaam").value,
+                adres: document.getElementById("adres").value,
+                huisnummer: document.getElementById("huisnummer").value,
+                postcode: document.getElementById("postcode").value,
+                email: document.getElementById("email").value,
+                land: document.getElementById("land").value,
+                telefoonnummer: document.getElementById("telefoonnummer").value,
+                gebortedatum: document.getElementById("gebortedatum").value,
+            };
+            localStorage.setItem("formData", JSON.stringify(formData));
+        });
+
+        // Restore data when the form is loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            const storedData = JSON.parse(localStorage.getItem("formData"));
+            if (storedData) {
+                document.getElementById("voornaam").value = storedData.voornaam || '';
+                document.getElementById("tussenvoegsel").value = storedData.tussenvoegsel || '';
+                document.getElementById("achternaam").value = storedData.achternaam || '';
+                document.getElementById("adres").value = storedData.adres || '';
+                document.getElementById("huisnummer").value = storedData.huisnummer || '';
+                document.getElementById("postcode").value = storedData.postcode || '';
+                document.getElementById("email").value = storedData.email || '';
+                document.getElementById("land").value = storedData.land || '';
+                document.getElementById("telefoonnummer").value = storedData.telefoonnummer || '';
+                document.getElementById("gebortedatum").value = storedData.gebortedatum || '';
+            }
+        });
+
+        // Clear the form and local storage on reset
+        document.querySelector("form").addEventListener("reset", function() {
+            localStorage.removeItem("formData");
         });
     </script>
 </body>
