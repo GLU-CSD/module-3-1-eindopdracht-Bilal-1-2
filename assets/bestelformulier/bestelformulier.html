@@ -29,16 +29,19 @@
                 <label for="product">Kies een product:</label>
                 <select name="product" id="product" required>
                     <option value="">-- Maak een keuze --</option>
-                    <option value="Laptop">d</option>
-                    <option value="Smartphone">f</option>
-                    <option value="Tablet">g</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Smartphone">Smartphone</option>
+                    <option value="Tablet">Tablet</option>
                 </select>  
                 
                 <label for="aantal">Aantal:</label>
                 <input type="number" name="aantal" id="aantal" min="1" required>
             </fieldset>
-            
-           
+
+            <fieldset>
+                <legend>Jouw bestelling</legend>
+                <ul id="order-list"></ul> <!-- Hier worden de producten ingeladen -->
+            </fieldset>
             
             <fieldset>
                 <legend>Opmerkingen</legend>
@@ -51,5 +54,27 @@
             </fieldset>
         </form>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let orderList = document.getElementById("order-list");
+      
+            if (cart.length === 0) {
+                orderList.innerHTML = "<p>Je winkelwagen is leeg.</p>";
+            } else {
+                cart.forEach(item => {
+                    let listItem = document.createElement("li");
+                    listItem.textContent = `${item.product} - €${item.price}`;
+                    orderList.appendChild(listItem);
+                });
+            }
+        });
+
+        // Leeg de winkelwagen na het verzenden van het formulier
+        document.querySelector("form").addEventListener("submit", function() {
+            localStorage.removeItem("cart");
+        });
+    </script>
 </body>
 </html>
