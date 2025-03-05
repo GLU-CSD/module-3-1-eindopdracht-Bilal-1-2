@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestelformulier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="formulier">
+        <form method="post" action="/submit">
+            <fieldset>
+                <legend>Bestelformulier</legend>
+                <label for="voornaam">Voornaam:</label>
+                <input type="text" name="voornaam" id="voornaam" required>
+                
+                <label for="achternaam">Achternaam:</label>
+                <input type="text" name="achternaam" id="achternaam" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" required>
+                
+                <label for="adres">Adres:</label>
+                <input type="text" name="adres" id="adres" required>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Producten</legend>
+                <label for="product">Kies een product:</label>
+                <select name="product" id="product" required>
+                    <option value="">-- Maak een keuze --</option>
+                    <option value="Laptop">d</option>
+                    <option value="Smartphone">f</option>
+                    <option value="Tablet">g</option>
+                </select>  
+                
+                <label for="aantal">Aantal:</label>
+                <input type="number" name="aantal" id="aantal" min="1" required>
+            </fieldset>
+            
+           
+            
+            <fieldset>
+                <legend>Opmerkingen</legend>
+                <textarea name="opmerking" rows="5" cols="40" placeholder="Uw bericht..."></textarea>
+            </fieldset>
+            
+            <fieldset>
+                <input type="submit" value="Bestelling plaatsen">
+                <input type="reset" value="Herstellen">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
