@@ -153,6 +153,25 @@ header {
 #winkelmand:hover {
   background-color: #0056b3; 
 }
+#cart-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+  display: none;
+  z-index: 1000;
+}
+
+/* CSS-class om het element te verbergen */
+.hidden {
+  display: none;
+}
 #container {
 width: 100%;
   background-color: rgba(0, 255, 255, 0);
