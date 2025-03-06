@@ -279,9 +279,9 @@ width: 100%;
   border: 1px solid black;
 }
 
-/* .product :hover{
-  transform: scale(1.1);
-} */
+.heleProduct:hover{
+  transform: scale(1.03);
+}
 @media (max-width: 768px) {
   .product {
     width: calc(50% - 20px); 
