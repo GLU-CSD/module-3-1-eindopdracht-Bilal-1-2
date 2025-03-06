@@ -5,6 +5,38 @@ body {
     padding: 20px;
 }
 
+.boven{
+    background-color: #d69e9e;
+    display: flex;
+    justify-content: space-between;
+
+}
+.menuLeft{
+    padding: 10px;
+    display: flex;
+justify-content: flex-start;
+align-items: center;
+    gap: 8px;
+    height: 10%;
+    width: 50%;
+    
+}
+.menuRight {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding-right: 20px;
+    width: 50%;
+  
+  }
+  #logo {
+    height: 50px;
+  }
+  
+  #logo img {
+    height: 100%;
+  }
 /* Formulier container */
 #formulier {
     max-width: 500px;
@@ -53,4 +85,24 @@ input[type="submit"], input[type="reset"] {
 
 input[type="submit"]:hover, input[type="reset"]:hover {
     background-color: #37274A;
+}
+
+
+#footerboven {
+  
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  
+}
+.footerboven {
+  width: 18%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+#footerbeneden{
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
 }

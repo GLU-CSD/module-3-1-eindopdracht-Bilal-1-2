@@ -11,7 +11,7 @@ body {
 
 
 header {
-  background-color: #ffffff;
+  background-color: #3fbcff;
   /* border: 1px solid black; */
 }
 
@@ -20,6 +20,7 @@ header {
 .boven {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   /* border: 1px solid black; */
 }
 
@@ -40,6 +41,7 @@ header {
   display: flex;
   gap: 10px;
   justify-content: space-between;
+  align-items: center;
 }
 
 #zoek {
@@ -61,7 +63,7 @@ header {
 }
 .productDropbtn {
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #ffffff00;
  color: #000000;
   padding: 16px;
   font-size: 16px;
@@ -70,7 +72,7 @@ header {
 
 .productDropdown {
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: #ffffff00;
   position: relative;
   display: inline-block;
 }
@@ -100,7 +102,7 @@ header {
 /* f */
 .dropbtn {
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #ffffff00;
  color: #000000;
   padding: 16px;
   font-size: 16px;
@@ -109,7 +111,7 @@ header {
 
 .dropdown {
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: #ffffff00;
   position: relative;
   display: inline-block;
 }
@@ -133,14 +135,14 @@ header {
 }
 
 
-.dropdown-content a:hover {background-color: #ffffff;}
+.dropdown-content a:hover {background-color: #ffffff00;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #ffffff;}
+.dropdown:hover .dropbtn {background-color: #ffffff00;}
 
 #winkelmand {
-  background-color: #4c2cffd5;
+  background-color: #4c2cff56;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -265,6 +267,8 @@ width: 100%;
 .product {
   width: calc(33.33% - 20px); /* 3 products per row on large screens */
   max-width: 200px;
+  box-shadow: #000000 ;
+  
   background-color: white;
   border-radius: 10px;
   padding: 10px;
@@ -274,16 +278,19 @@ width: 100%;
   box-sizing: border-box;
   border: 1px solid black;
 }
-/* Responsive Adjustments */
+
+/* .product :hover{
+  transform: scale(1.1);
+} */
 @media (max-width: 768px) {
   .product {
-    width: calc(50% - 20px); /* 2 products per row on tablets */
+    width: calc(50% - 20px); 
   }
 }
 
 @media (max-width: 480px) {
   .product {
-    width: 100%; /* 1 product per row on small screens */
+    width: 100%; 
   }
 }
 
@@ -339,7 +346,7 @@ footer {
 #footerboven {
   display: flex;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: #3fbcff;
   
 }
 .footerboven {
@@ -349,7 +356,7 @@ footer {
 }
 
 #footerbeneden{
-  background-color: #ffffff;
+  background-color: #3fbcff;
   display: flex;
   justify-content: space-between;
 }

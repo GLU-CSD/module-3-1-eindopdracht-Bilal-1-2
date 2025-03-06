@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilco</title>
+  <meta name="description" content="Dit is een webshop" />
+  <link rel="stylesheet" href="assets/css/inloggen.css" />
+ 
+
+  <script src="jquery.min.js"></script>
+  <script src="script.js" defer></script>
+  <meta name="description" content="" />
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:alt" content="" />
+
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="any" />
+  <link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/img/icon.png" />
+
+  <meta name="theme-color" content="#fafafa" />
+
+</head>
+
+<body>
+  <main>
+    <header>
+      <div class="boven">
+        <div class="menuLeft">
+          <div>Taal</div>
+          <div>
+            <select name="Taal">
+              <option value="English">English</option>
+              <option value="Nederlands">Nederlands</option>
+            </select>
+          </div>
+        </div>
+        <div class="menuRight">
+          <div><a href="">  Mijn Account</a></div>
+          <div>|</div>
+          <div><a href="bestelformulier.html"> Afrekenen</a></div>
+          <div>|</div>
+          <div><a href="inloggen.html">Inloggen</a></div>
+        </div>
+      </div>
+      <div class="onder">
+        <div id="logo">
+           <a href="index.html	"><img src="assets/img/logo.png" /></a>
+        </div>
+
+        <div>
+          <div class="productDropdown">
+            <button class="productDropbtn">product </button>
+            <div class="productDropdown-content">
+              <a href="#">Groente,fruit</a>
+              <a href="#">Bakkerij</a>
+              <a href="#">Thee,koffie</a>
+            </div>
+          </div>
+        </div>
+        <input type="text" value="" placeholder="Search" id="zoek" autofocus>
+
+        
+        <div class="dropdown">
+          <button class="dropbtn">Mijn profiel </button>
+          <div class="dropdown-content">
+            <a href="#">favoriet lijst</a>
+            <a href="#"> Eerder gekocht</a>
+            <a href="#">Mijn bestellingen</a>
+          </div>
+        </div>
+        <div>❤️</div>
+        <a href="bestelformulier.html">
+        <button id="winkelmand">  
+          
+       <img src="assets/img/bag.png" alt="" /> 0,00 </button>
+        </a>
+      </div>
+    </header>
+    <div id="container">
+
+      <div class="sidebar">
+        <div class="sidebar1"> 
+            <br>
+          <div> <a href=""> Bakkerij</a></div>
+          <div> <a href=""> Groente</a></div>
+          <div>  <a href="">Fruit </a></div>
+          <div> <a href=""> Thee</a> </div>
+          <a href=""> more</a>
+        </div>
+        <div class="sidebar1"> <a href="">recent bekeken</a> </div>
+        <div class="sidebar1">producten vergelijken
+          <div>_______________________</div>
+          <br>
+          <div class="productenvergelijken"><a href="">set van de products</a></div>
+          <div class="productenvergelijken"> <a href=""> set van de products</a></div>
+          <div>________________________</div> <br>
+          <button id="button1">vergelijken</button>
+          <br>
+          <br>
+          <div style="margin-left:25%;"><a href=""> Alles wissen </a></div>
+        </div>
+      </div>
+    <div>
+      <h2>Inloggen</h2>
+       <br>
+      <form action="index.html" method="post" id="login-form">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required placeholder="Voer je e-mail in">
+
+          <label for="password">Wachtwoord:</label>
+          <input type="password" id="password" name="password" required placeholder="Voer je wachtwoord in">
+
+          <button type="submit">Inloggen</button>
+
+          <div class="extra-links">
+              <a href="wachtwoord-vergeten.html">Wachtwoord vergeten?</a>
+              <a href="registreren.html">Nog geen account? Registreer hier</a>
+          </div>
+        </form>
+      </div>
+
+   
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+
+    <footer>
+      <div id="footerboven">
+        <div class="footerboven"><a href=""> Algemene voorwaarden </a></div>
+        <div class="footerboven"><a href=""> Privacybeleid  </a></div>
+        <div class="footerboven"><a href=""> Cookiebeleid  </a></div>
+        <div class="footerboven"><a href=""> Over Bilco  </a></div>
+        <div class="footerboven"><a href="">  Kwetsbaarheid melden  </a></div>
+       </div>
+      <div id="footerbeneden"> <div> &copy; 2025 Bilco</div> 
+      <div> &copy; 2025 Bilco</div>
+      <div> &copy; 2025 Bilco</div>
+      <div> &copy; 2025 Bilco</div>
+      <div> &copy; 2025 Bilco</div>
+      <div> &copy; 2025 Bilco</div>
+     </div>
+    </footer>
+   
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (email === "test@bilco.com" && password === "123456") {
+                alert("Succesvol ingelogd!");
+                window.location.href = "index.html";
+            } else {
+                alert("Ongeldige inloggegevens, probeer opnieuw.");
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
