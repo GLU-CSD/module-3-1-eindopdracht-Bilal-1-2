@@ -15,7 +15,10 @@ header {
   /* border: 1px solid black; */
 }
 
-
+a {
+  color: rgb(0, 0, 0); /* Kies je eigen kleur */
+  text-decoration: none; /* Optioneel: verwijdert de onderstreping */
+}
 
 .boven {
   display: flex;
@@ -263,7 +266,7 @@ width: 100%;
   border: 1px solid #000000;
   margin: 10px auto;
   padding: 10px;
-  padding-left: 2%;
+  padding-left: 10%;
   text-align: center;
 }
 #slidecontainer{ 
@@ -301,8 +304,8 @@ width: 100%;
 }
 
 .nutri-score div {
-  width: 45px;
-  height: 35px;
+  width: 35px;
+  height:35px;
   line-height: 30px;
   color: white;
   font-size: 20px;
@@ -310,9 +313,10 @@ width: 100%;
   margin-right: 5px;
   margin-left: 0px;
   transition: transform 0.2s, opacity 0.2s;
+  justify-items: center;
 }
 
-.A { background-color: #008000; } 
+.A {  background-color: #008000; } 
 .B { background-color: #86C440; } 
 .C { background-color: #F5A623; } 
 .D { background-color: #DC582A; } 
@@ -429,9 +433,11 @@ width: 100%;
 }
 
 footer {
-  background-color: rgb(73, 15, 220);
-  
-  
+  background-color:#3fbcff;
+  height: 100px;
+  display: flex;
+  gap: 70%;
+  flex-direction: column;
 }
 #footerboven {
   display: flex;

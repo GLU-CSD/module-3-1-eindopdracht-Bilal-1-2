@@ -30,11 +30,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 const slider = document.getElementById("ringSlider");
 const sliderValue = document.getElementById("sliderValue");
-sliderValue.innerHTML = "€" + slider.value +",00" ;  // Display the default slider value with currency
+sliderValue.innerHTML = "€" + slider.value; // Display the default slider value with currency
 
 slider.oninput = function() {
-    sliderValue.innerHTML = "€" + this.value +",00"; // Update the current slider value (each time you drag the slider handle)
+    sliderValue.innerHTML = "€" + this.value; // Update the current slider value (each time you drag the slider handle)
+}
+
+// Function to select the Nutri-score
+function selectScore(element) {
+    // Remove the 'selected' class from all score elements
+    const scores = document.querySelectorAll('.nutri-score div');
+    scores.forEach(score => {
+        score.classList.remove('selected');
+    });
+
+    // Add the 'selected' class to the clicked score element
+    element.classList.add('selected');
+
+    // Optionally, you can perform additional actions based on the selected score
+    console.log(`Selected score: ${element.innerText}`);
 }
