@@ -8,9 +8,8 @@
   <title>Bilco</title>
   <meta name="description" content="Dit is een webshop" />
   <link rel="stylesheet" href="assets/css/style.css" />
- 
 
-  <script src="jquery.min.js"></script>
+  
   <script src="script.js" defer></script>
   <meta name="description" content="" />
 
@@ -42,16 +41,18 @@
           </div>
         </div>
         <div class="menuRight">
-          <div><a href="">  Mijn Account</a></div>
-          <div>|</div>
-          <div><a href="bestelformulier.html"> Afrekenen</a></div>
-          <div>|</div>
-          <div><a href="inloggen.html">Inloggen</a></div>
+          <div class="navbar">
+          <div class="nav-link nav-link-ltr" ><a href="" > Mijn Account </a></div>
+          
+          <div class="nav-link nav-link-ltr" ><a href="bestelformulier.html"> Afrekenen</a></div>
+          
+          <div class="nav-link nav-link-ltr" ><a href="inloggen.html">Inloggen</a></div>
         </div>
       </div>
+    </div>
       <div class="onder">
         <div id="logo">
-           <a href="index.html	"><img src="assets/img/logo.png" /></a>
+           <a href="index.html"><img src="assets/img/logo.png" /></a>
         </div>
 
         <div>
@@ -66,7 +67,6 @@
         </div>
         <input type="text" value="" placeholder="Search" id="zoek" autofocus>
 
-        
         <div class="dropdown">
           <button class="dropbtn">Mijn profiel </button>
           <div class="dropdown-content">
@@ -96,13 +96,21 @@
             <div class="E" onclick="selectScore(this)">E</div>
           </div>
         </div>
+
         <div class="sidebar1"> <br>
           <div> <a href=""> Bakkerij</a></div>
           <div> <a href=""> Groente</a></div>
           <div>  <a href="">Fruit </a></div>
           <div> <a href=""> Thee</a> </div>
-          <a href=""> Koffie</a>
+          <div><a href=""> Koffie</a> </div>
+     
         </div>
+        <div id="slidecontainer">
+          <div style=" display: flex; justify-content: center;">Prijs</div>
+          <input type="range" min="0" max="50" value="0" class="slider" id="ringSlider">
+<div><div id="sliderValue">€0</div>
+</div>
+</div>
         <div class="sidebar1"> <a href="">recent bekeken</a> </div>
         <div class="sidebar1">producten vergelijken
           <div>______________________</div>
@@ -119,117 +127,102 @@
 
       <div style="margin-top: 1%; margin-bottom: 2%;">
         <div id="products">
-<div class="heleProduct">
-    <div class="product" style="width: 100%;">
-<img src="assets/img/producten/groente/carrot.png" alt="product" />
-            <div class="onder">
-              <div class="onderlinks">
-                <div>
-                  <h3 style="margin-top:5px;">wortel</h3>
-                </div>
-                <div>
-                  <p> €1,50 </p>
-                </div>
-              </div>
-              <div class="onderrechts">
-<button class="add-to-cart" data-product="wortel" data-price="1.50">Add to cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-          <div class="product">
-
-<img src="assets/img/producten/groente/lettuce.jpg" alt="product" />
-
-
-            <div class="onder">
-              <div class="onderlinks">
-                <div>
-                  <h3 style="margin-top:5px;">sla</h3>
-                </div>
-                <div>
-                  <p> €1,20</p>
-
-                </div>
-              </div>
-              <div class="onderrechts">
-<button class="add-to-cart" data-product="sla" data-price="1.20">Add to cart</button>
-
-
-
-              </div>
-            </div>
-          </div>
           
-          <div class="product">
-<img src="assets/img/producten/groente/onion.jpg" alt="product" />
-
-
-            <div class="onder">
-              <div class="onderlinks">
-                <div>
-                  <h3 style="margin-top:10px; margin-bottom: 10%;">uien</h3>
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/groente/carrot.png" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h3>wortel</h3>
+                    <p>€1,50 per kg</p>
+                  </div>
                 </div>
-                <div>
-                  <p style="margin-top: 10%;"> €1,99 per 2kg zak</p>
-
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="wortel" data-price="1.50">Add to cart</button>
                 </div>
-              </div>
-              <div class="onderrechts">
-<button class="add-to-cart" data-product="uien" data-price="1.99">Add to cart</button>
-
-
               </div>
             </div>
           </div>
-          
-            <div class="product">
-<img src="assets/img/producten/groente/patato.jpg" alt="product" />
+     
 
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/groente/lettuce.jpg" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h3 style="margin-top:5px;">sla</h3>
+                  </div>
+                  <div>
+                    <p> €1,20</p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="sla" data-price="1.20">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/groente/onion.jpg" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h3 style="margin-top:10px; margin-bottom: 10%;">uien</h3>
+                  </div>
+                  <div>
+                    <p style="margin-top: 10%;"> €1,99 per 2kg zak</p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="uien" data-price="1.99">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/groente/patato.jpg" alt="product" />
               <div class="onder">
                 <div class="onderlinks">
                   <div>
                     <h3 style="margin-top:10px; margin-bottom: 8px;">aardappel</h3>
                     <br>
-                  <p style="margin-top: 6px;"> €5,99 per 5kg zak</p>
+                    <p style="margin-top: 6px;"> €5,99 per 5kg zak</p>
                   </div>
-              
-
                 </div>
                 <div class="onderrechts">
-<button class="add-to-cart" data-product="aardappel" data-price="5.99">Add to cart</button>
-
-
+                  <button class="add-to-cart" data-product="aardappel" data-price="5.99">Add to cart</button>
                 </div>
               </div>
             </div>
-            <div class="product">
-<img src="assets/img/producten/groente/redonion.jpg" alt="product" />
+          </div>
+          <br>
 
-
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/groente/redonion.jpg" alt="product" />
               <div class="onder">
                 <div class="onderlinks">
                   <div>
-                    <h3 >rode uien</h3>
-                    
-                    <p >€1,80 per kg</p>
-
+                    <h3>rode uien</h3>
+                    <p>€1,80 per kg</p>
                   </div>
                 </div>
                 <div class="onderrechts">
-<button class="add-to-cart" data-product="rode uien" data-price="1.80">Add to cart</button>
-
-
+                  <button class="add-to-cart" data-product="rode uien" data-price="1.80">Add to cart</button>
                 </div>
               </div>
             </div>
-            <div class="product">
-<img src="assets/img/producten/groente/bosui.jpeg" alt="product" />
+          </div>
 
-
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/groente/bosui.jpeg" alt="product" />
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -237,327 +230,302 @@
                   </div>
                   <div>
                     <p>€0,80 </p>
-
                   </div>
                 </div>
                 <div class="onderrechts">
-<button class="add-to-cart" data-product="bosui" data-price="0.80">Add to cart</button>
-
-
+                  <button class="add-to-cart" data-product="bosui" data-price="0.80">Add to cart</button>
                 </div>
-              </div>
-            </div>
-            
-            
-              <div class="product">
-<img src="assets/img/producten/bakkerij/borek.jpg" alt="product" />
-
-
-                <div class="onder">
-                  <div class="onderlinks">
-                    <div>
-                      <h3 style="margin-top:10px;">borek</h3>
-                    </div>
-                    <div>
-                      <p> €2,50</p>
-
-                    </div>
-                  </div>
-                  <div class="onderrechts">
-<button class="add-to-cart" data-product="borek" data-price="2.50">Add to cart</button>
-
-
-                  </div>
-                </div>
-              </div>
-              <div class="product">
-                <img src="assets/img/producten/bakkerij/Firefly a chocolate donut with white background realistic 14284.jpg"
-                  alt="product" />
-                <div class="onder">
-                  <div class="onderlinks">
-                    <div>
-                      <h3 style="margin-top:10px;">donut</h3>
-                    </div>
-                    <div>
-                      <p> €1,50</p>
-
-                    </div>
-                  </div>
-                  <div class="onderrechts">
-<button class="add-to-cart" data-product="donut" data-price="1.50">Add to cart</button>
-
-
-                  </div>
-                </div>
-              </div>
-              <div class="product">
-<img src="assets/img/producten/bakkerij/bread.webp" alt="product" />
-
-
-                <div class="onder">
-                  <div class="onderlinks">
-                    <div>
-                      <h4 style="margin-top:10px; margin-bottom: 6px;">ongesneden bruin brood</h4>
-                    
-                      <p style="margin-top: 10% ;"> €2,00 </p>
-
-                    </div>
-                  </div>
-                  <div class="onderrechts">
-<button class="add-to-cart" data-product="ongesneden bruin brood" data-price="2.00">Add to cart</button>
-
-
-                  </div>
-                </div>
-              </div>
-             
-                <div class="product">
-<img src="assets/img/producten/bakkerij/d64e9555-0218-440f-b139-3698274eddfc.png" alt="product" />
-
-
-                  <div class="onder">
-                    <div class="onderlinks">
-                      <div>
-                        <h4 style="margin-top:10px; margin-bottom: 10px;">gesneden witte brood</h4>
-                      </div>
-                      <div>
-                        <p> €1,80 </p>
-
-                      </div>
-                    </div>
-                    <div class="onderrechts">
-<button class="add-to-cart" data-product="gesneden witte brood" data-price="1.80">Add to cart</button>
-                   </div>
-                  </div>
-                </div>
-
-                <div class="product">
-<img src="assets/img/producten/bakkerij/images (1).jpeg" alt="product" />
-                  <div class="onder">
-                    <div class="onderlinks">
-                      <div>
-                        <h3 style="margin-top:10px;">Simit</h3>
-                      </div>
-                      <div>
-                        <p> €1,00</p>
-
-                      </div>
-                    </div>
-                    <div class="onderrechts">
-<button class="add-to-cart" data-product="Simit" data-price="1.00">Add to cart</button>
-
-
-                    </div>
-                  </div>
-                </div>
-                <div class="product">
-<img src="assets/img/producten/bakkerij/images.jpeg" alt="product" />
-
-
-                  <div class="onder">
-                    <div class="onderlinks">
-                      <div>
-                        <h4 style="margin-top:10px; margin-bottom: 10%;"> gesneden bruin brood</h4>
-                      </div>
-                      <div>
-                        <p style="margin-top:10%; "> €2,20 </p>
-
-                      </div>
-                    </div>
-                    <div class="onderrechts">
-<button class="add-to-cart" data-product="gesneden bruin brood" data-price="2.20">Add to cart</button>
-
-
-                    </div>
-                  </div>
-                </div>
-                <div class="product">
-<img src="assets/img/producten/bakkerij/e3b4f6af-7fa2-44b5-8aef-5089a483fde3.png" alt="product" />
-
-
-                  <div class="onder">
-                    <div class="onderlinks">
-                      <div>
-                        <h4 style="margin-top:10px;"> Roomboter croissant</h4>
-                      </div>
-                      <div>
-                        <p> €0,40</p>
-
-                      </div>
-                    </div>
-                    <div class="onderrechts">
-<button class="add-to-cart" data-product="Roomboter croissant" data-price="0.40">Add to cart</button>
-
-
-                    </div>
-                  </div>
-                </div>
-                <div class="product">
-<img src="assets/img/producten/bakkerij/c0b06b37-a61c-4195-9a6c-abb997de692d.png" alt="product" />
-
-
-                  <div class="onder">
-                    <div class="onderlinks">
-                      <div>
-                        <h3 style="margin-top:10px;">  brood</h3>
-                      </div>
-                      <div>
-                        <p>€2,50</p>
-
-                      </div>
-                    </div>
-                    <div class="onderrechts">
-<button class="add-to-cart" data-product="brood" data-price="2.50">Add to cart</button>
-
-
-                    </div>
-                  </div>
-                </div>
-                <div class="product">
-<img src="assets/img/producten/fruit/07da1b8e-b142-4b69-8e59-05e13e714323.png" alt="product" />
-
-
-                  <div class="onder">
-                    <div class="onderlinks">
-                      <div>
-                        <h4 style="margin-top:10px; margin-bottom: 10%;"> organic aardbei</h4>
-                      </div>
-                      <div>
-                        <p style="margin-top: 10%;"> €4,00 per 500g</p>
-
-                      </div>
-                    </div>
-                    <div class="onderrechts">
-<button class="add-to-cart" data-product="organic aardbei" data-price="4.00">Add to cart</button>
-
-
-                    </div>
-                  </div>
-                </div>
-                <div class="product">
-<img src="assets/img/producten/fruit/appel.png" alt="product" />
-
-
-                  <div class="onder">
-                    <div class="onderlinks">
-                      <div>
-                        <h3 style="margin-top:10px;"> appel</h3>
-                      </div>
-                      <div>
-                        <p> €1,50 </p>
-
-                      </div>
-                    </div>
-                    <div class="onderrechts">
-<button class="add-to-cart" data-product="appel" data-price="1.50">Add to cart</button>
-       </div>
-      </div>
-     </div>
-                <div class="product">
-<img src="assets/img/producten/fruit/images.jpeg" alt="product" />
-
-
-                  <div class="onder">
-                    <div class="onderlinks">
-                      <div>
-                        <h3 style="margin-top:10px;">  aardbei</h3>
-                      </div>
-                      <div>
-                        <p> €2,50 per 500g</p>
-
-                      </div>
-                    </div>
-                    <div class="onderrechts">
-<button class="add-to-cart" data-product="aardbei" data-price="2.50">Add to cart</button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="product">
-                  <img src="assets/img/producten/koffie/espresso.jpg" alt="product" />
-                  <div class="onder">
-                    <div class="onderlinks">
-                      <div>
-                        <h4 style="margin-top:10px; margin-bottom: 6px;"> espresso koffie</h4>
-                      </div>
-                      <div>
-                        <p>€ 5,00 per 250g</p>
-
-                      </div>
-                    </div>
-                    <div class="onderrechts">
-<button class="add-to-cart" data-product="espresso koffie" data-price="5.00">Add to cart</button>
-
-
-                    </div>
-                  </div>
-                </div>
-                <div class="product">
-                  <img src="assets/img/producten/thee/Firefly a square of sugare in a pakkage 72893.jpg" alt="product" />
-                  <div class="onder">
-                    <div class="onderlinks">
-                      <div>
-                        <h3 style="margin-top:10px;">  suiker
-
-                        </h3>
-                      </div>
-                      <div>
-                        <p>€1,00 per zak</p>
-
-                      </div>
-                    </div>
-                    <div class="onderrechts">
-<button class="add-to-cart" data-product="suiker" data-price="1.00">Add to cart</button>
-
-
-                    </div>
-                  </div>
-                </div>
-                <div class="product">
-                  <img src="assets/img/producten/thee/thee.jpg" alt="product" />
-                  <div class="onder">
-                    <div class="onderlinks">
-                      <div>
-                        <h3 style="margin-top:10px;">  Thee
-                        </h3>
-                      </div>
-                      <div>
-                        <p> €3,00 per pak </p>
-                      </div>
-                    </div>
-                    <div class="onderrechts">
-<button class="add-to-cart" data-product="Thee" data-price="3.00">Add to cart</button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="product">
-                  <img src="assets/img/producten/thee/New_England_Breakfast_Mood.webp" alt="product" />
-                  <div class="onder">
-                    <div class="onderlinks">
-                      <div>
-                        <h3 style="margin-top:10px;"> New England Breakfast
-                        </h3>
-                      </div>
-                      <div>
-                        <p> €32,00 per pak </p>
-                      </div>
-                    </div>
-                    <div class="onderrechts">
-<button class="add-to-cart" data-product="New England Breakfast" data-price="32.00">Add to cart</button>
-                    </div>
-                  </div>
-                </div>
-
-
               </div>
             </div>
           </div>
+
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;"> 
+              <img src="assets/img/producten/bakkerij/borek.jpg" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h3 style="margin-top:10px;">borek</h3>
+                  </div>
+                  <div>
+                    <p> €2,50</p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="borek" data-price="2.50">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product"style="width: 100%;">
+              <img src="assets/img/producten/bakkerij/Firefly a chocolate donut with white background realistic 14284.jpg" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h3 style="margin-top:10px;">donut</h3>
+                  </div>
+                  <div>
+                    <p> €1,50</p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="donut" data-price="1.50">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/bakkerij/bread.webp" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h4 style="margin-top:10px; margin-bottom: 6px;">ongesneden bruin brood</h4>
+                    <p style="margin-top: 10%;"> €2,00 </p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="ongesneden bruin brood" data-price="2.00">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product"style="width: 100%;">
+              <img src="assets/img/producten/bakkerij/d64e9555-0218-440f-b139-3698274eddfc.png" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h4 style="margin-top:10px; margin-bottom: 10px;">gesneden witte brood</h4>
+                  </div>
+                  <div>
+                    <p> €1,80 </p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="gesneden witte brood" data-price="1.80">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product"style="width: 100%;">
+              <img src="assets/img/producten/bakkerij/images (1).jpeg" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h3 style="margin-top:10px;">Simit</h3>
+                  </div>
+                  <div>
+                    <p> €1,00</p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="Simit" data-price="1.00">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/bakkerij/images.jpeg" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h4 style="margin-top:10px; margin-bottom: 10%;"> gesneden bruin brood</h4>
+                  </div>
+                  <div>
+                    <p style="margin-top:10%; "> €2,20 </p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="gesneden bruin brood" data-price="2.20">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/bakkerij/e3b4f6af-7fa2-44b5-8aef-5089a483fde3.png" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h4 style="margin-top:10px;"> Roomboter croissant</h4>
+                  </div>
+                  <div>
+                    <p> €0,40</p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="Roomboter croissant" data-price="0.40">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/bakkerij/c0b06b37-a61c-4195-9a6c-abb997de692d.png" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h3 style="margin-top:10px;">  brood</h3>
+                  </div>
+                  <div>
+                    <p>€2,50</p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="brood" data-price="2.50">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/fruit/07da1b8e-b142-4b69-8e59-05e13e714323.png" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h4 style="margin-top:10px; margin-bottom: 10%;"> organic aardbei</h4>
+                  </div>
+                  <div>
+                    <p style="margin-top: 10%;"> €4,00 per 500g</p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="organic aardbei" data-price="4.00">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product"style="width: 100%;">
+              <img src="assets/img/producten/fruit/appel.png" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h3 style="margin-top:10px;"> appel</h3>
+                  </div>
+                  <div>
+                    <p> €1,50 </p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="appel" data-price="1.50">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product"style="width: 100%;">
+              <img src="assets/img/producten/fruit/images.jpeg" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h3 style="margin-top:10px;">  aardbei</h3>
+                  </div>
+                  <div>
+                    <p> €2,50 per 500g</p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="aardbei" data-price="2.50">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/koffie/espresso.jpg" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h4 style="margin-top:10px; margin-bottom: 6px;"> espresso koffie</h4>
+                  </div>
+                  <div>
+                    <p>€ 5,00 per 250g</p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="espresso koffie" data-price="5.00">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/thee/Firefly a square of sugare in a pakkage 72893.jpg" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h3 style="margin-top:10px;">  suiker</h3>
+                  </div>
+                  <div>
+                    <p>€1,00 per zak</p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="suiker" data-price="1.00">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/thee/thee.jpg" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h3 style="margin-top:10px;">  Thee</h3>
+                  </div>
+                  <div>
+                    <p> €3,00 per pak </p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="Thee" data-price="3.00">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="heleProduct">
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/thee/New_England_Breakfast_Mood.webp" alt="product" />
+              <div class="onder">
+                <div class="onderlinks">
+                  <div>
+                    <h3 style="margin-top:10px;"> New England Breakfast</h3>
+                  </div>
+                  <div>
+                    <p> €32,00 per pak </p>
+                  </div>
+                </div>
+                <div class="onderrechts">
+                  <button class="add-to-cart" data-product="New England Breakfast" data-price="32.00">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
     </div>
-  
 
     <footer>
       <div id="footerboven">
@@ -566,7 +534,7 @@
         <div class="footerboven"><a href=""> Cookiebeleid  </a></div>
         <div class="footerboven"><a href=""> Over Bilco  </a></div>
         <div class="footerboven"><a href="">  Kwetsbaarheid melden  </a></div>
-       </div>
+      </div>
       <div id="footerbeneden"> <div> &copy; 2025 Bilco</div> 
       <div> &copy; 2025 Bilco</div>
       <div> &copy; 2025 Bilco</div>
