@@ -214,13 +214,31 @@ a {
   background-color: #4c2cff56; /* Achtergrondkleur voor de winkelwagenknop */
   color: white; /* Tekstkleur voor de knop */
   border: none; /* Geen rand voor de knop */
-  padding: 10px 20px; /* Padding voor de knop */
+  padding: 10px ; /* Padding voor de knop */
   border-radius: 10px; /* Afgeronde hoeken voor de knop */
   font-size: 16px; /* Tekstgrootte voor de knop */
   cursor: pointer; /* Pointer cursor bij hover */
   transition: background-color 0.3s; /* Overgangseffect voor achtergrondkleur */
   justify-content: center; /* Centreer inhoud */
+ display: flex;
+ flex-direction: column;
+  width: 10%;
+ 
 }
+#winkelmand img{
+  width: 30%;
+
+}
+.cart-button{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  
+}
+
+
+
 
 #winkelmand:hover {
   background-color: #0056b3; /* Achtergrondkleur bij hover */

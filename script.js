@@ -18,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // Voeg het geselecteerde product toe aan de winkelwagen
             cart.push({ product, price });
 
-            // Sla de bijgewerkte winkelwagen op in LocalStorage
+            // Sla de bijgewerkte winkelwagen op in LocalStorage en update de totale prijs
+            updateTotalPrice();
+
             localStorage.setItem("cart", JSON.stringify(cart));
 
             // Toon een melding dat het product is toegevoegd aan de winkelwagen
@@ -46,7 +48,17 @@ slider.oninput = function() {
     sliderValue.innerHTML = "€" + this.value + (",00");
 }
 
-// Functie om de Nutri-score te selecteren
+function updateTotalPrice() {
+    // Haal de bestaande winkelwagen uit LocalStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+    // Bereken de totale prijs
+    let totalPrice = cart.reduce((total, item) => total + parseFloat(item.price), 0);
+    
+    // Update de winkelwagenweergave
+    document.getElementById("total-price").innerHTML = ` € ${totalPrice.toFixed(2)}`;
+}
+
 function selectScore(element) {
     // Verwijder de 'selected'-class van alle Nutri-score elementen
     const scores = document.querySelectorAll('.nutri-score div');
