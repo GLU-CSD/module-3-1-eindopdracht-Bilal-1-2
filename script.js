@@ -56,7 +56,7 @@ function updateTotalPrice() {
     let totalPrice = cart.reduce((total, item) => total + parseFloat(item.price), 0);
     
     // Update de winkelwagenweergave
-    document.getElementById("total-price").innerHTML = ` € ${totalPrice.toFixed(2)}`;
+    document.getElementById("total-price").innerHTML = `€${totalPrice.toFixed(2)}`;
 }
 
 function selectScore(element) {

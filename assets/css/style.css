@@ -196,6 +196,7 @@ a {
   color: black; /* Tekstkleur voor dropdown links */
   padding: 12px 16px; /* Padding voor dropdown links */
   text-decoration: none; /* Verwijder onderstreping van dropdown links */
+  display: block; /* Toon links als blokelementen */
 }
 
 .dropdown-content a:hover {
