@@ -7,7 +7,6 @@
   <title>Bilco</title> <!-- Titel van de pagina -->
   <meta name="description" content="Dit is een webshop"> <!-- Korte beschrijving van de pagina -->
   <link rel="stylesheet" href="assets/css/inloggen.css"> <!-- Verwijzing naar de CSS-stylesheet -->
-  <script src="jquery.min.js"></script> <!-- Verwijzing naar jQuery-bibliotheek -->
   <script src="script.js" defer></script> <!-- JavaScript-bestand wordt asynchroon geladen -->
   
   <!-- Iconen voor browsers en apparaten -->
@@ -30,14 +29,14 @@
           </select>
         </div>
         <div class="menuRight">
-          <!-- Navigatiebalk met links naar pagina's -->
           <div class="navbar">
-            <a href="">Mijn Account</a>
-            <a href="bestelformulier.html">Afrekenen</a>
-            <a href="inloggen.html">Inloggen</a>
+            <!-- Navigatielinks -->
+            <div class="nav-link nav-link-ltr"><a href=""> Mijn Account </a></div>
+            <div class="nav-link nav-link-ltr"><a href="bestelformulier.html"> Afrekenen</a></div>
+            <div class="nav-link nav-link-ltr"><a href="inloggen.html">Inloggen</a></div>
           </div>
-        </div>
       </div>
+  </div>
 
       <!-- Onderste sectie met logo, productmenu, en zoekbalk -->
       <div class="onder">
@@ -104,18 +103,23 @@
     </div>
   </main>
 
-  <footer> <!-- Footer met relevante links -->
+  <footer>
     <div id="footerboven">
-      <a href="">Algemene voorwaarden</a>
-      <a href="">Privacybeleid</a>
-      <a href="">Cookiebeleid</a>
-      <a href="">Over Bilco</a>
-      <a href="">Kwetsbaarheid melden</a>
+      <div class="footerboven"><a href=""> Algemene voorwaarden </a></div>
+      <div class="footerboven"><a href=""> Privacybeleid  </a></div>
+      <div class="footerboven"><a href=""> Cookiebeleid  </a></div>
+      <div class="footerboven"><a href=""> Over Bilco  </a></div>
+      <div class="footerboven"><a href="">  Kwetsbaarheid melden  </a></div>
     </div>
     <div id="footerbeneden">
-      <div>&copy; 2025 Bilco</div> <!-- Copyright -->
+        <div> &copy; 2025 Bilco</div> 
+        <div> &copy; 2025 Bilco</div>
+        <div> &copy; 2025 Bilco</div>
+        <div> &copy; 2025 Bilco</div>
+        <div> &copy; 2025 Bilco</div>
+        <div> &copy; 2025 Bilco</div>
     </div>
-  </footer>
+</footer>
 
   <script>
     document.getElementById("login-form").addEventListener("submit", function(event) {
