@@ -175,6 +175,9 @@
         document.querySelector("form").addEventListener("reset", function() {
             localStorage.removeItem("formData");
         });
+        document.querySelector("form").addEventListener("submit", function() {
+            localStorage.removeItem("cart");
+        });
     </script>
 </body>
 </html>
