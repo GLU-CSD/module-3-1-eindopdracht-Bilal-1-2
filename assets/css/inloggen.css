@@ -1,272 +1,357 @@
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-  }
-  
-  
-  
-  header {
-    background-color: #3fbcff;
-    /* border: 1px solid black; */
-  }
-  
-  
-  
-  .boven {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* border: 1px solid black; */
-  }
-  
-  .boven .menuLeft {
-    padding: 10px;
-    display: flex;
-    gap: 8px;
-  }
-  
-  .boven .menuRight {
-    display: flex;
-    gap: 8px;
-    padding-right: 20px;
-    padding-top: 10px;
-  }
-  
-  .onder {
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  #zoek {
-    display: flex;
-    gap: 5px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    width: 40%;
-  }
-  
-  #logo {
-    height: 50px;
-  }
-  
-  #logo img {
-    height: 100%;
-  }
-  .productDropbtn {
-    border-radius: 5px;
-    background-color: #ffffff00;
-   color: #000000;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  .productDropdown {
-    border-radius: 10px;
-    background-color: #ffffff00;
-    position: relative;
-    display: inline-block;
-  }
-  
-  .productDropdown-content {
-    border-radius: 10px;
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
-    z-index: 1;
-  }
-  
-  .productDropdown:hover .productDropdown-content {
-    display: block;
-  }
-  
-  
-  .productDropdown-content a {
-    border-radius: 10px;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  /* f */
-  .dropbtn {
-    border-radius: 5px;
-    background-color: #ffffff00;
-   color: #000000;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  .dropdown {
-    border-radius: 10px;
-    background-color: #ffffff00;
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    border-radius: 10px;
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    border-radius: 10px;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  
-  .dropdown-content a:hover {background-color: #ffffff00;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #ffffff00;}
-  
-  #winkelmand {
-    background-color: #4c2cff56;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    justify-content: center;
-  }
-  #winkelmand:hover {
-    background-color: #0056b3; 
-  }
-  #cart-message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 15px 25px;
-    border-radius: 8px;
-    font-size: 18px;
-    text-align: center;
-    display: none;
-    z-index: 1000;
-  }
+  display: flex; /* Flexbox layout voor de body */
+  justify-content: center; /* Center inhoud horizontaal */
+  align-items: center; /* Center inhoud verticaal */
+  flex-direction: column; /* Kolomlay-out voor de body */
+  margin: 0; /* Geen marge voor de body */
+  padding: 0; /* Geen padding voor de body */
+  background-color: #ffffff; /* Achtergrondkleur voor de body */
+}
+
+a {
+color: rgb(0, 0, 0); /* Link color */
+text-decoration: none; /* Removes underline from links */
+}
+
+.navbar {
+justify-content: center; /* Center the navigation links */
+display: flex;
+width: 100%;
+}
+
+.nav-link {
+font-weight: bold; /* Bold text for navigation links */
+font-size: 13px; /* Font size for navigation links */
+text-transform: uppercase; /* Uppercase text for navigation links */
+text-decoration: none; /* Removes underline from navigation links */
+color: #031D44; /* Color for navigation links */
+padding: 1%; /* Padding around navigation links */
+margin: 1%; /* Margin around navigation links */
+display: inline-block; /* Display links inline */
+position: relative; /* Position for hover effects */
+opacity: 0.75; /* Initial opacity for navigation links */
+}
+
+.nav-link:hover {
+opacity: 1; /* Full opacity on hover */
+}
+
+.nav-link::before {
+transition: 300ms; /* Transition effect for hover */
+height: 5px; /* Height of the hover effect */
+content: ""; /* Empty content for the pseudo-element */
+position: absolute; /* Positioning for the hover effect */
+background-color: #031D44; /* Color of the hover effect */
+}
+
+.nav-link-ltr::before {
+width: 0%; /* Initial width of the hover effect */
+bottom: 0px; /* Position at the bottom */
+}
+
+.nav-link-ltr:hover::before {
+width: 100%; /* Full width on hover */
+}
+
+.nav-link-fade-up::before {
+width: 100%; /* Full width for fade-up effect */
+bottom: 5px; /* Position at the bottom */
+opacity: 0; /* Initial opacity for fade-up effect */
+}
+
+.nav-link-fade-up:hover::before {
+bottom: 10px; /* Move up on hover */
+opacity: 1; /* Full opacity on hover */
+}
+
+.nav-link-grow-up::before {
+height: 0%; /* Initial height for grow-up effect */
+width: 100%; /* Full width for grow-up effect */
+bottom: 0px; /* Position at the bottom */
+}
+
+.nav-link-grow-up:hover::before {
+height: 10px; /* Height on hover */
+}
+
+header {
+  background-color: #3fbcff; /* Achtergrondkleur voor de header */
  
-  .hidden {
-    display: none;
-  }
-  #container {
-    max-width: 1000px;
-    display: flex;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    text-align: center;
-  }
-  .sidebar {
-    margin-right: 1%;
-    width: 25%;
-    max-width: 250px;
-     /* position: fixed;
-    transform: translateY(-2%);
-    left: 7%; */
-    background-color: #ffffff;
-   
-  }
-  
-  .sidebar1 {
-    background-color: #3fbcff;
-    border: 1px solid #000000;
-    margin: 10px auto;
-    padding: 10px;
-    padding-left: 2%;
-    text-align: center;
-  }
-  .productenvergelijken{
-    margin-left: 20%;
-    justify-content: center;
-  }
-  
-  #button1{
-    background-color: #2c4cffd5;
-    color: white;
-    border: none;
-    align-items: center;
-    border-radius: 10px;
-    font-size: 16px;
-    padding-left: 2%;
-    padding-right: 2%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    justify-content: center;
-  }
-  h2 {
-    margin-bottom: 20px;
 }
+
+.boven {
+  display: flex; /* Flexbox layout voor de bovenste sectie */
+  justify-content: space-between; /* Ruimte tussen linker en rechter menu */
+  align-items: center; /* Center items verticaal */
+}
+
+.boven .menuLeft {
+  padding: 10px; /* Padding voor het linker menu */
+  display: flex; /* Flexbox layout voor het linker menu */
+  gap: 8px; /* Ruimte tussen items in het linker menu */
+}
+
+.boven .menuRight {
+  display: flex; /* Flexbox layout voor het rechter menu */
+  gap: 8px; /* Ruimte tussen items in het rechter menu */
+  padding-right: 20px; /* Padding aan de rechterkant */
+  padding-top: 10px; /* Padding aan de bovenkant */
+}
+
+.onder {
+  display: flex; /* Flexbox layout voor de ondersectie */
+  gap: 10px; /* Ruimte tussen items in de ondersectie */
+  justify-content: space-between; /* Ruimte tussen items */
+  align-items: center; /* Center items verticaal */
+}
+
+#zoek {
+  display: flex; /* Flexbox layout voor de zoekbalk */
+  gap: 5px; /* Ruimte tussen zoekbalk en knop */
+  padding: 10px; /* Padding voor de zoekbalk */
+  border: 1px solid #ccc; /* Rand voor de zoekbalk */
+  border-radius: 5px; /* Afgeronde hoeken voor de zoekbalk */
+  background-color: #f9f9f9; /* Achtergrondkleur voor de zoekbalk */
+  width: 40%; /* Breedte van de zoekbalk */
+}
+
+#logo {
+  height: 50px; /* Hoogte van het logo */
+}
+
+#logo img {
+  height: 100%; /* Afbeelding neemt volledige hoogte van het logo in */
+}
+
+.productDropbtn {
+  border-radius: 5px; /* Afgeronde hoeken voor de product dropdown knop */
+  background-color: #ffffff00; /* Transparante achtergrond */
+  color: #000000; /* Tekstkleur voor de knop */
+  padding: 16px; /* Padding voor de knop */
+  font-size: 16px; /* Lettergrootte voor de knop */
+  border: none; /* Geen rand voor de knop */
+}
+
+.productDropdown {
+  border-radius: 10px; /* Afgeronde hoeken voor de product dropdown */
+  background-color: #ffffff00; /* Transparante achtergrond */
+  position: relative; /* Relatieve positionering voor de dropdown */
+  display: inline-block; /* Inline-block weergave voor de dropdown */
+}
+
+.productDropdown-content {
+  border-radius: 10px; /* Afgeronde hoeken voor de dropdown inhoud */
+  display: none; /* Verborgen standaard */
+  position: absolute; /* Absolute positionering voor de dropdown inhoud */
+  background-color: #ffffff; /* Achtergrondkleur voor de dropdown inhoud */
+  min-width: 160px; /* Minimale breedte voor de dropdown inhoud */
+  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2); /* Schaduw voor de dropdown inhoud */
+  z-index: 1; /* Laagvolgorde voor de dropdown inhoud */
+}
+
+.productDropdown:hover .productDropdown-content {
+  display: block; /* Toon dropdown inhoud bij hover */
+}
+
+.productDropdown-content a {
+  border-radius: 10px; /* Afgeronde hoeken voor links in de dropdown */
+  color: black; /* Tekstkleur voor links in de dropdown */
+  padding: 12px 16px; /* Padding voor links in de dropdown */
+  text-decoration: none; /* Geen onderstreping voor links in de dropdown */
+  display: block; /* Blokweergave voor links in de dropdown */
+}
+
+/* Dropdown voor profiel */
+.dropbtn {
+  border-radius: 5px; /* Afgeronde hoeken voor de profiel dropdown knop */
+  background-color: #ffffff00; /* Transparante achtergrond */
+  color: #000000; /* Tekstkleur voor de knop */
+  padding: 16px; /* Padding voor de knop */
+  font-size: 16px; /* Lettergrootte voor de knop */
+  border: none; /* Geen rand voor de knop */
+}
+
+.dropdown {
+  border-radius: 10px; /* Afgeronde hoeken voor de dropdown */
+  background-color: #ffffff00; /* Transparante achtergrond */
+  position: relative; /* Relatieve positionering voor de dropdown */
+  display: inline-block; /* Inline-block weergave voor de dropdown */
+}
+
+.dropdown-content {
+  border-radius: 10px; /* Afgeronde hoeken voor de dropdown inhoud */
+  display: none; /* Verborgen standaard */
+  position: absolute; /* Absolute positionering voor de dropdown inhoud */
+  background-color: #ffffff; /* Achtergrondkleur voor de dropdown inhoud */
+  min-width: 160px; /* Minimale breedte voor de dropdown inhoud */
+  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2); /* Schaduw voor de dropdown inhoud */
+  z-index: 1; /* Laagvolgorde voor de dropdown inhoud */
+}
+
+.dropdown-content a {
+  border-radius: 10px; /* Afgeronde hoeken voor links in de dropdown */
+  color: black; /* Tekstkleur voor links in de dropdown */
+  padding: 12px 16px; /* Padding voor links in de dropdown */
+  text-decoration: none; /* Geen onderstreping voor links in de dropdown */
+  display: block; /* Blokweergave voor links in de dropdown */
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff00; /* Achtergrondkleur bij hover voor links in de dropdown */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Toon dropdown inhoud bij hover */
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ffffff00; /* Transparante achtergrond bij hover voor de knop */
+}
+
+#winkelmand {
+  background-color: #4c2cff56; /* Achtergrondkleur voor de winkelmand knop */
+  color: white; /* Tekstkleur voor de knop */
+  border: none; /* Geen rand voor de knop */
+  padding: 10px 20px; /* Padding voor de knop */
+  border-radius: 10px; /* Afgeronde hoeken voor de knop */
+  font-size: 16px; /* Lettergrootte voor de knop */
+  cursor: pointer; /* Handcursor bij hover */
+  transition: background-color 0.3s; /* Overgangseffect voor achtergrondkleur */
+  justify-content: center; /* Center inhoud */
+}
+
+#winkelmand:hover {
+  background-color: #0056b3; /* Achtergrondkleur bij hover voor de winkelmand knop */
+}
+
+#cart-message {
+  position: fixed; /* Vaste positie voor het winkelwagentje bericht */
+  top: 50%; /* Center verticaal */
+  left: 50%; /* Center horizontaal */
+  transform: translate(-50%, -50%); /* Centering transformatie */
+  background-color: rgba(0, 0, 0, 0.8); /* Achtergrondkleur voor het bericht */
+  color: white; /* Tekstkleur voor het bericht */
+  padding: 15px 25px; /* Padding voor het bericht */
+  border-radius: 8px; /* Afgeronde hoeken voor het bericht */
+  font-size: 18px; /* Lettergrootte voor het bericht */
+  text-align: center; /* Center tekst */
+  display: none; /* Verborgen standaard */
+  z-index: 1000; /* Laagvolgorde voor het bericht */
+}
+
+.hidden {
+  display: none; /* Klasse om elementen te verbergen */
+}
+
+#container {
+  max-width: 800px; /* Maximale breedte voor de container */
+  display: flex; /* Flexbox layout voor de container */
+  background: white; /* Achtergrondkleur voor de container */
+  padding: 20px; /* Padding voor de container */
+  border-radius: 8px; /* Afgeronde hoeken voor de container */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Schaduw voor de container */
+  width: 100%; /* Volledige breedte voor de container */
+  text-align: center; /* Center tekst */
+}
+
+.sidebar {
+  margin-right: 1%; /* Rechtermarge voor de sidebar */
+  width: 25%; /* Breedte van de sidebar */
+  max-width: 250px; /* Maximale breedte voor de sidebar */
+  background-color: #ffffff; /* Achtergrondkleur voor de sidebar */
+}
+
+.sidebar1 {
+  background-color: #3fbcff; /* Achtergrondkleur voor sidebar items */
+  border: 1px solid #000000; /* Rand voor sidebar items */
+  margin: 10px auto; /* Marges voor sidebar items */
+  padding: 10px; /* Padding voor sidebar items */
+  padding-left: 2%; /* Linker padding voor sidebar items */
+  text-align: center; /* Center tekst in sidebar items */
+}
+
+.productenvergelijken {
+  margin-left: 20%; /* Linkermarge voor productvergelijking sectie */
+  justify-content: center; /* Center inhoud */
+}
+
+#button1 {
+  background-color: #2c4cffd5; /* Achtergrondkleur voor de vergelijk knop */
+  color: white; /* Tekstkleur voor de vergelijk knop */
+  border: none; /* Geen rand voor de vergelijk knop */
+  align-items: center; /* Center items verticaal */
+  border-radius: 10px; /* Afgeronde hoeken voor de vergelijk knop */
+  font-size: 16px; /* Lettergrootte voor de vergelijk knop */
+  padding-left: 2%; /* Linker padding voor de vergelijk knop */
+  padding-right: 2%; /* Rechter padding voor de vergelijk knop */
+  cursor: pointer; /* Handcursor bij hover */
+  transition: background-color 0.3s; /* Overgangseffect voor achtergrondkleur */
+  justify-content: center; /* Center inhoud */
+}
+
+h2 {
+  margin-bottom: 20px; /* Onder marge voor kopjes */
+}
+
 input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  width: 100%; /* Volledige breedte voor invoervelden */
+  padding: 10px; /* Padding voor invoervelden */
+  margin: 10px 0; /* Marges voor invoervelden */
+  border: 1px solid #ddd; /* Rand voor invoervelden */
+  border-radius: 5px; /* Afgeronde hoeken voor invoervelden */
 }
+
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
+  width: 100%; /* Volledige breedte voor knoppen */
+  padding: 10px; /* Padding voor knoppen */
+  background-color: #007bff; /* Achtergrondkleur voor knoppen */
+  border: none; /* Geen rand voor knoppen */
+  color: white; /* Tekstkleur voor knoppen */
+  font-size: 16px; /* Lettergrootte voor knoppen */
+  border-radius: 5px; /* Afgeronde hoeken voor knoppen */
+  cursor: pointer; /* Handcursor bij hover */
 }
+
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3; /* Achtergrondkleur bij hover voor knoppen */
 }
+
 .extra-links {
-    margin-top: 10px;
+  margin-top: 10px; /* Bovenmarge voor extra links */
 }
+
 .extra-links a {
-    display: block;
-    text-decoration: none;
-    color: #007bff;
-    margin-top: 5px;
+  display: block; /* Blokweergave voor extra links */
+  text-decoration: none; /* Geen onderstreping voor extra links */
+  color: #007bff; /* Tekstkleur voor extra links */
+  margin-top: 5px; /* Bovenmarge voor extra links */
+}
+
+
+footer {
+background-color: #3fbcff; /* Background color for the footer */
+height: 100px; /* Fixed height for the footer */
+display: flex; /* Flexbox layout for the footer */
+gap: 70%; /* Space between footer items */
+flex-direction: column; /* Column layout for the footer */
+
 }
 
 #footerboven {
-    display: flex;
-    justify-content: space-between;
-    background-color: #3fbcff;
-    
-  }
-  .footerboven {
-    width: 18%;
-    margin-left: 1%;
-    margin-right: 1%;
-  }
-  
-  #footerbeneden{
-    background-color: #3fbcff;
-    display: flex;
-    justify-content: space-between;
-  }
+display: flex; /* Flexbox layout for the top part of the footer */
+justify-content: space-between; /* Space between footer links */
+background-color: #3fbcff; /* Background color for the top part of the footer */
+}
+
+.footerboven {
+width: 18%; /* Width for footer links */
+margin-left: 1%; /* Left margin for footer links */
+margin-right: 1%; /* Right margin for footer links */
+}
+
+#footerbeneden {
+background-color: #3fbcff; /* Background color for the bottom part of the footer */
+display: flex; /* Flexbox layout for the bottom part of the footer */
+justify-content: space-between; /* Space between footer items */
+}

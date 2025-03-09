@@ -1,37 +1,36 @@
 <!DOCTYPE html>
-
-<html class="no-js" lang="">
+<html class="no-js" lang="nl">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bilco</title>
-  <meta name="description" content="Dit is een webshop" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="description" content="Dit is een webshop">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-  
-  <script src="script.js" defer></script>
-  <meta name="description" content="" />
 
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:image:alt" content="" />
 
-  <link rel="icon" href="/assets/img/favicon.ico" sizes="any" />
-  <link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="assets/img/icon.png" />
+  <!-- JavaScript-bestand -->
+  <script src="script.js" defer></script> <!-- JavaScript wordt asynchroon geladen -->
 
-  <meta name="theme-color" content="#fafafa" />
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
 
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icon.png">
+
+  <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
   <main>
-    <header>
+    <header><!-- Header met navigatie en logo -->
       <div class="boven">
-        <div class="menuLeft">
+        <div class="menuLeft"><!-- Links menu voor taal selecteren -->
           <div>Taal</div>
           <div>
             <select name="Taal">
@@ -40,23 +39,21 @@
             </select>
           </div>
         </div>
-        <div class="menuRight">
+        <div class="menuRight"><!-- Rechter navigatiebalk -->
           <div class="navbar">
-          <div class="nav-link nav-link-ltr" ><a href="" > Mijn Account </a></div>
-          
-          <div class="nav-link nav-link-ltr" ><a href="bestelformulier.html"> Afrekenen</a></div>
-          
-          <div class="nav-link nav-link-ltr" ><a href="inloggen.html">Inloggen</a></div>
+            <div class="nav-link nav-link-ltr"><a href=""> Mijn Account </a></div>
+            <div class="nav-link nav-link-ltr"><a href="bestelformulier.html"> Afrekenen</a></div>
+            <div class="nav-link nav-link-ltr"><a href="inloggen.html">Inloggen</a></div>
+          </div>
         </div>
       </div>
-    </div>
       <div class="onder">
-        <div id="logo">
-           <a href="index.html"><img src="assets/img/logo.png" /></a>
+        <div id="logo"><!-- Website logo -->
+          <a href="index.html"><img src="assets/img/logo.png" alt="Bilco logo"></a>
         </div>
 
         <div>
-          <div class="productDropdown">
+          <div class="productDropdown"><!-- Dropdown om producten te tonen -->
             <button class="productDropbtn">product </button>
             <div class="productDropdown-content">
               <a href="#">Groente,fruit</a>
@@ -75,19 +72,18 @@
             <a href="#">Mijn bestellingen</a>
           </div>
         </div>
-        
-        <a href="bestelformulier.html">
-        <button id="winkelmand">  
-          
-       <img src="assets/img/bag.png" alt="" /> 0,00 </button>
+
+        <!-- Fixed button inside anchor issue -->
+        <a href="bestelformulier.html" id="winkelmand" class="cart-button">
+          <img src="assets/img/bag.png" alt="Winkelwagen"> 0,00
         </a>
       </div>
     </header>
     <div id="container">
 
-      <div class="sidebar">
+      <div class="sidebar"> <!-- Sidebar met filter- en navigatiemogelijkheden -->
         <div class="sidebar1">
-          <div>Nutri-score</div><br>
+          <div>Nutri-score</div><br><!-- Nutri-score filteropties -->
           <div class="nutri-score">
             <div class="A" onclick="selectScore(this)">A</div>
             <div class="B" onclick="selectScore(this)">B</div>
@@ -97,20 +93,18 @@
           </div>
         </div>
 
-        <div class="sidebar1"> <br>
+        <div class="sidebar1"> <br><!-- Productcategorieën -->
           <div> <a href=""> Bakkerij</a></div>
           <div> <a href=""> Groente</a></div>
-          <div>  <a href="">Fruit </a></div>
+          <div> <a href="">Fruit </a></div>
           <div> <a href=""> Thee</a> </div>
           <div><a href=""> Koffie</a> </div>
-     
         </div>
-        <div id="slidecontainer">
-          <div style=" display: flex; justify-content: center;">Prijs</div>
+        <div id="slidecontainer">     <!-- Prijsfilter met slider -->
+          <div style="display: flex; justify-content: center;">Prijs</div>
           <input type="range" min="0" max="50" value="0" class="slider" id="ringSlider">
-<div><div id="sliderValue">€0</div>
-</div>
-</div>
+          <div><div id="sliderValue">€0</div></div>
+        </div>
         <div class="sidebar1"> <a href="">recent bekeken</a> </div>
         <div class="sidebar1">producten vergelijken
           <div>______________________</div>
@@ -126,11 +120,11 @@
       </div>
 
       <div style="margin-top: 1%; margin-bottom: 2%;">
-        <div id="products">
-          
+        <div id="products"><!-- Productweergave -->
+          <!-- Productvermeldingen worden hier dynamisch gegenereerd -->
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/groente/carrot.png" alt="product" />
+              <img src="assets/img/producten/groente/carrot.png" alt="Wortel">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -144,11 +138,10 @@
               </div>
             </div>
           </div>
-     
 
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/groente/lettuce.jpg" alt="product" />
+              <img src="assets/img/producten/groente/lettuce.jpg" alt="Sla">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -167,7 +160,7 @@
 
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/groente/onion.jpg" alt="product" />
+              <img src="assets/img/producten/groente/onion.jpg" alt="Uien">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -186,7 +179,7 @@
 
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/groente/patato.jpg" alt="product" />
+              <img src="assets/img/producten/groente/patato.jpg" alt="Aardappel">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -205,7 +198,7 @@
 
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/groente/redonion.jpg" alt="product" />
+              <img src="assets/img/producten/groente/redonion.jpg" alt="Rode uien">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -222,7 +215,7 @@
 
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/groente/bosui.jpeg" alt="product" />
+              <img src="assets/img/producten/groente/bosui.jpeg" alt="Bosui">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -240,8 +233,8 @@
           </div>
 
           <div class="heleProduct">
-            <div class="product" style="width: 100%;"> 
-              <img src="assets/img/producten/bakkerij/borek.jpg" alt="product" />
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/bakkerij/borek.jpg" alt="Borek">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -259,8 +252,8 @@
           </div>
 
           <div class="heleProduct">
-            <div class="product"style="width: 100%;">
-              <img src="assets/img/producten/bakkerij/Firefly a chocolate donut with white background realistic 14284.jpg" alt="product" />
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/bakkerij/chocolate-donut.jpg" alt="Donut">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -279,7 +272,7 @@
 
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/bakkerij/bread.webp" alt="product" />
+              <img src="assets/img/producten/bakkerij/bread.webp" alt="Bruin brood">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -295,8 +288,8 @@
           </div>
 
           <div class="heleProduct">
-            <div class="product"style="width: 100%;">
-              <img src="assets/img/producten/bakkerij/d64e9555-0218-440f-b139-3698274eddfc.png" alt="product" />
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/bakkerij/d64e9555-0218-440f-b139-3698274eddfc.png" alt="Wit brood">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -314,8 +307,8 @@
           </div>
 
           <div class="heleProduct">
-            <div class="product"style="width: 100%;">
-              <img src="assets/img/producten/bakkerij/images (1).jpeg" alt="product" />
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/bakkerij/images-1.jpeg" alt="Simit">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -334,7 +327,7 @@
 
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/bakkerij/images.jpeg" alt="product" />
+              <img src="assets/img/producten/bakkerij/images.jpeg" alt="Gesneden bruin brood">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -353,7 +346,7 @@
 
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/bakkerij/e3b4f6af-7fa2-44b5-8aef-5089a483fde3.png" alt="product" />
+              <img src="assets/img/producten/bakkerij/e3b4f6af-7fa2-44b5-8aef-5089a483fde3.png" alt="Roomboter croissant">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -372,7 +365,7 @@
 
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/bakkerij/c0b06b37-a61c-4195-9a6c-abb997de692d.png" alt="product" />
+              <img src="assets/img/producten/bakkerij/c0b06b37-a61c-4195-9a6c-abb997de692d.png" alt="Brood">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -391,7 +384,7 @@
 
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/fruit/07da1b8e-b142-4b69-8e59-05e13e714323.png" alt="product" />
+              <img src="assets/img/producten/fruit/07da1b8e-b142-4b69-8e59-05e13e714323.png" alt="Organic aardbei">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -409,8 +402,8 @@
           </div>
 
           <div class="heleProduct">
-            <div class="product"style="width: 100%;">
-              <img src="assets/img/producten/fruit/appel.png" alt="product" />
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/fruit/appel.png" alt="Appel">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -428,8 +421,8 @@
           </div>
 
           <div class="heleProduct">
-            <div class="product"style="width: 100%;">
-              <img src="assets/img/producten/fruit/images.jpeg" alt="product" />
+            <div class="product" style="width: 100%;">
+              <img src="assets/img/producten/fruit/images.jpeg" alt="Aardbei">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -448,7 +441,7 @@
 
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/koffie/espresso.jpg" alt="product" />
+              <img src="assets/img/producten/koffie/espresso.jpg" alt="Espresso koffie">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -467,7 +460,7 @@
 
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/thee/Firefly a square of sugare in a pakkage 72893.jpg" alt="product" />
+              <img src="assets/img/producten/thee/suiker-pakkage.jpg" alt="Suiker">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -486,7 +479,7 @@
 
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/thee/thee.jpg" alt="product" />
+              <img src="assets/img/producten/thee/thee.jpg" alt="Thee">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -505,7 +498,7 @@
 
           <div class="heleProduct">
             <div class="product" style="width: 100%;">
-              <img src="assets/img/producten/thee/New_England_Breakfast_Mood.webp" alt="product" />
+              <img src="assets/img/producten/thee/New_England_Breakfast_Mood.webp" alt="New England Breakfast">
               <div class="onder">
                 <div class="onderlinks">
                   <div>
@@ -521,29 +514,34 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
-    </div>
 
     <footer>
+      <!-- Bovenste sectie van de voettekst met links naar belangrijke informatie -->
       <div id="footerboven">
-        <div class="footerboven"><a href=""> Algemene voorwaarden </a></div>
-        <div class="footerboven"><a href=""> Privacybeleid  </a></div>
-        <div class="footerboven"><a href=""> Cookiebeleid  </a></div>
-        <div class="footerboven"><a href=""> Over Bilco  </a></div>
-        <div class="footerboven"><a href="">  Kwetsbaarheid melden  </a></div>
+        <div class="footerboven"><a href=""> Algemene voorwaarden </a></div> <!-- Link naar de algemene voorwaarden -->
+        <div class="footerboven"><a href=""> Privacybeleid </a></div> <!-- Link naar het privacybeleid -->
+        <div class="footerboven"><a href=""> Cookiebeleid </a></div> <!-- Link naar het cookiebeleid -->
+        <div class="footerboven"><a href=""> Over Bilco </a></div> <!-- Link naar informatie over Bilco -->
+        <div class="footerboven"><a href=""> Kwetsbaarheid melden </a></div> <!-- Link om kwetsbaarheden te melden -->
       </div>
-      <div id="footerbeneden"> <div> &copy; 2025 Bilco</div> 
-      <div> &copy; 2025 Bilco</div>
-      <div> &copy; 2025 Bilco</div>
-      <div> &copy; 2025 Bilco</div>
-      <div> &copy; 2025 Bilco</div>
-      <div> &copy; 2025 Bilco</div>
-     </div>
+    
+      <!-- Onderste sectie van de voettekst met copyrightinformatie -->
+      <div id="footerbeneden">
+        <div> &copy; 2025 Bilco</div> <!-- Copyright 2025 voor Bilco -->
+        <div> &copy; 2025 Bilco</div>
+        <div> &copy; 2025 Bilco</div>
+        <div> &copy; 2025 Bilco</div>
+        <div> &copy; 2025 Bilco</div>
+        <div> &copy; 2025 Bilco</div>
+      </div>
     </footer>
+    
+    <!-- Bericht over het toevoegen van een product aan de winkelwagen -->
     <div id="cart-message" class="hidden">Product toegevoegd!</div>
+    
 </body>
 
 </html>

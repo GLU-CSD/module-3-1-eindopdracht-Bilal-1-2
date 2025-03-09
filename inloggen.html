@@ -1,172 +1,135 @@
-<!DOCTYPE html>
-
-<html class="no-js" lang="">
-
+<!-- Definieer de basisstructuur van het document -->
+<!DOCTYPE html> <!-- HTML5-document -->
+<html class="no-js" lang=""> <!-- Klasse voor ondersteuning van JS/no-JS en taalinstelling -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bilco</title>
-  <meta name="description" content="Dit is een webshop" />
-  <link rel="stylesheet" href="assets/css/inloggen.css" />
- 
+  <meta charset="UTF-8"> <!-- Stel de tekenset in op UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Zorgt voor responsieve opmaak -->
+  <title>Bilco</title> <!-- Titel van de pagina -->
+  <meta name="description" content="Dit is een webshop"> <!-- Korte beschrijving van de pagina -->
+  <link rel="stylesheet" href="assets/css/inloggen.css"> <!-- Verwijzing naar de CSS-stylesheet -->
+  <script src="jquery.min.js"></script> <!-- Verwijzing naar jQuery-bibliotheek -->
+  <script src="script.js" defer></script> <!-- JavaScript-bestand wordt asynchroon geladen -->
+  
+  <!-- Iconen voor browsers en apparaten -->
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icon.png">
 
-  <script src="jquery.min.js"></script>
-  <script src="script.js" defer></script>
-  <meta name="description" content="" />
-
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:image:alt" content="" />
-
-  <link rel="icon" href="/assets/img/favicon.ico" sizes="any" />
-  <link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="assets/img/icon.png" />
-
-  <meta name="theme-color" content="#fafafa" />
-
+  <meta name="theme-color" content="#fafafa"> <!-- Browserbalkkleur -->
 </head>
 
 <body>
   <main>
     <header>
+      <!-- Bovenste sectie van de header met taalkeuze -->
       <div class="boven">
         <div class="menuLeft">
-          <div>Taal</div>
-          <div>
-            <select name="Taal">
-              <option value="English">English</option>
-              <option value="Nederlands">Nederlands</option>
-            </select>
-          </div>
+          <select name="Taal"> <!-- Dropdownmenu om de taal te selecteren -->
+            <option value="English">English</option>
+            <option value="Nederlands">Nederlands</option>
+          </select>
         </div>
         <div class="menuRight">
-          <div><a href="">  Mijn Account</a></div>
-          <div>|</div>
-          <div><a href="bestelformulier.html"> Afrekenen</a></div>
-          <div>|</div>
-          <div><a href="inloggen.html">Inloggen</a></div>
-        </div>
-      </div>
-      <div class="onder">
-        <div id="logo">
-           <a href="index.html	"><img src="assets/img/logo.png" /></a>
-        </div>
-
-        <div>
-          <div class="productDropdown">
-            <button class="productDropbtn">product </button>
-            <div class="productDropdown-content">
-              <a href="#">Groente,fruit</a>
-              <a href="#">Bakkerij</a>
-              <a href="#">Thee,koffie</a>
-            </div>
+          <!-- Navigatiebalk met links naar pagina's -->
+          <div class="navbar">
+            <a href="">Mijn Account</a>
+            <a href="bestelformulier.html">Afrekenen</a>
+            <a href="inloggen.html">Inloggen</a>
           </div>
         </div>
-        <input type="text" value="" placeholder="Search" id="zoek" autofocus>
+      </div>
 
-        
+      <!-- Onderste sectie met logo, productmenu, en zoekbalk -->
+      <div class="onder">
+        <div id="logo">
+          <a href="index.html"><img src="assets/img/logo.png" alt="Bilco Logo"></a> <!-- Link naar homepage -->
+        </div>
+        <div class="productDropdown">
+          <!-- Dropdownmenu voor productcategorieën -->
+          <button class="productDropbtn">Product</button>
+          <div class="productDropdown-content">
+            <a href="#">Groente, fruit</a>
+            <a href="#">Bakkerij</a>
+            <a href="#">Thee, koffie</a>
+          </div>
+        </div>
+        <input type="text" placeholder="Search" id="zoek" autofocus> <!-- Zoekveld -->
         <div class="dropdown">
-          <button class="dropbtn">Mijn profiel </button>
+          <button class="dropbtn">Mijn profiel</button> <!-- Profielopties -->
           <div class="dropdown-content">
-            <a href="#">favoriet lijst</a>
-            <a href="#"> Eerder gekocht</a>
+            <a href="#">Favoriet lijst</a>
+            <a href="#">Eerder gekocht</a>
             <a href="#">Mijn bestellingen</a>
           </div>
         </div>
-        <div>❤️</div>
         <a href="bestelformulier.html">
-        <button id="winkelmand">  
-          
-       <img src="assets/img/bag.png" alt="" /> 0,00 </button>
+          <div id="winkelmand"> <!-- Link naar winkelwagen -->
+            <img src="assets/img/bag.png" alt="Winkelmand"> 0,00
+          </div>
         </a>
       </div>
     </header>
-    <div id="container">
 
-      <div class="sidebar">
-        <div class="sidebar1"> 
-            <br>
-          <div> <a href=""> Bakkerij</a></div>
-          <div> <a href=""> Groente</a></div>
-          <div>  <a href="">Fruit </a></div>
-          <div> <a href=""> Thee</a> </div>
-          <a href=""> more</a>
+    <div id="container">
+      <div class="sidebar"> <!-- Zijbalk voor navigatie -->
+        <div class="sidebar1">
+          <a href="">Bakkerij</a>
+          <a href="">Groente</a>
+          <a href="">Fruit</a>
+          <a href="">Thee</a>
+          <a href="">More</a> <!-- Extra categorie -->
         </div>
-        <div class="sidebar1"> <a href="">recent bekeken</a> </div>
-        <div class="sidebar1">producten vergelijken
-          <div>_______________________</div>
-          <br>
-          <div class="productenvergelijken"><a href="">set van de products</a></div>
-          <div class="productenvergelijken"> <a href=""> set van de products</a></div>
-          <div>________________________</div> <br>
-          <button id="button1">vergelijken</button>
-          <br>
-          <br>
-          <div style="margin-left:25%;"><a href=""> Alles wissen </a></div>
+        <div class="sidebar1"><a href="">Recent bekeken</a></div>
+        <div class="sidebar1">
+          <!-- Mogelijkheid om producten te vergelijken -->
+          <button id="button1">Vergelijken</button>
+          <a href="">Alles wissen</a>
         </div>
       </div>
-    <div>
-      <h2>Inloggen</h2>
-       <br>
-      <form action="index.html" method="post" id="login-form">
+
+      <div>
+        <h2>Inloggen</h2> <!-- Sectie voor inloggen -->
+        <form action="index.html" method="post" id="login-form"> <!-- Inlogformulier -->
           <label for="email">E-mail:</label>
           <input type="email" id="email" name="email" required placeholder="Voer je e-mail in">
-
           <label for="password">Wachtwoord:</label>
           <input type="password" id="password" name="password" required placeholder="Voer je wachtwoord in">
-
           <button type="submit">Inloggen</button>
-
           <div class="extra-links">
-              <a href="wachtwoord-vergeten.html">Wachtwoord vergeten?</a>
-              <a href="registreren.html">Nog geen account? Registreer hier</a>
+            <a href="wachtwoord-vergeten.html">Wachtwoord vergeten?</a> <!-- Link om wachtwoord te herstellen -->
+            <a href="registreren.html">Nog geen account? Registreer hier</a>
           </div>
         </form>
       </div>
-
-   
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
+  </main>
+
+  <footer> <!-- Footer met relevante links -->
+    <div id="footerboven">
+      <a href="">Algemene voorwaarden</a>
+      <a href="">Privacybeleid</a>
+      <a href="">Cookiebeleid</a>
+      <a href="">Over Bilco</a>
+      <a href="">Kwetsbaarheid melden</a>
     </div>
-    
+    <div id="footerbeneden">
+      <div>&copy; 2025 Bilco</div> <!-- Copyright -->
+    </div>
+  </footer>
 
-    <footer>
-      <div id="footerboven">
-        <div class="footerboven"><a href=""> Algemene voorwaarden </a></div>
-        <div class="footerboven"><a href=""> Privacybeleid  </a></div>
-        <div class="footerboven"><a href=""> Cookiebeleid  </a></div>
-        <div class="footerboven"><a href=""> Over Bilco  </a></div>
-        <div class="footerboven"><a href="">  Kwetsbaarheid melden  </a></div>
-       </div>
-      <div id="footerbeneden"> <div> &copy; 2025 Bilco</div> 
-      <div> &copy; 2025 Bilco</div>
-      <div> &copy; 2025 Bilco</div>
-      <div> &copy; 2025 Bilco</div>
-      <div> &copy; 2025 Bilco</div>
-      <div> &copy; 2025 Bilco</div>
-     </div>
-    </footer>
-   
-    <script>
-        document.getElementById("login-form").addEventListener("submit", function(event) {
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
+  <script>
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
 
-            if (email === "test@bilco.com" && password === "123456") {
-                alert("Succesvol ingelogd!");
-                window.location.href = "index.html";
-            } else {
-                alert("Ongeldige inloggegevens, probeer opnieuw.");
-                event.preventDefault();
-            }
-        });
-    </script>
+      // Eenvoudige validatie
+      if (email === "test@bilco.com" && password === "123456") {
+        alert("Succesvol ingelogd!"); // Succesmelding
+        window.location.href = "index.html";
+      } else {
+        alert("Ongeldige inloggegevens, probeer opnieuw."); // Foutmelding
+        event.preventDefault();
+      }
+    });
+  </script>
 </body>
-
-</html>

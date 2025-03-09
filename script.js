@@ -1,28 +1,32 @@
+// Wacht tot de DOM volledig is geladen voordat de code wordt uitgevoerd
 document.addEventListener("DOMContentLoaded", function () {
+    // Selecteer alle knoppen met de class 'add-to-cart'
     let buttons = document.querySelectorAll(".add-to-cart");
 
+    // Voeg een klikgebeurtenis toe aan elke knop
     buttons.forEach(button => {
         button.addEventListener("click", function (event) {
-            event.preventDefault(); // 🔹 Voorkomt dat de pagina ververst
+            event.preventDefault(); // 🔹 Voorkomt dat de standaard actie (pagina verversen) wordt uitgevoerd
             
+            // Haal product- en prijsgegevens op uit de dataset attributen van de knop
             let product = this.getAttribute("data-product");
             let price = this.getAttribute("data-price");
 
-            // Haal bestaande winkelwagen op of maak een nieuwe array
+            // Haal de bestaande winkelwagen uit LocalStorage of maak een nieuwe lege array
             let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-            // Voeg product toe
+            // Voeg het geselecteerde product toe aan de winkelwagen
             cart.push({ product, price });
 
-            // Sla op in LocalStorage
+            // Sla de bijgewerkte winkelwagen op in LocalStorage
             localStorage.setItem("cart", JSON.stringify(cart));
 
-            // Toon een melding
+            // Toon een melding dat het product is toegevoegd aan de winkelwagen
             let message = document.getElementById("cart-message");
             message.innerText = `${product} toegevoegd aan je bestelling!`;
             message.style.display = "block";
 
-            // Verberg melding na 2 seconden
+            // Verberg de melding na 2 seconden
             setTimeout(() => {
                 message.style.display = "none";
             }, 2000);
@@ -30,25 +34,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Selecteer de slider en het element dat de waarde weergeeft
 const slider = document.getElementById("ringSlider");
 const sliderValue = document.getElementById("sliderValue");
-sliderValue.innerHTML = "€" + slider.value; // Display the default slider value with currency
 
+// Toon de standaard sliderwaarde met de valuta-indicatie
+sliderValue.innerHTML = "€" + slider.value + (",00");
+
+// Bijwerken van de waarde terwijl de slider wordt verplaatst
 slider.oninput = function() {
-    sliderValue.innerHTML = "€" + this.value; // Update the current slider value (each time you drag the slider handle)
+    sliderValue.innerHTML = "€" + this.value + (",00");
 }
 
-// Function to select the Nutri-score
+// Functie om de Nutri-score te selecteren
 function selectScore(element) {
-    // Remove the 'selected' class from all score elements
+    // Verwijder de 'selected'-class van alle Nutri-score elementen
     const scores = document.querySelectorAll('.nutri-score div');
     scores.forEach(score => {
         score.classList.remove('selected');
     });
 
-    // Add the 'selected' class to the clicked score element
+    // Voeg de 'selected'-class toe aan het aangeklikte Nutri-score element
     element.classList.add('selected');
 
-    // Optionally, you can perform additional actions based on the selected score
+    // Optioneel: voer extra acties uit op basis van de geselecteerde Nutri-score
     console.log(`Selected score: ${element.innerText}`);
 }
