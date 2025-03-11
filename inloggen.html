@@ -7,7 +7,7 @@
   <title>Bilco</title> <!-- Titel van de pagina -->
   <meta name="description" content="Dit is een webshop"> <!-- Korte beschrijving van de pagina -->
   <link rel="stylesheet" href="assets/css/inloggen.css"> <!-- Verwijzing naar de CSS-stylesheet -->
-  <script src="script.js" defer></script> <!-- JavaScript-bestand wordt asynchroon geladen -->
+  <script src="assets/JavaScript/inloggen.js" defer></script> <!-- JavaScript-bestand wordt asynchroon geladen -->
   
   <!-- Iconen voor browsers en apparaten -->
   <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
@@ -121,19 +121,4 @@
     </div>
 </footer>
 
-  <script>
-    document.getElementById("login-form").addEventListener("submit", function(event) {
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-
-      // Eenvoudige validatie
-      if (email === "test@bilco.com" && password === "123456") {
-        alert("Succesvol ingelogd!"); // Succesmelding
-        window.location.href = "index.html";
-      } else {
-        alert("Ongeldige inloggegevens, probeer opnieuw."); // Foutmelding
-        event.preventDefault();
-      }
-    });
-  </script>
 </body>
