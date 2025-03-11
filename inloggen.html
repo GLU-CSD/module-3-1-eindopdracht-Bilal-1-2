@@ -23,7 +23,8 @@
       <!-- Bovenste sectie van de header met taalkeuze -->
       <div class="boven">
         <div class="menuLeft">
-          <select name="Taal"> <!-- Dropdownmenu om de taal te selecteren -->
+
+          Tall:<select name="Taal"> <!-- Dropdownmenu om de taal te selecteren -->
             <option value="English">English</option>
             <option value="Nederlands">Nederlands</option>
           </select>
@@ -70,22 +71,47 @@
     </header>
 
     <div id="container">
-      <div class="sidebar"> <!-- Zijbalk voor navigatie -->
+
+      <div class="sidebar"> <!-- Sidebar met filter- en navigatiemogelijkheden -->
         <div class="sidebar1">
-          <a href="">Bakkerij</a>
-          <a href="">Groente</a>
-          <a href="">Fruit</a>
-          <a href="">Thee</a>
-          <a href="">More</a> <!-- Extra categorie -->
+          <div>Nutri-score</div><br><!-- Nutri-score filteropties -->
+          <div class="nutri-score">
+            <div class="A" onclick="selectScore(this)">A</div>
+            <div class="B" onclick="selectScore(this)">B</div>
+            <div class="C" onclick="selectScore(this)">C</div>
+            <div class="D" onclick="selectScore(this)">D</div>
+            <div class="E" onclick="selectScore(this)">E</div>
+          </div>
         </div>
-        <div class="sidebar1"><a href="">Recent bekeken</a></div>
-        <div class="sidebar1">
-          <!-- Mogelijkheid om producten te vergelijken -->
-          <button id="button1">Vergelijken</button>
-          <a href="">Alles wissen</a>
+
+        <div class="sidebar1"> <!-- Productcategorieën -->
+          <div> <a href=""> Bakkerij</a></div>
+          <div> <a href=""> Groente</a></div>
+          <div> <a href="">Fruit </a></div>
+          <div> <a href=""> Thee</a> </div>
+          <div><a href=""> Koffie</a> </div>
+        </div>
+        
+        <div id="slidecontainer">     <!-- Prijsfilter met slider -->
+          <div style="display: flex; justify-content: center;">Prijs</div>
+          <input type="range" min="0" max="50" value="0" class="slider" id="ringSlider">
+          <div><div id="sliderValue">€0</div>
+        </div>
+        </div>
+
+        <div class="sidebar1"> <a href="">recent bekeken</a> </div>
+        <div class="sidebar1">producten vergelijken
+          <div>______________________</div>
+          <br>
+          <div class="productenvergelijken"><a href="">set van de products</a></div>
+          <div class="productenvergelijken"> <a href=""> set van de products</a></div>
+          <div>______________________</div> <br>
+          <button id="button1">vergelijken</button>
+          <br>
+          <br>
+          <div style="margin-left:25%;"><a href=""> Alles wissen </a></div>
         </div>
       </div>
-
       <div>
         <h2>Inloggen</h2> <!-- Sectie voor inloggen -->
         <form action="index.html" method="post" id="login-form"> <!-- Inlogformulier -->
@@ -109,15 +135,11 @@
       <div class="footerboven"><a href=""> Privacybeleid  </a></div>
       <div class="footerboven"><a href=""> Cookiebeleid  </a></div>
       <div class="footerboven"><a href=""> Over Bilco  </a></div>
-      <div class="footerboven"><a href="">  Kwetsbaarheid melden  </a></div>
+      <div class="footerboven"><a href="">  Beveiligings melding </a></div>
     </div>
     <div id="footerbeneden">
         <div> &copy; 2025 Bilco</div> 
-        <div> &copy; 2025 Bilco</div>
-        <div> &copy; 2025 Bilco</div>
-        <div> &copy; 2025 Bilco</div>
-        <div> &copy; 2025 Bilco</div>
-        <div> &copy; 2025 Bilco</div>
+
     </div>
 </footer>
 

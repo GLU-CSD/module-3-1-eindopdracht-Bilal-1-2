@@ -43,6 +43,13 @@ const sliderValue = document.getElementById("sliderValue");
 // Toon de standaard sliderwaarde met de valuta-indicatie
 sliderValue.innerHTML = "€" + slider.value + (",00");
 
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+// Bereken de totale prijs
+let totalPrice = cart.reduce((totalPrice, item) => totalPrice + parseFloat(item.price), 0);
+document.getElementById("total-price").innerHTML = `€${totalPrice.toFixed(2)}`;
+    
+
 // Bijwerken van de waarde terwijl de slider wordt verplaatst
 slider.oninput = function() {
     sliderValue.innerHTML = "€" + this.value + (",00");
@@ -53,10 +60,11 @@ function updateTotalPrice() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     
     // Bereken de totale prijs
-    let totalPrice = cart.reduce((total, item) => total + parseFloat(item.price), 0);
+    let totalPrice = cart.reduce((totalPrice, item) => totalPrice + parseFloat(item.price), 0);
     
     // Update de winkelwagenweergave
     document.getElementById("total-price").innerHTML = `€${totalPrice.toFixed(2)}`;
+    
 }
 
 function selectScore(element) {

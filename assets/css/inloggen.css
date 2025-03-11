@@ -248,7 +248,7 @@ header {
   max-width: 800px; /* Maximale breedte voor de container */
   display: flex; /* Flexbox layout voor de container */
   background: white; /* Achtergrondkleur voor de container */
-  padding: 20px; /* Padding voor de container */
+
   border-radius: 8px; /* Afgeronde hoeken voor de container */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Schaduw voor de container */
   width: 100%; /* Volledige breedte voor de container */
@@ -270,10 +270,72 @@ header {
   padding-left: 2%; /* Linker padding voor sidebar items */
   text-align: center; /* Center tekst in sidebar items */
 }
+.sidebar1 .A{
+  margin-left: 10%;
+}
+.nutri-score {
+  display: flex; /* Flexbox layout voor de nutri-score */
+  font-family: Arial, sans-serif; /* Lettertype voor de nutri-score */
+  font-weight: bold; /* Vetgedrukte tekst voor de nutri-score */
+  text-align: center; /* Centreer tekst */
+  cursor: pointer; /* Pointer cursor bij hover */
+}
+
+.nutri-score div {
+  width: 35%; /* Breedte voor elk nutri-score item */
+  height: 35%; /* Hoogte voor elk nutri-score item */
+  line-height: 30px; /* Centreer tekst verticaal */
+  color: white; /* Tekstkleur voor nutri-score items */
+  font-size: 20px; /* Tekstgrootte voor nutri-score items */
+  border-radius: 5px; /* Afgeronde hoeken voor nutri-score items */
+  margin-right: 5px; /* Ruimte tussen nutri-score items */
+  margin-left: 3px; /* Geen linkermarge */
+  transition: transform 0.2s, opacity 0.2s; /* Overgangseffecten */
+  justify-items: center; /* Centreer items */
+}
+
+.A { background-color: #008000; } /* Kleur voor score A */
+.B { background-color: #86C440; } /* Kleur voor score B */
+.C { background-color: #F5A623; } /* Kleur voor score C */
+.D { background-color: #DC582A; } /* Kleur voor score D */
+.E { background-color: #D61D1D; } /* Kleur voor score E */
+
+.selected {
+  transform: scale(1.1); /* Schaal effect voor geselecteerde nutri-score */
+  border: 3px solid white; /* Rand voor geselecteerde nutri-score */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Schaduweffect voor geselecteerde nutri-score */
+}
 
 .productenvergelijken {
   margin-left: 20%; /* Linkermarge voor productvergelijking sectie */
   justify-content: center; /* Center inhoud */
+}
+#slidecontainer {
+  background-color: #3fbcff; /* Achtergrondkleur voor de slider container */
+  border: 1px solid #000000; /* Rand voor de slider container */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Kolomlayout */
+  align-content: center; /* Centreer inhoud */
+  justify-content: center; /* Centreer inhoud */
+}
+
+.slider {
+  width: 80%; /* Volledige breedte voor de slider */
+  height: 15px; /* Hoogte voor de slider */
+  border-radius: 5px; /* Afgeronde hoeken voor de slider */
+  background: #d3d3d3; /* Achtergrondkleur voor de slider */
+  outline: none; /* Geen outline */
+  opacity: 0.7; /* Initiële doorzichtigheid voor de slider */
+  -webkit-transition: .2s; /* Overgangseffect voor de slider */
+  transition: opacity .2s; /* Overgangseffect voor de slider */
+  margin-left: 1%;
+  margin-right: 1%;
+  padding: 0%;
+}
+
+#sliderValue {
+  display: flex; /* Flexbox layout voor de slider waarde */
+  justify-content: center; /* Centreer inhoud */
 }
 
 #button1 {
@@ -289,13 +351,35 @@ header {
   transition: background-color 0.3s; /* Overgangseffect voor achtergrondkleur */
   justify-content: center; /* Center inhoud */
 }
+@media (max-width: 380px) {
+  .product {
+    width: 100%; /* 1 product per rij op kleine schermen */
+  }
+  #button1{
+    font-size: 70%;
+    margin-left: 8%;
+  }
+  .nutri-score div{
+    font-size: 16px;
+    margin-left: 0%;
+  }
+#footerboven{
+  font-size: 12px  ;
+}
+.dropbtn{
+font-size: 12px;
+}
+.productDropbtn{
+font-size: 12px;
+}
+}
 
 h2 {
   margin-bottom: 20px; /* Onder marge voor kopjes */
 }
 
 input {
-  width: 100%; /* Volledige breedte voor invoervelden */
+  width: 80%; /* Volledige breedte voor invoervelden */
   padding: 10px; /* Padding voor invoervelden */
   margin: 10px 0; /* Marges voor invoervelden */
   border: 1px solid #ddd; /* Rand voor invoervelden */
@@ -303,7 +387,7 @@ input {
 }
 
 button {
-  width: 100%; /* Volledige breedte voor knoppen */
+  width: 80%; /* Volledige breedte voor knoppen */
   padding: 10px; /* Padding voor knoppen */
   background-color: #007bff; /* Achtergrondkleur voor knoppen */
   border: none; /* Geen rand voor knoppen */
@@ -353,5 +437,5 @@ margin-right: 1%; /* Right margin for footer links */
 #footerbeneden {
 background-color: #3fbcff; /* Background color for the bottom part of the footer */
 display: flex; /* Flexbox layout for the bottom part of the footer */
-justify-content: space-between; /* Space between footer items */
+justify-content:center; /* Space between footer items */
 }

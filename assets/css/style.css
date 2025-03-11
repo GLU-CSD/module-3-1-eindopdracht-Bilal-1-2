@@ -186,7 +186,7 @@ a {
   display: none; /* Verborgen standaard */
   position: absolute; /* Positionering voor dropdown inhoud */
   background-color: #ffffff; /* Achtergrondkleur voor dropdown inhoud */
-  min-width: 160px; /* Minimale breedte voor dropdown inhoud */
+  min-width: 10%; /* Minimale breedte voor dropdown inhoud */
   box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2); /* Schaduweffect */
   z-index: 1; /* Laagvolgorde */
 }
@@ -377,7 +377,7 @@ a {
 
 /* Individuele Product Styling */
 .product {
-  width: calc(33.33% - 20px); /* 3 producten per rij op grote schermen */
+  width: calc(33.33%); /* 3 producten per rij op grote schermen */
   max-width: 200px; /* Maximale breedte voor individuele producten */
   box-shadow: #000000; /* Schaduw voor individuele producten */
   background-color: white; /* Achtergrondkleur voor individuele producten */
@@ -396,14 +396,25 @@ a {
 
 @media (max-width: 768px) {
   .product {
-    width: calc(50% - 20px); /* 2 producten per rij op middelgrote schermen */
+    width: calc(50%); /* 2 producten per rij op middelgrote schermen */
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
   .product {
     width: 100%; /* 1 product per rij op kleine schermen */
   }
+  #button1{
+    font-size: 70%;
+    margin-left: 8%;
+  }
+  .nutri-score div{
+    font-size: 16px;
+    margin-left: 0%;
+  }
+#footerboven{
+  font-size: 4px  ;
+}
 }
 
 .onder {
@@ -435,7 +446,7 @@ a {
   border: none; /* Geen rand voor knoppen */
   padding: 10px 20px; /* Padding voor knoppen */
   border-radius: 10px; /* Afgeronde hoeken voor knoppen */
-  font-size: 16px; /* Tekstgrootte voor knoppen */
+  font-size: 100%; /* Tekstgrootte voor knoppen */
   padding: 3px; /* Padding voor knoppen */
   cursor: pointer; /* Pointer cursor bij hover */
   transition: background-color 0.3s; /* Overgangseffect voor achtergrondkleur */
@@ -466,6 +477,7 @@ footer {
   display: flex; /* Flexbox layout voor het bovenste deel van de footer */
   justify-content: space-between; /* Ruimte tussen footer links */
   background-color: #3fbcff; /* Achtergrondkleur voor het bovenste deel van de footer */
+  font-size: 60%;
 }
 
 .footerboven {
@@ -478,4 +490,5 @@ footer {
   background-color: #3fbcff; /* Achtergrondkleur voor het onderste deel van de footer */
   display: flex; /* Flexbox layout voor het onderste deel van de footer */
   justify-content: space-between; /* Ruimte tussen footer items */
+  font-size: 60%;
 }
