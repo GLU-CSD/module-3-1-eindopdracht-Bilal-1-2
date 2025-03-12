@@ -46,7 +46,7 @@
 
     <!-- Formulier voor het plaatsen van een bestelling -->
     <div id="formulier">
-        <form action="result.html">
+        <form action="result.php" method="post">
             <!-- Sectie voor persoonlijke gegevens -->
             <fieldset>
                 <legend>Bestelformulier</legend>
@@ -59,31 +59,31 @@
                 </select>
                 <!-- Voornaam invoerveld -->
                 <label for="voornaam">Voornaam:</label>
-                <input type="text" name="voornaam" id="voornaam" required>
+                <input type="text" name="voornaam" id="voornaam" placeholder="Voornaam"required>
                 <!-- Tussenvoegsel invoerveld -->
                 <label for="tussenvoegsel">Tussenvoegsel:</label>
-                <input type="text" name="tussenvoegsel" id="tussenvoegsel">
+                <input type="text" name="tussenvoegsel" id="tussenvoegsel" placeholder="Tussenvoegsel">
                 <!-- Achternaam invoerveld -->
                 <label for="achternaam">Achternaam:</label>
-                <input type="text" name="achternaam" id="achternaam" required>
+                <input type="text" name="achternaam" id="achternaam" placeholder="achternaam"  required>
                 <!-- Adresgegevens -->
                 <div style="display: flex; justify-content: space-between;">
-                    <div>
+                    <div style="width:40%;">
                         <label for="adres">Straatnaam:</label>
-                        <input type="text" name="adres" id="adres" required>
-                    </div>
-                    <div>
+                        <input type="text" name="adres" id="adres" placeholder="adres" required>
+                    </div >
+                    <div style="width:30%;">
                         <label for="huisnummer">Huisnummer:</label>
-                        <input type="text" name="huisnummer" id="huisnummer" required>
+                        <input type="text" name="huisnummer" id="huisnummer" placeholder="huisnummer" required>
                     </div>
-                    <div>
+                    <div style="width:30%;">
                         <label for="postcode">Postcode:</label>
-                        <input type="text" name="postcode" id="postcode" required pattern="[0-9]{4}[A-Za-z]{2}" title="Vul een geldige postcode in (bijv. 1234AB)">
+                        <input type="text" name="postcode" id="postcode" placeholder="postcode"  required pattern="[0-9]{4}[A-Za-z]{2}" title="Vul een geldige postcode in (bijv. 1234AB)">
                     </div>
                 </div>
                 <!-- E-mail invoerveld -->
                 <label for="email">E-mail:</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" placeholder="email" required>
                 <!-- Land dropdown -->
                 <label for="land">Land:</label>
                 <select name="land" id="land" required>
@@ -93,7 +93,7 @@
                 </select>
                 <!-- Telefoonnummer invoerveld -->
                 <label for="telefoonnummer">Telefoonnummer:</label>
-                <input type="tel" name="telefoonnummer" id="telefoonnummer" required pattern="\d{10}" title="Vul een geldig telefoonnummer in (minimaal 10 cijfers)">
+                <input type="tel" name="telefoonnummer" id="telefoonnummer" placeholder="telefoonnummer" required pattern="\d{10}" title="Vul een geldig telefoonnummer in (minimaal 10 cijfers)">
                 <!-- Geboortedatum invoerveld -->
                 <label for="gebortedatum">Geboortedatum:</label>
                 <input type="date" name="gebortedatum" id="gebortedatum" required>
@@ -139,7 +139,10 @@
         </div>
     </footer>
 
-    <php? >
+    <?php
+
+
+?>
 
 </body>
 </html>

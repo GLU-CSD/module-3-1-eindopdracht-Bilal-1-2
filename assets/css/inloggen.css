@@ -270,9 +270,7 @@ header {
   padding-left: 2%; /* Linker padding voor sidebar items */
   text-align: center; /* Center tekst in sidebar items */
 }
-.sidebar1 .A{
-  margin-left: 10%;
-}
+
 .nutri-score {
   display: flex; /* Flexbox layout voor de nutri-score */
   font-family: Arial, sans-serif; /* Lettertype voor de nutri-score */
@@ -351,26 +349,43 @@ header {
   transition: background-color 0.3s; /* Overgangseffect voor achtergrondkleur */
   justify-content: center; /* Center inhoud */
 }
-@media (max-width: 380px) {
-  .product {
-    width: 100%; /* 1 product per rij op kleine schermen */
+@media (max-width: 480px) {
+
+ 
+  #logo img {
+    height: 60%; /* Afbeelding neemt volledige hoogte van het logo in */
+  }
+  
+  
+  .dropdown-content{
+    min-width: 100px;
+    font-size: 10px;
+  }
+  .productDropdown-content{
+    min-width: 100px;
+    font-size: 10px;
   }
   #button1{
     font-size: 70%;
     margin-left: 8%;
+    padding:10%;
   }
   .nutri-score div{
     font-size: 16px;
     margin-left: 0%;
   }
 #footerboven{
-  font-size: 12px  ;
+  font-size: 8px  ;
+}
+#footerbeneden{
+  font-size: 8px  ;
 }
 .dropbtn{
-font-size: 12px;
+font-size: 8px;
+padding: 0px;
 }
 .productDropbtn{
-font-size: 12px;
+font-size: 8px;
 }
 }
 
@@ -415,9 +430,9 @@ button:hover {
 
 footer {
 background-color: #3fbcff; /* Background color for the footer */
-height: 100px; /* Fixed height for the footer */
+height: 30px; /* Fixed height for the footer */
 display: flex; /* Flexbox layout for the footer */
-gap: 70%; /* Space between footer items */
+
 flex-direction: column; /* Column layout for the footer */
 
 }

@@ -119,18 +119,18 @@ a {
 #logo img {
   height: 100%; /* Vul de beschikbare ruimte */
 }
-@media (max-width: 380px) {
+@media (max-width: 480px) {
 
   .menuLeft select{
     width: 90%;
-    font-size: 10px;
+    font-size: 65%;
     height: 90%;
   }
 .nav-link{
-  font-size: 10px;
+  font-size: 60%;
 }
 
-#footerboven{
+.footerboven{
   font-size: 60% ;
 }
 #footerbeneden{
@@ -162,8 +162,8 @@ label {
 
 /* Invoervelden met stijl */
 input, select, textarea {
-  width: 100%; /* Volledige breedte */
-  padding: 8px; /* Binnenruimte */
+  width: 99%; /* Volledige breedte */
+  padding: 5.5px; /* Binnenruimte */
   margin-top: 5px; /* Bovenmarge */
   border: 1px solid #ccc; /* Rand */
   border-radius: 5px; /* Afgeronde hoeken */
