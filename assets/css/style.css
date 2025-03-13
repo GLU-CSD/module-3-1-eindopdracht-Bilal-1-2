@@ -412,7 +412,7 @@ a {
 .product {
   width: calc(33.33%); /* 3 producten per rij op grote schermen */
   max-width: 200px; /* Maximale breedte voor individuele producten */
-  box-shadow: #000000; /* Schaduw voor individuele producten */
+  box-shadow: black; /* Schaduw voor individuele producten */
   background-color: white; /* Achtergrondkleur voor individuele producten */
   border-radius: 10px; /* Afgeronde hoeken voor individuele producten */
   padding: 10px; /* Padding voor individuele producten */

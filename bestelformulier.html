@@ -6,7 +6,7 @@
     <title>Bestelformulier</title>
     <!-- Koppeling naar het CSS-bestand voor de stijl van het bestelformulier -->
     <link rel="stylesheet" href="assets/css/bestelformulier.css">
-  <script src="assets/JavaScript/bestelling.js" defer></script> <!-- JavaScript wordt asynchroon geladen -->
+    <script src="assets/JavaScript/bestelling.js" defer></script> <!-- JavaScript wordt asynchroon geladen -->
     
     <!-- Favicon voor de website -->
     <link rel="icon" href="assets/img/favicon.ico" sizes="any">
@@ -46,66 +46,85 @@
 
     <!-- Formulier voor het plaatsen van een bestelling -->
     <div id="formulier">
-        <form action="result.php" method="post">
+        <form action="result.php" method="post" onsubmit="return validateForm()">
             <!-- Sectie voor persoonlijke gegevens -->
             <fieldset>
                 <legend>Bestelformulier</legend>
                 <!-- Aanhef dropdown -->
                 <label for="aanhef">Aanhef:</label>
-                <select name="aanhef" id="aanhef" required>
+                <select name="aanhef" id="aanhef" onfocus="resetAlert()">
                     <option value="" disabled selected>Kies een optie</option>
                     <option value="Dhr">Dhr.</option>
                     <option value="Mevr">Mevr.</option>
                 </select>
+                <div id="alertBijAanhef" style="color: red"></div>
+                
                 <!-- Voornaam invoerveld -->
-                <label  for="voornaam">Voornaam:</label>
-                <input  type="text" name="voornaam" id="voornaam" required>
+                <label for="voornaam">Voornaam:</label>
+                <input type="text" name="voornaam" id="voornaam" placeholder="Voornaam" onfocus="resetAlert()">
+                <div id="alertBijNaam" style="color: red"></div>
+                
                 <!-- Tussenvoegsel invoerveld -->
                 <label for="tussenvoegsel">Tussenvoegsel:</label>
-                <input type="text" name="tussenvoegsel" id="tussenvoegsel">
+                <input type="text" name="tussenvoegsel" id="tussenvoegsel" placeholder="Tussenvoegsel" onfocus="resetAlert()">
+                <div id="alertBijTussenvoegsel" style="color: red"></div>
+                
                 <!-- Achternaam invoerveld -->
                 <label for="achternaam">Achternaam:</label>
-                <input type="text" name="achternaam" id="achternaam" required>
+                <input type="text" name="achternaam" id="achternaam" placeholder="achternaam" onfocus="resetAlert()">
+                <div id="alertBijAchternaam" style="color: red"></div>
+                
                 <!-- Adresgegevens -->
-                <div  id="woonplaats" >
-                    <div style="width: 40%;" >
+                <div style="display: flex; justify-content: space-between;">
+                    <div style="width:40%;">
                         <label for="adres">Straatnaam:</label>
-                        <input type="text" name="adres" id="adres" required>
+                        <input type="text" name="adres" id="adres" placeholder="adres" onfocus="resetAlert()">
+                        <div id="alertBijAdres" style="color: red"></div>
+                    </div >
+                    <div style="width:30%;">
+                        <label for="huisnummer">Huisnummer:</label>
+                        <input type="text" name="huisnummer" id="huisnummer" placeholder="huisnummer" onfocus="resetAlert()">
+                        <div id="alertBijHuisnummer" style="color: red"></div>
                     </div>
-                    <div style="width: 35%;" > 
-                        <label for="huisnummer" >Huisnummer:</label>
-                        <input type="text"name="huisnummer" id="huisnummer" required>
-                    </div>
-                    <div style="width: 20%;">
+                    <div style="width:30%;">
                         <label for="postcode">Postcode:</label>
-                        <input type="text" name="postcode" id="postcode" required pattern="[0-9]{4}[A-Za-z]{2}" title="Vul een geldige postcode in (bijv. 1234AB)">
+                        <input type="text" name="postcode" id="postcode" placeholder="postcode" pattern="[0-9]{4}[A-Za-z]{2}" title="Vul een geldige postcode in (bijv. 1234AB)" onfocus="resetAlert()">
+                        <div id="alertBijPostcode" style="color: red"></div>
                     </div>
                 </div>
+                
                 <!-- E-mail invoerveld -->
                 <label for="email">E-mail:</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" placeholder="email" onfocus="resetAlert()">
+                <div id="alertBijEmail" style="color: red"></div>
+                
                 <!-- Land dropdown -->
                 <label for="land">Land:</label>
-                <select name="land" id="land" required>
+                <select name="land" id="land" onfocus="resetAlert()">
                     <option value="" disabled selected>Selecteer een land</option>
                     <option value="Nederland">Nederland</option>
                     <option value="Belgie">België</option>
                 </select>
+                <div id="alertBijLand" style="color: red"></div>
+                
                 <!-- Telefoonnummer invoerveld -->
                 <label for="telefoonnummer">Telefoonnummer:</label>
-                <input type="tel" name="telefoonnummer" id="telefoonnummer" required pattern="\d{10}" title="Vul een geldig telefoonnummer in (minimaal 10 cijfers)">
+                <input type="tel" name="telefoonnummer" id="telefoonnummer" placeholder="telefoonnummer" pattern="\d{10}" title="Vul een geldig telefoonnummer in (minimaal 10 cijfers)" onfocus="resetAlert()">
+                <div id="alertBijTelefoonnummer" style="color: red"></div>
+                
                 <!-- Geboortedatum invoerveld -->
                 <label for="gebortedatum">Geboortedatum:</label>
-                <input type="date" name="gebortedatum" id="gebortedatum" required>
+                <input type="date" name="gebortedatum" id="gebortedatum" onfocus="resetAlert()">
+                <div id="alertBijGebortedatum" style="color: red"></div>
             </fieldset>
-
+    
             <!-- Sectie voor de bestelling -->
             <fieldset>
                 <legend>Jouw bestelling</legend>
                 <!-- Lijst met bestelde producten -->
                 <ul id="order-list"></ul>
             </fieldset>
-
+    
             <!-- Sectie voor opmerkingen -->
             <fieldset>
                 <legend>Opmerkingen</legend>
@@ -135,11 +154,7 @@
             <div> &copy; 2025 Bilco</div>
             <div> &copy; 2025 Bilco</div>
             <div> &copy; 2025 Bilco</div>
-
         </div>
     </footer>
-
-    <php? >
-
 </body>
 </html>

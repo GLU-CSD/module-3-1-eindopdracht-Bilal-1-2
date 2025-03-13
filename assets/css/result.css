@@ -1,0 +1,190 @@
+/* Dit CSS-bestand bevat stijlen voor de algemene layout van een webpagina, inclusief de header, navigatiebalk, dropdown-menu's, zoekbalk, productweergave, footer en andere elementen. */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Achtergrondkleur voor de body */
+  }
+  
+  header {
+    background-color: #3fbcff; /* Achtergrondkleur voor de header */
+  }
+  
+  a {
+    color: rgb(0, 0, 0); /* Tekstkleur voor links */
+    text-decoration: none; /* Verwijder onderstreping van links */
+  }
+  
+  .boven {
+    display: flex;
+    justify-content: space-between; /* Ruimte tussen linker en rechter menu */
+    align-items: center;
+  }
+  
+  .boven .menuLeft {
+    padding: 10px;
+    display: flex;
+    gap: 8px; /* Ruimte tussen items in het linker menu */
+    width: 50%;
+  }
+  
+  .boven .menuRight {
+    display: flex;
+    gap: 8px; /* Ruimte tussen items in het rechter menu */
+    padding-right: 20px;
+    padding-top: 10px;
+    margin-right: 0%;
+    width: 50%;
+  }
+  
+  .navbar {
+    justify-content: center; /* Centreer de navigatielinks */
+    display: flex;
+    width: 100%;
+  }
+  
+  .nav-link {
+    font-weight: bold; /* Vetgedrukte tekst voor navigatielinks */
+    font-size: 12px; /* Tekstgrootte voor navigatielinks */
+    text-transform: uppercase; /* Hoofdletters voor navigatielinks */
+    text-decoration: none; /* Verwijder onderstreping van navigatielinks */
+    color: #031D44; /* Tekstkleur voor navigatielinks */
+    padding: 1%; /* Padding rond navigatielinks */
+    margin-right: 2%; /* Marge rond navigatielinks */
+    display: inline-block; /* Toon links inline */
+    position: relative; /* Positie voor hover-effecten */
+    opacity: 0.75; /* Initiële doorzichtigheid voor navigatielinks */
+  }
+  
+  .nav-link:hover {
+    opacity: 1; /* Volledige doorzichtigheid bij hover */
+  }
+  
+  .nav-link::before {
+    transition: 300ms; /* Overgangseffect voor hover */
+    height: 5px; /* Hoogte van het hover-effect */
+    content: ""; /* Lege inhoud voor het pseudo-element */
+    position: absolute; /* Positionering voor het hover-effect */
+    background-color: #031D44; /* Kleur van het hover-effect */
+  }
+  
+  .nav-link-ltr::before {
+    width: 0%; /* Initiële breedte van het hover-effect */
+    bottom: 0px; /* Positie aan de onderkant */
+  }
+  
+  .nav-link-ltr:hover::before {
+    width: 100%; /* Volledige breedte bij hover */
+  }
+  
+  .nav-link-fade-up::before {
+    width: 100%; /* Volledige breedte voor fade-up effect */
+    bottom: 5px; /* Positie aan de onderkant */
+    opacity: 0; /* Initiële doorzichtigheid voor fade-up effect */
+  }
+  
+  .nav-link-fade-up:hover::before {
+    bottom: 10px; /* Beweeg omhoog bij hover */
+    opacity: 1; /* Volledige doorzichtigheid bij hover */
+  }
+  
+  .nav-link-grow-up::before {
+    height: 0%; /* Initiële hoogte voor grow-up effect */
+    width: 100%; /* Volledige breedte voor grow-up effect */
+    bottom: 0px; /* Positie aan de onderkant */
+  }
+  
+  .nav-link-grow-up:hover::before {
+    height: 10px; /* Hoogte bij hover */
+  }
+  
+  .onder {
+    display: flex;
+    gap: 10px; /* Ruimte tussen items in de 'onder' sectie */
+    justify-content: space-between; /* Ruimte tussen items */
+    align-items: center; /* Centreer items verticaal */
+  }
+  
+  #zoek {
+    display: flex;
+    gap: 5px; /* Ruimte tussen zoekbalk en knop */
+    padding: 10px; /* Padding voor de zoekbalk */
+    border: 1px solid #ccc; /* Rand voor de zoekbalk */
+    border-radius: 5px; /* Afgeronde hoeken voor de zoekbalk */
+    background-color: #f9f9f9; /* Achtergrondkleur voor de zoekbalk */
+    width: 40%; /* Breedte van de zoekbalk */
+  }
+  
+  #logo {
+    height: 50px; /* Hoogte voor het logo */
+  }
+  
+  #logo img {
+    height: 100%; /* Afbeelding neemt volledige hoogte van het logo in */
+  }
+
+  #container {
+    max-width: 800px;
+    width: 100%; /* Volledige breedte voor de container */
+    background-color: rgba(0, 255, 255, 0); /* Transparante achtergrond */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Centreer inhoud */
+    box-sizing: border-box; /* Box-sizing model */
+  }
+
+  @media (max-width: 480px) {
+
+ 
+ 
+    
+
+    
+
+  #footerboven{
+    font-size: 8px  ;
+  }
+  #footerbeneden{
+    font-size: 8px  ;
+  }
+
+  }
+  
+  .onder {
+    display: flex;
+    gap: 10px; /* Ruimte tussen items in de 'onder' sectie */
+    justify-content: space-between; /* Ruimte tussen items */
+    align-items: center; /* Centreer items verticaal */
+  }
+  footer {
+   
+    background-color: #3fbcff; /* Achtergrondkleur voor de footer */
+    height: 50px; /* Vaste hoogte voor de footer */
+    display: flex; /* Flexbox layout voor de footer */
+    gap: 70%; /* Ruimte tussen footer items */
+    flex-direction: column; /* Kolomlayout voor de footer */
+  }
+  
+  #footerboven {
+    display: flex; /* Flexbox layout voor het bovenste deel van de footer */
+    justify-content: space-between; /* Ruimte tussen footer links */
+    background-color: #3fbcff; /* Achtergrondkleur voor het bovenste deel van de footer */
+    font-size: 60%;
+  }
+  
+  .footerboven {
+    width: 18%; /* Breedte voor footer links */
+    margin-left: 1%; /* Linkermarge voor footer links */
+    margin-right: 1%; /* Rechtermarge voor footer links */
+  }
+  
+  #footerbeneden {
+    background-color: #3fbcff; /* Achtergrondkleur voor het onderste deel van de footer */
+    display: flex; /* Flexbox layout voor het onderste deel van de footer */
+    justify-content: center; /* Ruimte tussen footer items */
+    font-size: 60%;
+    margin-bottom: 1%;
+  }
