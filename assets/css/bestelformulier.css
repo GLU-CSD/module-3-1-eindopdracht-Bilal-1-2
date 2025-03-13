@@ -110,6 +110,12 @@ a {
   width: 50%; /* Breedte */
 }
 
+#woonplaats{
+  display: flex;
+ justify-content: space-between;
+
+}
+
 /* Stijlen voor het logo */
 #logo {
   height: 50px; /* Hoogte van het logo */
@@ -120,6 +126,14 @@ a {
   height: 100%; /* Vul de beschikbare ruimte */
 }
 @media (max-width: 480px) {
+ label{
+  font-size: 14px;
+
+ }
+ 
+ input{
+  font-size: 12px;
+ }
 
   .menuLeft select{
     width: 90%;

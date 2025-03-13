@@ -210,15 +210,30 @@ header {
 }
 
 #winkelmand {
-  background-color: #4c2cff56; /* Achtergrondkleur voor de winkelmand knop */
+  background-color: #4c2cff56; /* Achtergrondkleur voor de winkelwagenknop */
   color: white; /* Tekstkleur voor de knop */
   border: none; /* Geen rand voor de knop */
-  padding: 10px 20px; /* Padding voor de knop */
+  padding: 9px ; /* Padding voor de knop */
+  margin-right: 1%;
   border-radius: 10px; /* Afgeronde hoeken voor de knop */
-  font-size: 16px; /* Lettergrootte voor de knop */
-  cursor: pointer; /* Handcursor bij hover */
+  font-size: 16px; /* Tekstgrootte voor de knop */
+  cursor: pointer; /* Pointer cursor bij hover */
   transition: background-color 0.3s; /* Overgangseffect voor achtergrondkleur */
-  justify-content: center; /* Center inhoud */
+  justify-content: center; /* Centreer inhoud */
+ display: flex;
+ flex-direction: column;
+  width: 10%;
+ 
+}
+#bagimg{
+  display: flex;
+  justify-content: center;
+}
+#bagimg img {
+  display: flex; 
+  justify-content: center;
+  height: 50%;
+  width: 50%;
 }
 
 #winkelmand:hover {
@@ -353,7 +368,7 @@ header {
 
  
   #logo img {
-    height: 60%; /* Afbeelding neemt volledige hoogte van het logo in */
+    height: 70%; /* Afbeelding neemt volledige hoogte van het logo in */
   }
   
   
@@ -365,14 +380,16 @@ header {
     min-width: 100px;
     font-size: 10px;
   }
+ 
   #button1{
     font-size: 70%;
     margin-left: 8%;
     padding:10%;
   }
+  
   .nutri-score div{
     font-size: 16px;
-    margin-left: 0%;
+    
   }
 #footerboven{
   font-size: 8px  ;
@@ -381,11 +398,11 @@ header {
   font-size: 8px  ;
 }
 .dropbtn{
-font-size: 8px;
+font-size: 12px;
 padding: 0px;
 }
 .productDropbtn{
-font-size: 8px;
+font-size: 12px;
 }
 }
 

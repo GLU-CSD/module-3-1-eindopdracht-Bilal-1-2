@@ -49,12 +49,12 @@ a {
 
 .nav-link {
   font-weight: bold; /* Vetgedrukte tekst voor navigatielinks */
-  font-size: 13px; /* Tekstgrootte voor navigatielinks */
+  font-size: 12px; /* Tekstgrootte voor navigatielinks */
   text-transform: uppercase; /* Hoofdletters voor navigatielinks */
   text-decoration: none; /* Verwijder onderstreping van navigatielinks */
   color: #031D44; /* Tekstkleur voor navigatielinks */
   padding: 1%; /* Padding rond navigatielinks */
-  margin: 1%; /* Marge rond navigatielinks */
+  margin-right: 2%; /* Marge rond navigatielinks */
   display: inline-block; /* Toon links inline */
   position: relative; /* Positie voor hover-effecten */
   opacity: 0.75; /* Initiële doorzichtigheid voor navigatielinks */
@@ -215,7 +215,8 @@ a {
   background-color: #4c2cff56; /* Achtergrondkleur voor de winkelwagenknop */
   color: white; /* Tekstkleur voor de knop */
   border: none; /* Geen rand voor de knop */
-  padding: 10px ; /* Padding voor de knop */
+  padding: 9px ; /* Padding voor de knop */
+  margin-right: 1%;
   border-radius: 10px; /* Afgeronde hoeken voor de knop */
   font-size: 16px; /* Tekstgrootte voor de knop */
   cursor: pointer; /* Pointer cursor bij hover */
@@ -226,10 +227,18 @@ a {
   width: 10%;
  
 }
-#winkelmand img{
-  width: 30%;
-
+#bagimg{
+  display: flex;
+  justify-content: center;
 }
+#bagimg img {
+  display: flex; 
+  justify-content: center;
+  height: 50%;
+  width: 50%;
+}
+
+
 .cart-button{
   justify-content: center;
   display: flex;
@@ -238,11 +247,12 @@ a {
   
 }
 
-
-
-
 #winkelmand:hover {
   background-color: #0056b3; /* Achtergrondkleur bij hover */
+}
+
+#total-price{
+  font-size: 13px;
 }
 
 #cart-message {
@@ -264,13 +274,7 @@ a {
   display: none; /* Klasse om elementen te verbergen */
 }
 
-#container {
-  width: 100%; /* Volledige breedte voor de container */
-  background-color: rgba(0, 255, 255, 0); /* Transparante achtergrond */
-  display: flex; /* Flexbox layout */
-  justify-content: center; /* Centreer inhoud */
-  box-sizing: border-box; /* Box-sizing model */
-}
+
 
 .sidebar {
   margin-right: 1%; /* Rechtermarge voor de sidebar */
@@ -364,7 +368,36 @@ a {
   transition: background-color 0.3s; /* Overgangseffect voor achtergrondkleur */
   justify-content: center; /* Centreer inhoud */
 }
+@media (max-width: 768px) {
+  .product {
+    width: calc(50%); /* 2 producten per rij op middelgrote schermen */
+  }
+}
 
+@media (max-width: 480px) {
+  .product {
+    width: 100%; /* 1 product per rij op kleine schermen */
+  }
+  #button1{
+    font-size: 14px;
+    margin-left: 8%;
+  }
+  .nutri-score div{
+    font-size: 16px;
+    margin-left: 0%;
+  }
+#footerboven{
+  font-size: 4px  ;
+  justify-content: center;
+}
+}
+#container {
+  width: 100%; /* Volledige breedte voor de container */
+  background-color: rgba(0, 255, 255, 0); /* Transparante achtergrond */
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Centreer inhoud */
+  box-sizing: border-box; /* Box-sizing model */
+}
 /* Product Grid */
 #products {
   display: flex; /* Flexbox layout voor producten */
@@ -394,28 +427,7 @@ a {
   transform: scale(1.03); /* Schaal effect bij hover voor producten */
 }
 
-@media (max-width: 768px) {
-  .product {
-    width: calc(50%); /* 2 producten per rij op middelgrote schermen */
-  }
-}
 
-@media (max-width: 380px) {
-  .product {
-    width: 100%; /* 1 product per rij op kleine schermen */
-  }
-  #button1{
-    font-size: 70%;
-    margin-left: 8%;
-  }
-  .nutri-score div{
-    font-size: 16px;
-    margin-left: 0%;
-  }
-#footerboven{
-  font-size: 4px  ;
-}
-}
 
 .onder {
   display: flex; /* Flexbox layout voor de 'onder' sectie */
@@ -467,7 +479,7 @@ a {
 
 footer {
   background-color: #3fbcff; /* Achtergrondkleur voor de footer */
-  height: 100px; /* Vaste hoogte voor de footer */
+  height: 50px; /* Vaste hoogte voor de footer */
   display: flex; /* Flexbox layout voor de footer */
   gap: 70%; /* Ruimte tussen footer items */
   flex-direction: column; /* Kolomlayout voor de footer */
@@ -489,6 +501,7 @@ footer {
 #footerbeneden {
   background-color: #3fbcff; /* Achtergrondkleur voor het onderste deel van de footer */
   display: flex; /* Flexbox layout voor het onderste deel van de footer */
-  justify-content: space-between; /* Ruimte tussen footer items */
+  justify-content: center; /* Ruimte tussen footer items */
   font-size: 60%;
+  margin-bottom: 1%;
 }

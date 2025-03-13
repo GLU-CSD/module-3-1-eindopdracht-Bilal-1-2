@@ -3,69 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    hchhc
+    <title>Formulier Verwerking</title>
 </head>
 <body>
 <?php
-$aanhef = $_POST['aanhef'];
-$voornaam = $_POST['voornaam'];
-$tussenvoegsel=$_post['tussenvoegsel'];
-    $achternaam = $_POST['achternaam'];
-    $adres = $_POST['adres'];   
-    $huisnummer = $_POST['huisnummer'];   
-    $postcode = $_POST['postcode'];   
-    $email = $_POST['email'];
-    $land = $_POST['land'];   
-    $telefoonnummer = $_POST['telefoonnummer'];   
-    $gebortedatum = $_POST['gebortedatum'];   
-    
-    
-    echo ("<br>aanhef: " . $aanhef);
-    echo ("<br>Voornaam: " . $voornaam);
-    echo ("<br>Achternaam: " . $achternaam);
-    echo ("<br>tussenvoegsel: " . $tussenvoegsel);
-    echo ("<br>adres: " . $adres);
-    echo ("<br>huisnummer: " . $huisnummer);
-    echo ("<br>postcode: " . $postcode);
-    echo ("<br>Email: " . $email);
-    echo ("<br>land: " . $land);
-    echo ("<br>telefoonnummer: " . $telefoonnummer);
-    echo ("<br>gebortedatum: " . $gebortedatum);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Veilig invoer opschonen om XSS te voorkomen
+    function sanitize_input($data) {
+        return htmlspecialchars(stripslashes(trim($data)));
+    }
 
+    // Formuliergegevens ophalen en controleren
+    $aanhef = sanitize_input($_POST['aanhef'] ?? '');
+    $voornaam = sanitize_input($_POST['voornaam'] ?? '');
+    $tussenvoegsel = sanitize_input($_POST['tussenvoegsel'] ?? '');
+    $achternaam = sanitize_input($_POST['achternaam'] ?? '');
+    $adres = sanitize_input($_POST['adres'] ?? '');
+    $huisnummer = sanitize_input($_POST['huisnummer'] ?? '');
+    $postcode = sanitize_input($_POST['postcode'] ?? '');
+    $email = sanitize_input($_POST['email'] ?? '');
+    $land = sanitize_input($_POST['land'] ?? '');
+    $telefoonnummer = sanitize_input($_POST['telefoonnummer'] ?? '');
+    $gebortedatum = sanitize_input($_POST['gebortedatum'] ?? '');
 
-    //----------- database connection
+    echo "<br>Aanhef: $aanhef";
+    echo "<br>Voornaam: $voornaam";
+    echo "<br>Tussenvoegsel: $tussenvoegsel";
+    echo "<br>Achternaam: $achternaam";
+    echo "<br>Adres: $adres";
+    echo "<br>Huisnummer: $huisnummer";
+    echo "<br>Postcode: $postcode";
+    echo "<br>Email: $email";
+    echo "<br>Land: $land";
+    echo "<br>Telefoonnummer: $telefoonnummer";
+    echo "<br>Geboortedatum: $gebortedatum";
 
+    // Databaseverbinding
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "formphp";
+    $dbname = "bilco";
 
-    // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Check connection
+    // Verbinding controleren
     if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+        die("Verbinding mislukt: " . $conn->connect_error);
     }
-    echo "<br><br>Connected successfully";
+    echo "<br><br>Verbinding succesvol!";
 
-    //------------ insert data into database
-
-    $sql = "INSERT INTO persoonsgegevens (voornaam, achternaam, email)
-VALUES ('" . $voornaam . "', '" . $achternaam . "', '" . $email . "')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-    $conn->close();
-
-
-
-    ?>
+    // Veilige SQL-query met prepared statements
+    $sql = "INSERT INTO persoonsgegevens (aanhef, voornaam, tussenvoegsel, achternaam, adres, huisnummer, postcode, email, land, telefoonnummer, gebortedatum) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sssssssssss", $aanhef, $voornaam, $tussenvoegsel, $achternaam, $adres, $huisnummer, $postcode, $email, $land, $telefoonnummer, $gebortedatum);
+
+    if ($stmt->execute()) {
+        echo "<br>Nieuw record succesvol aangemaakt!";
+    } else {
+        echo "<br>Fout bij het invoegen: " . $stmt->error;
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+?>
 </body>
 </html>

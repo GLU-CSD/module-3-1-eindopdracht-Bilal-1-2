@@ -46,7 +46,7 @@
 
     <!-- Formulier voor het plaatsen van een bestelling -->
     <div id="formulier">
-        <form action="result.html">
+        <form action="result.php" method="post">
             <!-- Sectie voor persoonlijke gegevens -->
             <fieldset>
                 <legend>Bestelformulier</legend>
@@ -58,8 +58,8 @@
                     <option value="Mevr">Mevr.</option>
                 </select>
                 <!-- Voornaam invoerveld -->
-                <label for="voornaam">Voornaam:</label>
-                <input type="text" name="voornaam" id="voornaam" required>
+                <label  for="voornaam">Voornaam:</label>
+                <input  type="text" name="voornaam" id="voornaam" required>
                 <!-- Tussenvoegsel invoerveld -->
                 <label for="tussenvoegsel">Tussenvoegsel:</label>
                 <input type="text" name="tussenvoegsel" id="tussenvoegsel">
@@ -67,16 +67,16 @@
                 <label for="achternaam">Achternaam:</label>
                 <input type="text" name="achternaam" id="achternaam" required>
                 <!-- Adresgegevens -->
-                <div style="display: flex; justify-content: space-between;">
-                    <div>
+                <div  id="woonplaats" >
+                    <div style="width: 40%;" >
                         <label for="adres">Straatnaam:</label>
                         <input type="text" name="adres" id="adres" required>
                     </div>
-                    <div>
-                        <label for="huisnummer">Huisnummer:</label>
-                        <input type="text" name="huisnummer" id="huisnummer" required>
+                    <div style="width: 35%;" > 
+                        <label for="huisnummer" >Huisnummer:</label>
+                        <input type="text"name="huisnummer" id="huisnummer" required>
                     </div>
-                    <div>
+                    <div style="width: 20%;">
                         <label for="postcode">Postcode:</label>
                         <input type="text" name="postcode" id="postcode" required pattern="[0-9]{4}[A-Za-z]{2}" title="Vul een geldige postcode in (bijv. 1234AB)">
                     </div>
