@@ -185,7 +185,7 @@ input, select, textarea {
 
 /* Stijlen voor buttons */
 input[type="submit"], input[type="reset"] {
-  background-color: #4D365B; /* Kleur */
+  background-color: #369ad0; /* Kleur */
   color: white; /* Tekstkleur */
   padding: 10px;
   border: none;
