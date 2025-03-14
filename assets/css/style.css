@@ -148,13 +148,21 @@ a {
   display: none; /* Verborgen standaard */
   position: absolute; /* Positionering voor dropdown inhoud */
   background-color: #ffffff; /* Achtergrondkleur voor dropdown inhoud */
-  min-width: 160px; /* Minimale breedte voor dropdown inhoud */
+  min-width: 10%; /* Minimale breedte voor dropdown inhoud */
   box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2); /* Schaduweffect */
   z-index: 1; /* Laagvolgorde */
 }
 
+.productDropdown-content a:hover {
+  background-color: #ffffff00; /* Achtergrondkleur bij hover */
+}
+
 .productDropdown:hover .productDropdown-content {
   display: block; /* Toon dropdown inhoud bij hover */
+}
+
+.productDropdown:hover .productDropbtn {
+  background-color: #ffffff00; /* Achtergrondkleur bij hover */
 }
 
 .productDropdown-content a {
@@ -253,6 +261,8 @@ a {
 
 #total-price{
   font-size: 13px;
+  display: flex;
+  justify-content: center;
 }
 
 #cart-message {

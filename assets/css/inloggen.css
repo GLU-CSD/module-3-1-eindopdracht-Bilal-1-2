@@ -129,76 +129,83 @@ header {
   background-color: #ffffff00; /* Transparante achtergrond */
   color: #000000; /* Tekstkleur voor de knop */
   padding: 16px; /* Padding voor de knop */
-  font-size: 16px; /* Lettergrootte voor de knop */
+  font-size: 16px; /* Tekstgrootte voor de knop */
   border: none; /* Geen rand voor de knop */
 }
 
 .productDropdown {
-  border-radius: 10px; /* Afgeronde hoeken voor de product dropdown */
+  border-radius: 10px; /* Afgeronde hoeken voor de dropdown */
   background-color: #ffffff00; /* Transparante achtergrond */
-  position: relative; /* Relatieve positionering voor de dropdown */
-  display: inline-block; /* Inline-block weergave voor de dropdown */
+  position: relative; /* Positionering voor de dropdown */
+  display: inline-block; /* Toon inline */
 }
 
 .productDropdown-content {
-  border-radius: 10px; /* Afgeronde hoeken voor de dropdown inhoud */
+  border-radius: 10px; /* Afgeronde hoeken voor dropdown inhoud */
   display: none; /* Verborgen standaard */
-  position: absolute; /* Absolute positionering voor de dropdown inhoud */
-  background-color: #ffffff; /* Achtergrondkleur voor de dropdown inhoud */
-  min-width: 160px; /* Minimale breedte voor de dropdown inhoud */
-  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2); /* Schaduw voor de dropdown inhoud */
-  z-index: 1; /* Laagvolgorde voor de dropdown inhoud */
+  position: absolute; /* Positionering voor dropdown inhoud */
+  background-color: #ffffff; /* Achtergrondkleur voor dropdown inhoud */
+  min-width: 10%; /* Minimale breedte voor dropdown inhoud */
+  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2); /* Schaduweffect */
+  z-index: 1; /* Laagvolgorde */
+}
+
+.productDropdown-content a:hover {
+  background-color: #ffffff00; /* Achtergrondkleur bij hover */
 }
 
 .productDropdown:hover .productDropdown-content {
   display: block; /* Toon dropdown inhoud bij hover */
 }
 
-.productDropdown-content a {
-  border-radius: 10px; /* Afgeronde hoeken voor links in de dropdown */
-  color: black; /* Tekstkleur voor links in de dropdown */
-  padding: 12px 16px; /* Padding voor links in de dropdown */
-  text-decoration: none; /* Geen onderstreping voor links in de dropdown */
-  display: block; /* Blokweergave voor links in de dropdown */
+.productDropdown:hover .productDropbtn {
+  background-color: #ffffff00; /* Achtergrondkleur bij hover */
 }
 
-/* Dropdown voor profiel */
+.productDropdown-content a {
+  border-radius: 10px; /* Afgeronde hoeken voor dropdown links */
+  color: black; /* Tekstkleur voor dropdown links */
+  padding: 12px 16px; /* Padding voor dropdown links */
+  text-decoration: none; /* Verwijder onderstreping van dropdown links */
+  display: block; /* Toon links als blokelementen */
+}
+
 .dropbtn {
-  border-radius: 5px; /* Afgeronde hoeken voor de profiel dropdown knop */
+  border-radius: 5px; /* Afgeronde hoeken voor de dropdown knop */
   background-color: #ffffff00; /* Transparante achtergrond */
   color: #000000; /* Tekstkleur voor de knop */
   padding: 16px; /* Padding voor de knop */
-  font-size: 16px; /* Lettergrootte voor de knop */
+  font-size: 16px; /* Tekstgrootte voor de knop */
   border: none; /* Geen rand voor de knop */
 }
 
 .dropdown {
   border-radius: 10px; /* Afgeronde hoeken voor de dropdown */
   background-color: #ffffff00; /* Transparante achtergrond */
-  position: relative; /* Relatieve positionering voor de dropdown */
-  display: inline-block; /* Inline-block weergave voor de dropdown */
+  position: relative; /* Positionering voor de dropdown */
+  display: inline-block; /* Toon inline */
 }
 
 .dropdown-content {
-  border-radius: 10px; /* Afgeronde hoeken voor de dropdown inhoud */
+  border-radius: 10px; /* Afgeronde hoeken voor dropdown inhoud */
   display: none; /* Verborgen standaard */
-  position: absolute; /* Absolute positionering voor de dropdown inhoud */
-  background-color: #ffffff; /* Achtergrondkleur voor de dropdown inhoud */
-  min-width: 160px; /* Minimale breedte voor de dropdown inhoud */
-  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2); /* Schaduw voor de dropdown inhoud */
-  z-index: 1; /* Laagvolgorde voor de dropdown inhoud */
+  position: absolute; /* Positionering voor dropdown inhoud */
+  background-color: #ffffff; /* Achtergrondkleur voor dropdown inhoud */
+  min-width: 10%; /* Minimale breedte voor dropdown inhoud */
+  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2); /* Schaduweffect */
+  z-index: 1; /* Laagvolgorde */
 }
 
 .dropdown-content a {
-  border-radius: 10px; /* Afgeronde hoeken voor links in de dropdown */
-  color: black; /* Tekstkleur voor links in de dropdown */
-  padding: 12px 16px; /* Padding voor links in de dropdown */
-  text-decoration: none; /* Geen onderstreping voor links in de dropdown */
-  display: block; /* Blokweergave voor links in de dropdown */
+  border-radius: 10px; /* Afgeronde hoeken voor dropdown links */
+  color: black; /* Tekstkleur voor dropdown links */
+  padding: 12px 16px; /* Padding voor dropdown links */
+  text-decoration: none; /* Verwijder onderstreping van dropdown links */
+  display: block; /* Toon links als blokelementen */
 }
 
 .dropdown-content a:hover {
-  background-color: #ffffff00; /* Achtergrondkleur bij hover voor links in de dropdown */
+  background-color: #ffffff00; /* Achtergrondkleur bij hover */
 }
 
 .dropdown:hover .dropdown-content {
@@ -206,8 +213,10 @@ header {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #ffffff00; /* Transparante achtergrond bij hover voor de knop */
+  background-color: #ffffff00; /* Achtergrondkleur bij hover */
 }
+
+
 
 #winkelmand {
   background-color: #4c2cff56; /* Achtergrondkleur voor de winkelwagenknop */
@@ -232,12 +241,16 @@ header {
 #bagimg img {
   display: flex; 
   justify-content: center;
-  height: 50%;
-  width: 50%;
+  height: 20%;
+  width: 20%;
 }
 
 #winkelmand:hover {
   background-color: #0056b3; /* Achtergrondkleur bij hover voor de winkelmand knop */
+}
+#total-price{
+  display: flex;
+  justify-content: center;
 }
 
 #cart-message {
