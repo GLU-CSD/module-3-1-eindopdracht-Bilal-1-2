@@ -20,6 +20,7 @@
             </select>
           </div>
         </div>
+        
         <div class="menuRight"><!-- Rechter navigatiebalk -->
           <div class="navbar">
             <div class="nav-link nav-link-ltr"><a href=""> Mijn Account </a></div>
@@ -28,33 +29,14 @@
           </div>
         </div>
       </div>
+
       <div class="onder">
         <div id="logo"><!-- Website logo -->
           <a href="index.html"><img src="assets/img/logo.png" alt="Bilco logo"></a>
         </div>
-
-
         <input type="text" value="" placeholder="Search" id="zoek" autofocus>
-
-      
-
-        
-
-
       </div>
     </header>
-
-
-
-
-
-
-
-
-
-
-
-
 
 <div>
 <?php

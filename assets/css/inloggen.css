@@ -1,4 +1,3 @@
-
 body {
   display: flex; /* Flexbox layout voor de body */
   justify-content: center; /* Center inhoud horizontaal */
@@ -10,74 +9,73 @@ body {
 }
 
 a {
-color: rgb(0, 0, 0); /* Link color */
-text-decoration: none; /* Removes underline from links */
+  color: rgb(0, 0, 0); /* Link color */
+  text-decoration: none; /* Removes underline from links */
 }
 
 .navbar {
-justify-content: center; /* Center the navigation links */
-display: flex;
-width: 100%;
+  justify-content: center; /* Center the navigation links */
+  display: flex;
+  width: 100%;
 }
 
 .nav-link {
-font-weight: bold; /* Bold text for navigation links */
-font-size: 13px; /* Font size for navigation links */
-text-transform: uppercase; /* Uppercase text for navigation links */
-text-decoration: none; /* Removes underline from navigation links */
-color: #031D44; /* Color for navigation links */
-padding: 1%; /* Padding around navigation links */
-margin: 1%; /* Margin around navigation links */
-display: inline-block; /* Display links inline */
-position: relative; /* Position for hover effects */
-opacity: 0.75; /* Initial opacity for navigation links */
+  font-weight: bold; /* Bold text for navigation links */
+  font-size: 13px; /* Font size for navigation links */
+  text-transform: uppercase; /* Uppercase text for navigation links */
+  text-decoration: none; /* Removes underline from navigation links */
+  color: #031d44; /* Color for navigation links */
+  padding: 1%; /* Padding around navigation links */
+  margin: 1%; /* Margin around navigation links */
+  display: inline-block; /* Display links inline */
+  position: relative; /* Position for hover effects */
+  opacity: 0.75; /* Initial opacity for navigation links */
 }
 
 .nav-link:hover {
-opacity: 1; /* Full opacity on hover */
+  opacity: 1; /* Full opacity on hover */
 }
 
 .nav-link::before {
-transition: 300ms; /* Transition effect for hover */
-height: 5px; /* Height of the hover effect */
-content: ""; /* Empty content for the pseudo-element */
-position: absolute; /* Positioning for the hover effect */
-background-color: #031D44; /* Color of the hover effect */
+  transition: 300ms; /* Transition effect for hover */
+  height: 5px; /* Height of the hover effect */
+  content: ""; /* Empty content for the pseudo-element */
+  position: absolute; /* Positioning for the hover effect */
+  background-color: #031d44; /* Color of the hover effect */
 }
 
 .nav-link-ltr::before {
-width: 0%; /* Initial width of the hover effect */
-bottom: 0px; /* Position at the bottom */
+  width: 0%; /* Initial width of the hover effect */
+  bottom: 0px; /* Position at the bottom */
 }
 
 .nav-link-ltr:hover::before {
-width: 100%; /* Full width on hover */
+  width: 100%; /* Full width on hover */
 }
 
 .nav-link-fade-up::before {
-width: 100%; /* Full width for fade-up effect */
-bottom: 5px; /* Position at the bottom */
-opacity: 0; /* Initial opacity for fade-up effect */
+  width: 100%; /* Full width for fade-up effect */
+  bottom: 5px; /* Position at the bottom */
+  opacity: 0; /* Initial opacity for fade-up effect */
 }
 
 .nav-link-fade-up:hover::before {
-bottom: 10px; /* Move up on hover */
-opacity: 1; /* Full opacity on hover */
+  bottom: 10px; /* Move up on hover */
+  opacity: 1; /* Full opacity on hover */
 }
 
 .nav-link-grow-up::before {
-height: 0%; /* Initial height for grow-up effect */
-width: 100%; /* Full width for grow-up effect */
-bottom: 0px; /* Position at the bottom */
+  height: 0%; /* Initial height for grow-up effect */
+  width: 100%; /* Full width for grow-up effect */
+  bottom: 0px; /* Position at the bottom */
 }
 
 .nav-link-grow-up:hover::before {
-height: 10px; /* Height on hover */
+  height: 10px; /* Height on hover */
 }
 
 header {
   background-color: #3fbcff; /* Achtergrondkleur voor de header */
- 
 }
 
 .boven {
@@ -216,30 +214,27 @@ header {
   background-color: #ffffff00; /* Achtergrondkleur bij hover */
 }
 
-
-
 #winkelmand {
   background-color: #4c2cff56; /* Achtergrondkleur voor de winkelwagenknop */
   color: white; /* Tekstkleur voor de knop */
   border: none; /* Geen rand voor de knop */
-  padding: 9px ; /* Padding voor de knop */
+  padding: 9px; /* Padding voor de knop */
   margin-right: 1%;
   border-radius: 10px; /* Afgeronde hoeken voor de knop */
   font-size: 16px; /* Tekstgrootte voor de knop */
   cursor: pointer; /* Pointer cursor bij hover */
   transition: background-color 0.3s; /* Overgangseffect voor achtergrondkleur */
   justify-content: center; /* Centreer inhoud */
- display: flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
   width: 10%;
- 
 }
-#bagimg{
+#bagimg {
   display: flex;
   justify-content: center;
 }
 #bagimg img {
-  display: flex; 
+  display: flex;
   justify-content: center;
   height: 20%;
   width: 20%;
@@ -248,7 +243,7 @@ header {
 #winkelmand:hover {
   background-color: #0056b3; /* Achtergrondkleur bij hover voor de winkelmand knop */
 }
-#total-price{
+#total-price {
   display: flex;
   justify-content: center;
 }
@@ -320,11 +315,21 @@ header {
   justify-items: center; /* Centreer items */
 }
 
-.A { background-color: #008000; } /* Kleur voor score A */
-.B { background-color: #86C440; } /* Kleur voor score B */
-.C { background-color: #F5A623; } /* Kleur voor score C */
-.D { background-color: #DC582A; } /* Kleur voor score D */
-.E { background-color: #D61D1D; } /* Kleur voor score E */
+.A {
+  background-color: #008000;
+} /* Kleur voor score A */
+.B {
+  background-color: #86c440;
+} /* Kleur voor score B */
+.C {
+  background-color: #f5a623;
+} /* Kleur voor score C */
+.D {
+  background-color: #dc582a;
+} /* Kleur voor score D */
+.E {
+  background-color: #d61d1d;
+} /* Kleur voor score E */
 
 .selected {
   transform: scale(1.1); /* Schaal effect voor geselecteerde nutri-score */
@@ -352,8 +357,8 @@ header {
   background: #d3d3d3; /* Achtergrondkleur voor de slider */
   outline: none; /* Geen outline */
   opacity: 0.7; /* Initiële doorzichtigheid voor de slider */
-  -webkit-transition: .2s; /* Overgangseffect voor de slider */
-  transition: opacity .2s; /* Overgangseffect voor de slider */
+  -webkit-transition: 0.2s; /* Overgangseffect voor de slider */
+  transition: opacity 0.2s; /* Overgangseffect voor de slider */
   margin-left: 1%;
   margin-right: 1%;
   padding: 0%;
@@ -378,45 +383,41 @@ header {
   justify-content: center; /* Center inhoud */
 }
 @media (max-width: 480px) {
-
- 
   #logo img {
     height: 70%; /* Afbeelding neemt volledige hoogte van het logo in */
   }
-  
-  
-  .dropdown-content{
+
+  .dropdown-content {
     min-width: 100px;
     font-size: 10px;
   }
-  .productDropdown-content{
+  .productDropdown-content {
     min-width: 100px;
     font-size: 10px;
   }
- 
-  #button1{
+
+  #button1 {
     font-size: 70%;
     margin-left: 8%;
-    padding:10%;
+    padding: 10%;
   }
-  
-  .nutri-score div{
+
+  .nutri-score div {
     font-size: 16px;
-    
   }
-#footerboven{
-  font-size: 8px  ;
-}
-#footerbeneden{
-  font-size: 8px  ;
-}
-.dropbtn{
-font-size: 12px;
-padding: 0px;
-}
-.productDropbtn{
-font-size: 12px;
-}
+  #footerboven {
+    font-size: 8px;
+  }
+  #footerbeneden {
+    font-size: 8px;
+  }
+  .dropbtn {
+    font-size: 12px;
+    padding: 0px;
+  }
+  .productDropbtn {
+    font-size: 12px;
+  }
 }
 
 h2 {
@@ -457,30 +458,28 @@ button:hover {
   margin-top: 5px; /* Bovenmarge voor extra links */
 }
 
-
 footer {
-background-color: #3fbcff; /* Background color for the footer */
-height: 30px; /* Fixed height for the footer */
-display: flex; /* Flexbox layout for the footer */
+  background-color: #3fbcff; /* Background color for the footer */
+  height: 30px; /* Fixed height for the footer */
+  display: flex; /* Flexbox layout for the footer */
 
-flex-direction: column; /* Column layout for the footer */
-
+  flex-direction: column; /* Column layout for the footer */
 }
 
 #footerboven {
-display: flex; /* Flexbox layout for the top part of the footer */
-justify-content: space-between; /* Space between footer links */
-background-color: #3fbcff; /* Background color for the top part of the footer */
+  display: flex; /* Flexbox layout for the top part of the footer */
+  justify-content: space-between; /* Space between footer links */
+  background-color: #3fbcff; /* Background color for the top part of the footer */
 }
 
 .footerboven {
-width: 18%; /* Width for footer links */
-margin-left: 1%; /* Left margin for footer links */
-margin-right: 1%; /* Right margin for footer links */
+  width: 18%; /* Width for footer links */
+  margin-left: 1%; /* Left margin for footer links */
+  margin-right: 1%; /* Right margin for footer links */
 }
 
 #footerbeneden {
-background-color: #3fbcff; /* Background color for the bottom part of the footer */
-display: flex; /* Flexbox layout for the bottom part of the footer */
-justify-content:center; /* Space between footer items */
+  background-color: #3fbcff; /* Background color for the bottom part of the footer */
+  display: flex; /* Flexbox layout for the bottom part of the footer */
+  justify-content: center; /* Space between footer items */
 }

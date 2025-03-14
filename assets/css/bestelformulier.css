@@ -24,7 +24,7 @@ a {
   font-size: 13px; /* Lettergrootte van de navigatielinks */
   text-transform: uppercase; /* Tekst in hoofdletters */
   text-decoration: none; /* Geen onderstreping */
-  color: #031D44; /* Kleur van de links */
+  color: #031d44; /* Kleur van de links */
   padding: 1%; /* Ruimte rondom de links */
   margin: 1%; /* Buitenmarge voor de links */
   display: inline-block; /* Links in blokvorm tonen */
@@ -43,7 +43,7 @@ a {
   height: 5px; /* Hoogte van de lijn onder links */
   content: ""; /* Leeg inhoudsblok voor de lijn */
   position: absolute; /* Absolute positionering onder de links */
-  background-color: #031D44; /* Kleur van de lijn */
+  background-color: #031d44; /* Kleur van de lijn */
 }
 
 /* Specifiek voor links met het left-to-right effect */
@@ -110,10 +110,9 @@ a {
   width: 50%; /* Breedte */
 }
 
-#woonplaats{
+#woonplaats {
   display: flex;
- justify-content: space-between;
-
+  justify-content: space-between;
 }
 
 /* Stijlen voor het logo */
@@ -126,30 +125,29 @@ a {
   height: 100%; /* Vul de beschikbare ruimte */
 }
 @media (max-width: 480px) {
- label{
-  font-size: 14px;
+  label {
+    font-size: 14px;
+  }
 
- }
- 
- input{
-  font-size: 12px;
- }
+  input {
+    font-size: 12px;
+  }
 
-  .menuLeft select{
+  .menuLeft select {
     width: 90%;
     font-size: 65%;
     height: 90%;
   }
-.nav-link{
-  font-size: 60%;
-}
+  .nav-link {
+    font-size: 60%;
+  }
 
-.footerboven{
-  font-size: 60% ;
-}
-#footerbeneden{
-  font-size: 60% ;
-}
+  .footerboven {
+    font-size: 60%;
+  }
+  #footerbeneden {
+    font-size: 60%;
+  }
 }
 
 /* Stijlen voor het formulier */
@@ -175,7 +173,9 @@ label {
 }
 
 /* Invoervelden met stijl */
-input, select, textarea {
+input,
+select,
+textarea {
   width: 99%; /* Volledige breedte */
   padding: 5.5px; /* Binnenruimte */
   margin-top: 5px; /* Bovenmarge */
@@ -184,7 +184,8 @@ input, select, textarea {
 }
 
 /* Stijlen voor buttons */
-input[type="submit"], input[type="reset"] {
+input[type="submit"],
+input[type="reset"] {
   background-color: #369ad0; /* Kleur */
   color: white; /* Tekstkleur */
   padding: 10px;
@@ -195,8 +196,9 @@ input[type="submit"], input[type="reset"] {
 }
 
 /* Hover-effect voor buttons */
-input[type="submit"]:hover, input[type="reset"]:hover {
-  background-color: #37274A; /* Donkere achtergrond bij hover */
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #37274a; /* Donkere achtergrond bij hover */
 }
 
 /* Footer layout en stijl */
@@ -227,7 +229,4 @@ footer {
   background-color: #3fbcff;
   display: flex;
   justify-content: space-between;
-  
 }
-
-

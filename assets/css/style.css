@@ -52,7 +52,7 @@ a {
   font-size: 12px; /* Tekstgrootte voor navigatielinks */
   text-transform: uppercase; /* Hoofdletters voor navigatielinks */
   text-decoration: none; /* Verwijder onderstreping van navigatielinks */
-  color: #031D44; /* Tekstkleur voor navigatielinks */
+  color: #031d44; /* Tekstkleur voor navigatielinks */
   padding: 1%; /* Padding rond navigatielinks */
   margin-right: 2%; /* Marge rond navigatielinks */
   display: inline-block; /* Toon links inline */
@@ -69,7 +69,7 @@ a {
   height: 5px; /* Hoogte van het hover-effect */
   content: ""; /* Lege inhoud voor het pseudo-element */
   position: absolute; /* Positionering voor het hover-effect */
-  background-color: #031D44; /* Kleur van het hover-effect */
+  background-color: #031d44; /* Kleur van het hover-effect */
 }
 
 .nav-link-ltr::before {
@@ -223,43 +223,39 @@ a {
   background-color: #4c2cff56; /* Achtergrondkleur voor de winkelwagenknop */
   color: white; /* Tekstkleur voor de knop */
   border: none; /* Geen rand voor de knop */
-  padding: 9px ; /* Padding voor de knop */
+  padding: 9px; /* Padding voor de knop */
   margin-right: 1%;
   border-radius: 10px; /* Afgeronde hoeken voor de knop */
   font-size: 16px; /* Tekstgrootte voor de knop */
   cursor: pointer; /* Pointer cursor bij hover */
   transition: background-color 0.3s; /* Overgangseffect voor achtergrondkleur */
   justify-content: center; /* Centreer inhoud */
- display: flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
   width: 10%;
- 
 }
-#bagimg{
+#bagimg {
   display: flex;
   justify-content: center;
 }
 #bagimg img {
-  display: flex; 
+  display: flex;
   justify-content: center;
   height: 50%;
   width: 50%;
 }
 
-
-.cart-button{
+.cart-button {
   justify-content: center;
   display: flex;
   align-items: center;
-
-  
 }
 
 #winkelmand:hover {
   background-color: #0056b3; /* Achtergrondkleur bij hover */
 }
 
-#total-price{
+#total-price {
   font-size: 13px;
   display: flex;
   justify-content: center;
@@ -283,8 +279,6 @@ a {
 .hidden {
   display: none; /* Klasse om elementen te verbergen */
 }
-
-
 
 .sidebar {
   margin-right: 1%; /* Rechtermarge voor de sidebar */
@@ -318,8 +312,8 @@ a {
   background: #d3d3d3; /* Achtergrondkleur voor de slider */
   outline: none; /* Geen outline */
   opacity: 0.7; /* Initiële doorzichtigheid voor de slider */
-  -webkit-transition: .2s; /* Overgangseffect voor de slider */
-  transition: opacity .2s; /* Overgangseffect voor de slider */
+  -webkit-transition: 0.2s; /* Overgangseffect voor de slider */
+  transition: opacity 0.2s; /* Overgangseffect voor de slider */
 }
 
 #sliderValue {
@@ -348,11 +342,21 @@ a {
   justify-items: center; /* Centreer items */
 }
 
-.A { background-color: #008000; } /* Kleur voor score A */
-.B { background-color: #86C440; } /* Kleur voor score B */
-.C { background-color: #F5A623; } /* Kleur voor score C */
-.D { background-color: #DC582A; } /* Kleur voor score D */
-.E { background-color: #D61D1D; } /* Kleur voor score E */
+.A {
+  background-color: #008000;
+} /* Kleur voor score A */
+.B {
+  background-color: #86c440;
+} /* Kleur voor score B */
+.C {
+  background-color: #f5a623;
+} /* Kleur voor score C */
+.D {
+  background-color: #dc582a;
+} /* Kleur voor score D */
+.E {
+  background-color: #d61d1d;
+} /* Kleur voor score E */
 
 .selected {
   transform: scale(1.1); /* Schaal effect voor geselecteerde nutri-score */
@@ -388,18 +392,18 @@ a {
   .product {
     width: 100%; /* 1 product per rij op kleine schermen */
   }
-  #button1{
+  #button1 {
     font-size: 14px;
     margin-left: 8%;
   }
-  .nutri-score div{
+  .nutri-score div {
     font-size: 16px;
     margin-left: 0%;
   }
-#footerboven{
-  font-size: 4px  ;
-  justify-content: center;
-}
+  #footerboven {
+    font-size: 4px;
+    justify-content: center;
+  }
 }
 #container {
   width: 100%; /* Volledige breedte voor de container */
@@ -420,7 +424,6 @@ a {
 
 /* Individuele Product Styling */
 .product {
- 
   max-width: 180px; /* Maximale breedte voor individuele producten */
 
   box-shadow: black; /* Schaduw voor individuele producten */
@@ -438,8 +441,6 @@ a {
   transform: scale(1.03); /* Schaal effect bij hover voor producten */
   max-width: 200px;
 }
-
-
 
 .onder {
   display: flex; /* Flexbox layout voor de 'onder' sectie */
@@ -465,7 +466,9 @@ a {
 }
 
 .onderrechts button {
-  background-color: hwb(205 11% 18% / 0.835); /* Achtergrondkleur voor knoppen in de rechtersectie */
+  background-color: hwb(
+    205 11% 18% / 0.835
+  ); /* Achtergrondkleur voor knoppen in de rechtersectie */
   color: white; /* Tekstkleur voor knoppen */
   border: none; /* Geen rand voor knoppen */
   padding: 10px 20px; /* Padding voor knoppen */

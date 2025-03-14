@@ -1,147 +1,199 @@
 <!-- Definieer de basisstructuur van het document -->
-<!DOCTYPE html> <!-- HTML5-document -->
-<html class="no-js" lang=""> <!-- Klasse voor ondersteuning van JS/no-JS en taalinstelling -->
-<head>
-  <meta charset="UTF-8"> <!-- Stel de tekenset in op UTF-8 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Zorgt voor responsieve opmaak -->
-  <title>Bilco</title> <!-- Titel van de pagina -->
-  <meta name="description" content="Dit is een webshop"> <!-- Korte beschrijving van de pagina -->
-  <link rel="stylesheet" href="assets/css/inloggen.css"> <!-- Verwijzing naar de CSS-stylesheet -->
-  <script src="assets/JavaScript/inloggen.js" defer></script> <!-- JavaScript-bestand wordt asynchroon geladen -->
-  
-  <!-- Iconen voor browsers en apparaten -->
-  <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
-  <link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/img/icon.png">
+<!DOCTYPE html>
+<!-- HTML5-document -->
+<html class="no-js" lang="">
+  <!-- Klasse voor ondersteuning van JS/no-JS en taalinstelling -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Stel de tekenset in op UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Zorgt voor responsieve opmaak -->
+    <title>Bilco</title>
+    <!-- Titel van de pagina -->
+    <meta name="description" content="Dit is een webshop" />
+    <!-- Korte beschrijving van de pagina -->
+    <link rel="stylesheet" href="assets/css/inloggen.css" />
+    <!-- Verwijzing naar de CSS-stylesheet -->
+    <script src="assets/JavaScript/inloggen.js" defer></script>
+    <!-- JavaScript-bestand wordt asynchroon geladen -->
 
-  <meta name="theme-color" content="#fafafa"> <!-- Browserbalkkleur -->
-</head>
+    <!-- Iconen voor browsers en apparaten -->
+    <link rel="icon" href="/assets/img/favicon.ico" sizes="any" />
+    <link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/img/icon.png" />
 
-<body>
-  <main>
-    <header>
-      <!-- Bovenste sectie van de header met taalkeuze -->
-      <div class="boven">
-        <div class="menuLeft">
+    <meta name="theme-color" content="#fafafa" />
+    <!-- Browserbalkkleur -->
+  </head>
 
-          Tall:<select name="Taal"> <!-- Dropdownmenu om de taal te selecteren -->
-            <option value="English">English</option>
-            <option value="Nederlands">Nederlands</option>
-          </select>
-        </div>
-        <div class="menuRight">
-          <div class="navbar">
-            <!-- Navigatielinks -->
-            <div class="nav-link nav-link-ltr"><a href=""> Mijn Account </a></div>
-            <div class="nav-link nav-link-ltr"><a href="bestelformulier.html"> Afrekenen</a></div>
-            <div class="nav-link nav-link-ltr"><a href="inloggen.html">Inloggen</a></div>
+  <body>
+    <main>
+      <header>
+        <!-- Bovenste sectie van de header met taalkeuze -->
+        <div class="boven">
+          <div class="menuLeft">
+            Tall:<select name="Taal">
+              <!-- Dropdownmenu om de taal te selecteren -->
+              <option value="English">English</option>
+              <option value="Nederlands">Nederlands</option>
+            </select>
           </div>
-      </div>
-  </div>
-
-      <!-- Onderste sectie met logo, productmenu, en zoekbalk -->
-      <div class="onder">
-        <div id="logo">
-          <a href="index.html"><img src="assets/img/logo.png" alt="Bilco Logo"></a> <!-- Link naar homepage -->
-        </div>
-        <div class="productDropdown">
-          <!-- Dropdownmenu voor productcategorieën -->
-          <button class="productDropbtn">Product</button>
-          <div class="productDropdown-content">
-            <a href="#">Groente, fruit</a>
-            <a href="#">Bakkerij</a>
-            <a href="#">Thee, koffie</a>
-          </div>
-        </div>
-        <input type="text" placeholder="Search" id="zoek" autofocus> <!-- Zoekveld -->
-        <div class="dropdown">
-          <button class="dropbtn">Mijn profiel</button> <!-- Profielopties -->
-          <div class="dropdown-content">
-            <a href="#">Favoriet lijst</a>
-            <a href="#">Eerder gekocht</a>
-            <a href="#">Mijn bestellingen</a>
+          <div class="menuRight">
+            <div class="navbar">
+              <!-- Navigatielinks -->
+              <div class="nav-link nav-link-ltr">
+                <a href=""> Mijn Account </a>
+              </div>
+              <div class="nav-link nav-link-ltr">
+                <a href="bestelformulier.html"> Afrekenen</a>
+              </div>
+              <div class="nav-link nav-link-ltr">
+                <a href="inloggen.html">Inloggen</a>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Onderste sectie met logo, productmenu, en zoekbalk -->
+        <div class="onder">
+          <div id="logo">
+            <a href="index.html"
+              ><img src="assets/img/logo.png" alt="Bilco Logo"
+            /></a>
+            <!-- Link naar homepage -->
+          </div>
+          <div class="productDropdown">
+            <!-- Dropdownmenu voor productcategorieën -->
+            <button class="productDropbtn">Product</button>
+            <div class="productDropdown-content">
+              <a href="#">Groente, fruit</a>
+              <a href="#">Bakkerij</a>
+              <a href="#">Thee, koffie</a>
+            </div>
+          </div>
+          <input type="text" placeholder="Search" id="zoek" autofocus />
+          <!-- Zoekveld -->
+          <div class="dropdown">
+            <button class="dropbtn">Mijn profiel</button>
+            <!-- Profielopties -->
+            <div class="dropdown-content">
+              <a href="#">Favoriet lijst</a>
+              <a href="#">Eerder gekocht</a>
+              <a href="#">Mijn bestellingen</a>
+            </div>
+          </div>
           <a href="bestelformulier.html" id="winkelmand" class="cart-button">
-            <div  id="bagimg" ><img src="assets/img/bag.png" alt="Winkelwagen"> </div>
-          
-           <div><strong><span  id="total-price" ></span></strong></div> 
+            <div id="bagimg">
+              <img src="assets/img/bag.png" alt="Winkelwagen" />
+            </div>
+
+            <div>
+              <strong><span id="total-price"></span></strong>
+            </div>
           </a>
-          
-                </div>
-    </header>
+        </div>
+      </header>
 
-    <div id="container">
+      <div id="container">
+        <div class="sidebar">
+          <!-- Sidebar met filter- en navigatiemogelijkheden -->
+          <div class="sidebar1">
+            <div>Nutri-score</div>
+            <br /><!-- Nutri-score filteropties -->
+            <div class="nutri-score">
+              <div class="A" onclick="selectScore(this)">A</div>
+              <div class="B" onclick="selectScore(this)">B</div>
+              <div class="C" onclick="selectScore(this)">C</div>
+              <div class="D" onclick="selectScore(this)">D</div>
+              <div class="E" onclick="selectScore(this)">E</div>
+            </div>
+          </div>
 
-      <div class="sidebar"> <!-- Sidebar met filter- en navigatiemogelijkheden -->
-        <div class="sidebar1">
-          <div>Nutri-score</div><br><!-- Nutri-score filteropties -->
-          <div class="nutri-score">
-            <div class="A" onclick="selectScore(this)">A</div>
-            <div class="B" onclick="selectScore(this)">B</div>
-            <div class="C" onclick="selectScore(this)">C</div>
-            <div class="D" onclick="selectScore(this)">D</div>
-            <div class="E" onclick="selectScore(this)">E</div>
+          <div class="sidebar1">
+            <!-- Productcategorieën -->
+            <div><a href=""> Bakkerij</a></div>
+            <div><a href=""> Groente</a></div>
+            <div><a href="">Fruit </a></div>
+            <div><a href=""> Thee</a></div>
+            <div><a href=""> Koffie</a></div>
+          </div>
+
+          <div id="slidecontainer">
+            <!-- Prijsfilter met slider -->
+            <div style="display: flex; justify-content: center">Prijs</div>
+            <input
+              type="range"
+              min="0"
+              max="50"
+              value="0"
+              class="slider"
+              id="ringSlider"
+            />
+            <div><div id="sliderValue">€0</div></div>
+          </div>
+
+          <div class="sidebar1"><a href="">recent bekeken</a></div>
+          <div class="sidebar1">
+            producten vergelijken
+            <div>___________</div>
+            <br />
+            <div class="productenvergelijken">
+              <a href="">set van de products</a>
+            </div>
+            <div class="productenvergelijken">
+              <a href=""> set van de products</a>
+            </div>
+            <div>___________</div>
+            <br />
+            <button id="button1">vergelijken</button>
+            <br />
+            <br />
+            <div style="margin-left: 25%"><a href=""> Alles wissen </a></div>
           </div>
         </div>
-
-        <div class="sidebar1"> <!-- Productcategorieën -->
-          <div> <a href=""> Bakkerij</a></div>
-          <div> <a href=""> Groente</a></div>
-          <div> <a href="">Fruit </a></div>
-          <div> <a href=""> Thee</a> </div>
-          <div><a href=""> Koffie</a> </div>
-        </div>
-        
-        <div id="slidecontainer">     <!-- Prijsfilter met slider -->
-          <div style="display: flex; justify-content: center;">Prijs</div>
-          <input type="range" min="0" max="50" value="0" class="slider" id="ringSlider">
-          <div><div id="sliderValue">€0</div>
-        </div>
-        </div>
-
-        <div class="sidebar1"> <a href="">recent bekeken</a> </div>
-        <div class="sidebar1">producten vergelijken
-          <div>___________</div>
-          <br>
-          <div class="productenvergelijken"><a href="">set van de products</a></div>
-          <div class="productenvergelijken"> <a href=""> set van de products</a></div>
-          <div>___________</div> <br>
-          <button id="button1">vergelijken</button>
-          <br>
-          <br>
-          <div style="margin-left:25%;"><a href=""> Alles wissen </a></div>
+        <div>
+          <h2>Inloggen</h2>
+          <!-- Sectie voor inloggen -->
+          <form action="index.html" method="post" id="login-form">
+            <!-- Inlogformulier -->
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Voer je e-mail in"
+            />
+            <label for="password">Wachtwoord:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              placeholder="Voer je wachtwoord in"
+            />
+            <button type="submit">Inloggen</button>
+            <div class="extra-links">
+              <a href="wachtwoord-vergeten.html">Wachtwoord vergeten?</a>
+              <!-- Link om wachtwoord te herstellen -->
+              <a href="registreren.html">Nog geen account? Registreer hier</a>
+            </div>
+          </form>
         </div>
       </div>
-      <div>
-        <h2>Inloggen</h2> <!-- Sectie voor inloggen -->
-        <form action="index.html" method="post" id="login-form"> <!-- Inlogformulier -->
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" required placeholder="Voer je e-mail in">
-          <label for="password">Wachtwoord:</label>
-          <input type="password" id="password" name="password" required placeholder="Voer je wachtwoord in">
-          <button type="submit">Inloggen</button>
-          <div class="extra-links">
-            <a href="wachtwoord-vergeten.html">Wachtwoord vergeten?</a> <!-- Link om wachtwoord te herstellen -->
-            <a href="registreren.html">Nog geen account? Registreer hier</a>
-          </div>
-        </form>
+    </main>
+
+    <footer>
+      <div id="footerboven">
+        <div class="footerboven"><a href=""> Algemene voorwaarden </a></div>
+        <div class="footerboven"><a href=""> Privacybeleid </a></div>
+        <div class="footerboven"><a href=""> Cookiebeleid </a></div>
+        <div class="footerboven"><a href=""> Over Bilco </a></div>
+        <div class="footerboven"><a href=""> Beveiligings melding </a></div>
       </div>
-    </div>
-  </main>
-
-  <footer>
-    <div id="footerboven">
-      <div class="footerboven"><a href=""> Algemene voorwaarden </a></div>
-      <div class="footerboven"><a href=""> Privacybeleid  </a></div>
-      <div class="footerboven"><a href=""> Cookiebeleid  </a></div>
-      <div class="footerboven"><a href=""> Over Bilco  </a></div>
-      <div class="footerboven"><a href="">  Beveiligings melding </a></div>
-    </div>
-    <div id="footerbeneden">
-        <div> &copy; 2025 Bilco</div> 
-
-    </div>
-</footer>
-
-</body>
+      <div id="footerbeneden">
+        <div>&copy; 2025 Bilco</div>
+      </div>
+    </footer>
+  </body>
+</html>
