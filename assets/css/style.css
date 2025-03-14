@@ -368,7 +368,7 @@ a {
   transition: background-color 0.3s; /* Overgangseffect voor achtergrondkleur */
   justify-content: center; /* Centreer inhoud */
 }
-@media (max-width: 768px) {
+@media (max-width: 831px) {
   .product {
     width: calc(50%); /* 2 producten per rij op middelgrote schermen */
   }
@@ -410,8 +410,9 @@ a {
 
 /* Individuele Product Styling */
 .product {
-  width: calc(33.33%); /* 3 producten per rij op grote schermen */
-  max-width: 200px; /* Maximale breedte voor individuele producten */
+ 
+  max-width: 180px; /* Maximale breedte voor individuele producten */
+
   box-shadow: black; /* Schaduw voor individuele producten */
   background-color: white; /* Achtergrondkleur voor individuele producten */
   border-radius: 10px; /* Afgeronde hoeken voor individuele producten */
@@ -425,6 +426,7 @@ a {
 
 .heleProduct:hover {
   transform: scale(1.03); /* Schaal effect bij hover voor producten */
+  max-width: 200px;
 }
 
 
