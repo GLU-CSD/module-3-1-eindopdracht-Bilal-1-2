@@ -126,11 +126,16 @@ a {
 }
 @media (max-width: 480px) {
   label {
-    font-size: 14px;
+    font-size: 60%;
+  }
+  /* Stijl voor foutmeldingen */
+  [id^="alertBij"] {
+    font-size: 9px;
+    color: red;
   }
 
   input {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .menuLeft select {

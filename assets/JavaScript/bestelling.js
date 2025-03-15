@@ -7,24 +7,32 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     cart.forEach((item) => {
       let listItem = document.createElement("li");
-      listItem.textContent = item.product + " - €" + item.price; // Changed back to string concatenation
+      listItem.textContent = item.product + " - €" + item.price;
       orderList.appendChild(listItem);
     });
   }
 });
 
+// Verwijder winkelwagen uit LocalStorage bij het verzenden van het formulier
 document.querySelector("form").addEventListener("submit", function () {
   localStorage.removeItem("cart");
 });
 
-// Validate form function
+// Functie om foutmeldingen te resetten wanneer een invoerveld wordt geselecteerd
+function resetAlert() {
+  let alerts = document.querySelectorAll("[id^='alertBij']");
+  alerts.forEach((alert) => {
+    alert.innerHTML = ""; // Verwijder de foutmelding
+  });
+}
 
+// Validatie van het formulier
 function validateForm() {
   let fields = [
     {
       id: "aanhef",
       alertId: "alertBijAanhef",
-      message: "Kies  je voor een aanhef.",
+      message: "Kies een aanhef.",
     },
     {
       id: "voornaam",
