@@ -12,6 +12,7 @@ body {
 
 header {
   background-color: #3fbcff; /* Achtergrondkleur voor de header */
+  width: 100%;
 }
 
 a {
@@ -19,20 +20,20 @@ a {
   text-decoration: none; /* Verwijder onderstreping van links */
 }
 
-.boven {
+.above {
   display: flex;
   justify-content: space-between; /* Ruimte tussen linker en rechter menu */
   align-items: center;
 }
 
-.boven .menuLeft {
+.above .menuLeft {
   padding: 10px;
   display: flex;
   gap: 8px; /* Ruimte tussen items in het linker menu */
   width: 50%;
 }
 
-.boven .menuRight {
+.above .menuRight {
   display: flex;
   gap: 8px; /* Ruimte tussen items in het rechter menu */
   padding-right: 20px;
@@ -57,7 +58,7 @@ a {
   margin-right: 2%; /* Marge rond navigatielinks */
   display: inline-block; /* Toon links inline */
   position: relative; /* Positie voor hover-effecten */
-  opacity: 0.75; /* Initiële doorzichtigheid voor navigatielinks */
+  opacity: 0.75; /* InitiÃ«le doorzichtigheid voor navigatielinks */
 }
 
 .nav-link:hover {
@@ -73,7 +74,7 @@ a {
 }
 
 .nav-link-ltr::before {
-  width: 0%; /* Initiële breedte van het hover-effect */
+  width: 0%; /* InitiÃ«le breedte van het hover-effect */
   bottom: 0px; /* Positie aan de onderkant */
 }
 
@@ -84,7 +85,7 @@ a {
 .nav-link-fade-up::before {
   width: 100%; /* Volledige breedte voor fade-up effect */
   bottom: 5px; /* Positie aan de onderkant */
-  opacity: 0; /* Initiële doorzichtigheid voor fade-up effect */
+  opacity: 0; /* InitiÃ«le doorzichtigheid voor fade-up effect */
 }
 
 .nav-link-fade-up:hover::before {
@@ -93,7 +94,7 @@ a {
 }
 
 .nav-link-grow-up::before {
-  height: 0%; /* Initiële hoogte voor grow-up effect */
+  height: 0%; /* InitiÃ«le hoogte voor grow-up effect */
   width: 100%; /* Volledige breedte voor grow-up effect */
   bottom: 0px; /* Positie aan de onderkant */
 }
@@ -102,11 +103,13 @@ a {
   height: 10px; /* Hoogte bij hover */
 }
 
-.onder {
+#onder {
   display: flex;
   gap: 10px; /* Ruimte tussen items in de 'onder' sectie */
   justify-content: space-between; /* Ruimte tussen items */
   align-items: center; /* Centreer items verticaal */
+  background-color: #3fbcff;
+  width: 100%;
 }
 
 #zoek {
@@ -255,11 +258,7 @@ a {
   background-color: #0056b3; /* Achtergrondkleur bij hover */
 }
 
-#total-price {
-  font-size: 13px;
-  display: flex;
-  justify-content: center;
-}
+
 
 #cart-message {
   position: fixed; /* Vaste positie voor het winkelwagenbericht */
@@ -296,6 +295,7 @@ a {
   text-align: center; /* Centreer tekst in sidebar items */
 }
 
+/* Style for the slider container */
 #slidecontainer {
   background-color: #3fbcff; /* Achtergrondkleur voor de slider container */
   border: 1px solid #000000; /* Rand voor de slider container */
@@ -304,23 +304,58 @@ a {
   align-content: center; /* Centreer inhoud */
   justify-content: center; /* Centreer inhoud */
 }
-
-.slider {
-  width: 100%; /* Volledige breedte voor de slider */
-  height: 15px; /* Hoogte voor de slider */
-  border-radius: 5px; /* Afgeronde hoeken voor de slider */
-  background: #d3d3d3; /* Achtergrondkleur voor de slider */
-  outline: none; /* Geen outline */
-  opacity: 0.7; /* Initiële doorzichtigheid voor de slider */
-  -webkit-transition: 0.2s; /* Overgangseffect voor de slider */
-  transition: opacity 0.2s; /* Overgangseffect voor de slider */
+#priceSliderMin {
+  z-index: 1; /* Ensure the max slider is above the min slider */
 }
 
-#sliderValue {
-  display: flex; /* Flexbox layout voor de slider waarde */
-  justify-content: center; /* Centreer inhoud */
+/* Style for the slider thumbs */
+#priceSliderMin::-webkit-slider-thumb,
+#priceSliderMax::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #ffffff00;
+  cursor: pointer;
+  pointer-events: all;
+  position: relative;
+  z-index: 3;
 }
 
+#priceSliderMin::-moz-range-thumb,
+#priceSliderMax::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #C6C6C6;
+  cursor: pointer;
+  pointer-events: all;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover and active states for thumbs */
+#priceSliderMin::-webkit-slider-thumb:hover,
+#priceSliderMax::-webkit-slider-thumb:hover {
+  background: #f7f7f7;
+}
+
+#priceSliderMin::-webkit-slider-thumb:active,
+#priceSliderMax::-webkit-slider-thumb:active {
+  box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+  -webkit-box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+}
+
+/* Style for the price range display */
+#priceRangeDisplay {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  color: #ffffff;
+}
 .nutri-score {
   display: flex; /* Flexbox layout voor de nutri-score */
   font-family: Arial, sans-serif; /* Lettertype voor de nutri-score */
@@ -382,10 +417,11 @@ a {
   transition: background-color 0.3s; /* Overgangseffect voor achtergrondkleur */
   justify-content: center; /* Centreer inhoud */
 }
-@media (max-width: 831px) {
+@media (max-width: 780px) {
   .product {
-    width: calc(50%); /* 2 producten per rij op middelgrote schermen */
+    width: calc(100%); /* 2 producten per rij op middelgrote schermen */
   }
+
 }
 
 @media (max-width: 480px) {
@@ -400,7 +436,7 @@ a {
     font-size: 16px;
     margin-left: 0%;
   }
-  #footerboven {
+  #footerabove {
     font-size: 4px;
     justify-content: center;
   }
@@ -424,7 +460,7 @@ a {
 
 /* Individuele Product Styling */
 .product {
-  max-width: 180px; /* Maximale breedte voor individuele producten */
+  max-width: 150px; /* Maximale breedte voor individuele producten */
 
   box-shadow: black; /* Schaduw voor individuele producten */
   background-color: white; /* Achtergrondkleur voor individuele producten */
@@ -489,7 +525,8 @@ a {
 
 #products {
   width: 100%; /* Volledige breedte voor de productensectie */
-  background: rgb(255, 255, 255); /* Achtergrondkleur voor de productensectie */
+  background: rgb(255, 255, 255);
+   /* Achtergrondkleur voor de productensectie */
 }
 
 footer {
@@ -498,25 +535,29 @@ footer {
   display: flex; /* Flexbox layout voor de footer */
   gap: 70%; /* Ruimte tussen footer items */
   flex-direction: column; /* Kolomlayout voor de footer */
+  width: 100%;
 }
 
-#footerboven {
+#footerabove {
   display: flex; /* Flexbox layout voor het bovenste deel van de footer */
   justify-content: space-between; /* Ruimte tussen footer links */
   background-color: #3fbcff; /* Achtergrondkleur voor het bovenste deel van de footer */
   font-size: 60%;
+  width: 100%;
 }
 
-.footerboven {
+.footerabove {
   width: 18%; /* Breedte voor footer links */
   margin-left: 1%; /* Linkermarge voor footer links */
   margin-right: 1%; /* Rechtermarge voor footer links */
+  width: 100%;
 }
 
-#footerbeneden {
+#footerunder {
   background-color: #3fbcff; /* Achtergrondkleur voor het onderste deel van de footer */
   display: flex; /* Flexbox layout voor het onderste deel van de footer */
   justify-content: center; /* Ruimte tussen footer items */
   font-size: 60%;
   margin-bottom: 1%;
+  width: 100%;
 }

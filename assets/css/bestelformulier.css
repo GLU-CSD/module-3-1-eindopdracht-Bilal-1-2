@@ -83,7 +83,7 @@ a {
 }
 
 /* Stijlen voor de bovenste sectie */
-.boven {
+.above {
   background-color: #3fbcff; /* Blauwe achtergrond */
   display: flex; /* Flexbox-indeling */
   justify-content: space-between; /* Verdeling van ruimte */
@@ -147,10 +147,10 @@ a {
     font-size: 60%;
   }
 
-  .footerboven {
+  .footerabove {
     font-size: 60%;
   }
-  #footerbeneden {
+  #footerunder {
     font-size: 60%;
   }
 }
@@ -216,21 +216,21 @@ footer {
 }
 
 /* Layout van bovenste deel van de footer */
-#footerboven {
+#footerabove {
   display: flex;
   justify-content: space-between; /* Links rechts uitlijnen */
   background-color: #3fbcff;
 }
 
 /* Link secties in de footer */
-.footerboven {
+.footerabove{
   width: 18%;
   margin-left: 1%;
   margin-right: 1%;
 }
 
 /* Layout van onderste deel van de footer */
-#footerbeneden {
+#footerunder {
   background-color: #3fbcff;
   display: flex;
   justify-content: space-between;

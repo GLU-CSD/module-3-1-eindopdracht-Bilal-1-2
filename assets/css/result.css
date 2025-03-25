@@ -19,20 +19,20 @@ a {
   text-decoration: none; /* Verwijder onderstreping van links */
 }
 
-.boven {
+.above {
   display: flex;
   justify-content: space-between; /* Ruimte tussen linker en rechter menu */
   align-items: center;
 }
 
-.boven .menuLeft {
+.above .menuLeft {
   padding: 10px;
   display: flex;
   gap: 8px; /* Ruimte tussen items in het linker menu */
   width: 50%;
 }
 
-.boven .menuRight {
+.above .menuRight {
   display: flex;
   gap: 8px; /* Ruimte tussen items in het rechter menu */
   padding-right: 20px;
@@ -137,10 +137,10 @@ a {
 }
 
 @media (max-width: 480px) {
-  #footerboven {
+  #footerabove {
     font-size: 8px;
   }
-  #footerbeneden {
+  #footerunder {
     font-size: 8px;
   }
 }
@@ -159,20 +159,20 @@ footer {
   flex-direction: column; /* Kolomlayout voor de footer */
 }
 
-#footerboven {
+#footerabove {
   display: flex; /* Flexbox layout voor het bovenste deel van de footer */
   justify-content: space-between; /* Ruimte tussen footer links */
   background-color: #3fbcff; /* Achtergrondkleur voor het bovenste deel van de footer */
   font-size: 60%;
 }
 
-.footerboven {
+.footerabove {
   width: 18%; /* Breedte voor footer links */
   margin-left: 1%; /* Linkermarge voor footer links */
   margin-right: 1%; /* Rechtermarge voor footer links */
 }
 
-#footerbeneden {
+#footerunder {
   background-color: #3fbcff; /* Achtergrondkleur voor het onderste deel van de footer */
   display: flex; /* Flexbox layout voor het onderste deel van de footer */
   justify-content: center; /* Ruimte tussen footer items */

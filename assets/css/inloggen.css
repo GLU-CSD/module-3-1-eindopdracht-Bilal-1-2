@@ -78,19 +78,19 @@ header {
   background-color: #3fbcff; /* Achtergrondkleur voor de header */
 }
 
-.boven {
+.above {
   display: flex; /* Flexbox layout voor de bovenste sectie */
   justify-content: space-between; /* Ruimte tussen linker en rechter menu */
   align-items: center; /* Center items verticaal */
 }
 
-.boven .menuLeft {
+.above .menuLeft {
   padding: 10px; /* Padding voor het linker menu */
   display: flex; /* Flexbox layout voor het linker menu */
   gap: 8px; /* Ruimte tussen items in het linker menu */
 }
 
-.boven .menuRight {
+.above .menuRight {
   display: flex; /* Flexbox layout voor het rechter menu */
   gap: 8px; /* Ruimte tussen items in het rechter menu */
   padding-right: 20px; /* Padding aan de rechterkant */
@@ -405,10 +405,10 @@ header {
   .nutri-score div {
     font-size: 16px;
   }
-  #footerboven {
+  #footerabove {
     font-size: 8px;
   }
-  #footerbeneden {
+  #footerunder {
     font-size: 8px;
   }
   .dropbtn {
@@ -466,19 +466,19 @@ footer {
   flex-direction: column; /* Column layout for the footer */
 }
 
-#footerboven {
+#footerabove {
   display: flex; /* Flexbox layout for the top part of the footer */
   justify-content: space-between; /* Space between footer links */
   background-color: #3fbcff; /* Background color for the top part of the footer */
 }
 
-.footerboven {
+.footerabove {
   width: 18%; /* Width for footer links */
   margin-left: 1%; /* Left margin for footer links */
   margin-right: 1%; /* Right margin for footer links */
 }
 
-#footerbeneden {
+#footerbunder {
   background-color: #3fbcff; /* Background color for the bottom part of the footer */
   display: flex; /* Flexbox layout for the bottom part of the footer */
   justify-content: center; /* Space between footer items */
