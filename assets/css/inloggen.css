@@ -97,7 +97,7 @@ header {
   padding-top: 10px; /* Padding aan de bovenkant */
 }
 
-.onder {
+.under {
   display: flex; /* Flexbox layout voor de ondersectie */
   gap: 10px; /* Ruimte tussen items in de ondersectie */
   justify-content: space-between; /* Ruimte tussen items */
@@ -229,15 +229,14 @@ header {
   flex-direction: column;
   width: 10%;
 }
-#bagimg {
+
+#bagimg{
   display: flex;
   justify-content: center;
 }
 #bagimg img {
-  display: flex;
-  justify-content: center;
-  height: 20%;
-  width: 20%;
+  height: 50%;
+  width: 50%;
 }
 
 #winkelmand:hover {
@@ -337,7 +336,7 @@ header {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Schaduweffect voor geselecteerde nutri-score */
 }
 
-.productenvergelijken {
+.productToCompare {
   margin-left: 20%; /* Linkermarge voor productvergelijking sectie */
   justify-content: center; /* Center inhoud */
 }

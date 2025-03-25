@@ -102,7 +102,7 @@ a {
   height: 10px; /* Hoogte bij hover */
 }
 
-.onder {
+.under {
   display: flex;
   gap: 10px; /* Ruimte tussen items in de 'onder' sectie */
   justify-content: space-between; /* Ruimte tussen items */
@@ -145,7 +145,7 @@ a {
   }
 }
 
-.onder {
+.under {
   display: flex;
   gap: 10px; /* Ruimte tussen items in de 'onder' sectie */
   justify-content: space-between; /* Ruimte tussen items */
